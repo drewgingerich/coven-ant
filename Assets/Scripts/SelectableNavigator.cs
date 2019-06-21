@@ -34,7 +34,7 @@ public class SelectableNavigator : MonoBehaviour
         if (next != null)
         {
             selected.Deselect();
-            selected = selected.left;
+            selected = next;
             selected.Select();
         }
     }

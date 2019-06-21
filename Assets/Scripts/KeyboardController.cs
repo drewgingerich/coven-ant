@@ -1,31 +1,31 @@
 ﻿using UnityEngine;
 
-public class ArcadeController : MonoBehaviour
+public class KeyboardController : MonoBehaviour
 {
     public SelectableNavigator navigator;
 
     private void Update() {
-        Vector2 move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        if (Input.GetButton("Submit"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             navigator.Use();
         }
 
-        if ( move.x == 1)
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             navigator.MoveRight();
         }
-        else if (move.x == -1)
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             navigator.MoveLeft();
         }
-        else if(move.y == 1)
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             navigator.MoveUp();
         }
-        else if (move.y == -1)
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             navigator.MoveDown();
         }
     }
+
 }
