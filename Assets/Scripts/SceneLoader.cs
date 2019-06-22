@@ -1,12 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    private void Start()
     {
-        StartCoroutine(LoadYourAsyncScene(sceneName));
+        FadeManager.Instance.FadeIn(1);
+    }
+
+    public void FadeScene(string sceneName)
+    {
+        FadeManager.Instance.FadeOut(1, Color.black, () =>
+        {
+            StartCoroutine(LoadYourAsyncScene(sceneName));
+        });
     }
 
     IEnumerator LoadYourAsyncScene(string sceneName)
