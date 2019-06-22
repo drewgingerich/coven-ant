@@ -15,6 +15,7 @@ public class Selectable : MonoBehaviour
 
     public void Select()
     {
+        Debug.Log("Hovering!");
         isHovered = true;
         OnHover.Invoke();
     }
