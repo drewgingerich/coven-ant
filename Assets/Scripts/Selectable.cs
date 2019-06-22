@@ -4,6 +4,9 @@ using UnityEngine.Events;
 public class Selectable : MonoBehaviour
 {
     public UnityEvent OnUse;
+    bool isHovered;
+    public UnityEvent OnHover;
+    public UnityEvent OnDeHover;
 
     public Selectable left;
     public Selectable right;
@@ -12,12 +15,14 @@ public class Selectable : MonoBehaviour
 
     public void Select()
     {
-
+        isHovered = true;
+        OnHover.Invoke();
     }
 
     public void Deselect()
     {
-
+        isHovered = false;
+        OnDeHover.Invoke();
     }
 
     public void Use()

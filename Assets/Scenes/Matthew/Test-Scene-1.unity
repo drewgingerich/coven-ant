@@ -204,7 +204,6 @@ GameObject:
   m_Component:
   - component: {fileID: 820474292}
   - component: {fileID: 820474294}
-  - component: {fileID: 820474293}
   m_Layer: 0
   m_Name: test-potion (5)
   m_TagString: Untagged
@@ -226,27 +225,6 @@ Transform:
   m_Father: {fileID: 1637244218}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &820474293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820474291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 124b99419fada40229790fd9db8a5651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnUse:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  left: {fileID: 0}
-  right: {fileID: 0}
-  up: {fileID: 0}
-  down: {fileID: 0}
 --- !u!212 &820474294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -305,7 +283,6 @@ GameObject:
   m_Component:
   - component: {fileID: 870707094}
   - component: {fileID: 870707096}
-  - component: {fileID: 870707095}
   m_Layer: 0
   m_Name: test-potion (2)
   m_TagString: Untagged
@@ -327,27 +304,6 @@ Transform:
   m_Father: {fileID: 1637244218}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &870707095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870707093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 124b99419fada40229790fd9db8a5651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnUse:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  left: {fileID: 0}
-  right: {fileID: 0}
-  up: {fileID: 0}
-  down: {fileID: 0}
 --- !u!212 &870707096
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -406,7 +362,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1427746771}
   - component: {fileID: 1427746773}
-  - component: {fileID: 1427746772}
   m_Layer: 0
   m_Name: test-potion (4)
   m_TagString: Untagged
@@ -428,27 +383,6 @@ Transform:
   m_Father: {fileID: 1637244218}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1427746772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427746770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 124b99419fada40229790fd9db8a5651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnUse:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  left: {fileID: 0}
-  right: {fileID: 0}
-  up: {fileID: 0}
-  down: {fileID: 0}
 --- !u!212 &1427746773
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -507,7 +441,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1488438999}
   - component: {fileID: 1488439001}
-  - component: {fileID: 1488439000}
   m_Layer: 0
   m_Name: test-potion
   m_TagString: Untagged
@@ -529,27 +462,6 @@ Transform:
   m_Father: {fileID: 1637244218}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1488439000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488438998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 124b99419fada40229790fd9db8a5651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnUse:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  left: {fileID: 0}
-  right: {fileID: 0}
-  up: {fileID: 0}
-  down: {fileID: 0}
 --- !u!212 &1488439001
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -644,7 +556,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1784774683}
   - component: {fileID: 1784774685}
-  - component: {fileID: 1784774684}
   m_Layer: 0
   m_Name: test-potion (6)
   m_TagString: Untagged
@@ -666,27 +577,6 @@ Transform:
   m_Father: {fileID: 1637244218}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1784774684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784774682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 124b99419fada40229790fd9db8a5651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnUse:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  left: {fileID: 0}
-  right: {fileID: 0}
-  up: {fileID: 0}
-  down: {fileID: 0}
 --- !u!212 &1784774685
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -745,7 +635,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1820636721}
   - component: {fileID: 1820636723}
-  - component: {fileID: 1820636722}
   m_Layer: 0
   m_Name: test-potion (3)
   m_TagString: Untagged
@@ -767,27 +656,6 @@ Transform:
   m_Father: {fileID: 1637244218}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1820636722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820636720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 124b99419fada40229790fd9db8a5651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnUse:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  left: {fileID: 0}
-  right: {fileID: 0}
-  up: {fileID: 0}
-  down: {fileID: 0}
 --- !u!212 &1820636723
 SpriteRenderer:
   m_ObjectHideFlags: 0
