@@ -14,11 +14,11 @@ public class SceneLoader : MonoBehaviour
     {
         FadeManager.Instance.FadeOut(1, Color.black, () =>
         {
-            StartCoroutine(LoadYourAsyncScene(sceneName));
+            StartCoroutine(LoadAsyncScene(sceneName));
         });
     }
 
-    IEnumerator LoadYourAsyncScene(string sceneName)
+    IEnumerator LoadAsyncScene(string sceneName)
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 
