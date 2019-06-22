@@ -64,3 +64,6 @@ crashlytics-build.properties
 
 # Visual Studio Code config files
 .vscode/
+
+# OSX
+.DS_Store
