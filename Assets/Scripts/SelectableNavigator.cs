@@ -38,4 +38,21 @@ public class SelectableNavigator : MonoBehaviour
             selected.Select();
         }
     }
+
+    void Start()
+    {
+        if(selected) {
+            selected.Select();
+        }
+    }
+
+    /// <summary>
+    /// This function is called when the behaviour becomes disabled or inactive.
+    /// </summary>
+    void OnDisable()
+    {
+        if(selected) {
+            selected.Deselect();
+        }
+    }
 }

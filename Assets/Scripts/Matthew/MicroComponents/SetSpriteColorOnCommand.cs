@@ -6,15 +6,18 @@ using UnityEngine;
 public class SetSpriteColorOnCommand : MonoBehaviour {
     public Color colorToActivate;
     public bool activateOnStart = false;
-    private Color originalColor;
+    private Color originalColor = Color.white;
     private SpriteRenderer sprite;
     private bool colorApplied = false;
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
-    void Start() {
+    void OnEnable() {
         sprite = GetComponent<SpriteRenderer>();
+        if(!sprite) {
+            Debug.LogError("SpriteRenderer component was not found!");
+        }
         originalColor = sprite.color;
         colorApplied = false;
         if(activateOnStart) {
