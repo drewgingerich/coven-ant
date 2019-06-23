@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1252470854714879558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1551576286428959248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2227108486490119549}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EyesAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 5033301232650778785}
   - component: {fileID: 2058520476015278168}
   - component: {fileID: 7306527293087797914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightEyeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 3068044487746600701}
   - component: {fileID: 2810897741213152280}
   - component: {fileID: 5218012388427777037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftAntennaSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 4308022285393526742}
   - component: {fileID: 3076694545549655091}
   - component: {fileID: 974172353177670320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NoseSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6643199096592233270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NoseAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 4949196723197007644}
   - component: {fileID: 3673211721114519062}
   - component: {fileID: 6241785840228576692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MouthSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5069181930087230281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MouthAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3948679512849937113}
   - component: {fileID: 8532411041431487734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FaceSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,7 +688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1401224801936904868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AntennaAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,7 +719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6061992619989418425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 1976163084774980196}
   - component: {fileID: 8405698739689307423}
   - component: {fileID: 5683711942870559705}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightAntennaSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -864,7 +864,7 @@ GameObject:
   - component: {fileID: 3198667801806294012}
   - component: {fileID: 9014721896502073197}
   - component: {fileID: 5522513493499410609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftEyeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
