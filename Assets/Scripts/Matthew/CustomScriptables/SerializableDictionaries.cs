@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using Scriptables.GameEvents;
 
 [Serializable]
-public class StringEventDictionary : SerializableDictionary<string, UnityEvent> {}
+public class StringToUnityEventDictionary : SerializableDictionary<string, UnityEvent> {}
+[Serializable]
+public class StringToStringUnityEventDictionary : SerializableDictionary<string, StringUnityEvent> {}

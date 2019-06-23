@@ -1,0 +1,13 @@
+---
+version: 1
+commands:
+  Bu: 
+    name: "ButtonUp"
+    args:
+      - name: "ButtonID"
+        type: int
+  Bd:
+    name: "ButtonDown"
+    args:
+      - name: "ButtonID"
+        type: int

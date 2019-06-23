@@ -10,14 +10,13 @@ using UnityEngine.Events;
 /// </summary>
 [CreateAssetMenu(menuName = "Config/Serial Message Router")]
 public class SerialMessageInput : ScriptableObject {
-	public StringEventDictionary responses;
-	[Header("Hardcoded Responses")]
-	public UnityEvent onH;
-	public UnityEvent onP;
+	public StringToStringUnityEventDictionary responses;
 	public void OnMessageArrived(string msg) {
-		if( responses.ContainsKey(msg) ) {
-			Debug.Log("Activating response for Arduino button: '" + msg + "'");
-			responses[msg].Invoke();
+		String[] tokenizedMsg = msg.Split(' ');
+		
+		if( responses.ContainsKey(tokenizedMsg[0]) ) {
+			Debug.Log("Activating response for message: '" + tokenizedMsg[0] + "'");
+			responses[tokenizedMsg[0]].Invoke(msg);
 		} else {
 			Debug.LogWarning( "'" + msg + "'" + " has no defaults.");
 		}
