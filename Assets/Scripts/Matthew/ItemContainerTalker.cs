@@ -15,6 +15,8 @@ public class ItemContainerTalker : MonoBehaviour {
         // transform.BroadcastMessage("Apply");
         if(hasItem) {
             item.OnApply.Invoke();
+            Destroy(item);
+            SendMessageUpwards("ItemUsed", this, SendMessageOptions.RequireReceiver);
             hasItem = false;
             item = null;
         } else {

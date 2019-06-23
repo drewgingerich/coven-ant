@@ -11,6 +11,7 @@ public class ItemPopulator : MonoBehaviour {
     public bool populateItemsOnStart;
     public float durationBetweenEachItemSpawnAtStart;
     private List<ItemContainerTalker> containers = new List<ItemContainerTalker>();
+    
     public void PopulateSpecificContainer(ItemContainerTalker container) {
         if( container.hasItem ) {
             container.DestroyItem();
@@ -28,6 +29,11 @@ public class ItemPopulator : MonoBehaviour {
         container.AddItem(newItem);
         onItemSpawned.Raise(newItem.gameObject);
     }
+
+    public void ItemUsed(ItemContainerTalker container) {
+
+    }
+
     void Start() {
         if( containers.Count == 0 ) {
             transform.GetComponentsInChildren<ItemContainerTalker>(false, containers);
@@ -39,6 +45,7 @@ public class ItemPopulator : MonoBehaviour {
             StartCoroutine(CascadeSpawnItems());
         }
     }
+    
     
     IEnumerator CascadeSpawnItems() {
         foreach (ItemContainerTalker container in containers) {

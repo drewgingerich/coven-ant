@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1810335453769574297
+--- !u!1001 &8532473474827571845
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 6670660246354764739, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_Name
-      value: Green Potion
+      value: Potion to See You With
       objectReference: {fileID: 0}
     - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
@@ -70,17 +70,74 @@ PrefabInstance:
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.5828355
+      value: 0.905676
       objectReference: {fileID: 0}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.7122642
       objectReference: {fileID: 0}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.2980392
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 23a7d5f931994a246b56581c6ab4dc65,
+        type: 2}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ddd1ff72cd857e4c8d45283ad8a0753,
+        type: 2}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da3ea27ea6cdeed4989e56f59512ec31, type: 3}
