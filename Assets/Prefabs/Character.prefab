@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 6055484901815565625}
   - component: {fileID: 5033301232650778785}
   - component: {fileID: 2058520476015278168}
+  - component: {fileID: 7306527293087797914}
   m_Layer: 0
   m_Name: RightEyeSprite
   m_TagString: Untagged
@@ -194,6 +195,19 @@ MonoBehaviour:
   translation: {x: 0.15, y: 0}
   scale: {x: 1, y: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &7306527293087797914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058520476015278167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2f2a54d1bd04ba5a8cb8b8c556d6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  link: {fileID: 11400000, guid: 469539c63e9034cea8201b5e1d325265, type: 2}
 --- !u!1 &2810897741213152279
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +219,7 @@ GameObject:
   - component: {fileID: 339161389515995098}
   - component: {fileID: 3068044487746600701}
   - component: {fileID: 2810897741213152280}
+  - component: {fileID: 5218012388427777037}
   m_Layer: 0
   m_Name: LeftAntennaSprite
   m_TagString: Untagged
@@ -290,6 +305,19 @@ MonoBehaviour:
   translation: {x: -0.1, y: 0}
   scale: {x: 1, y: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &5218012388427777037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810897741213152279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2f2a54d1bd04ba5a8cb8b8c556d6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  link: {fileID: 11400000, guid: 91055a6b0bce2415c98674d2b090d33d, type: 2}
 --- !u!1 &3076694545549655090
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +329,7 @@ GameObject:
   - component: {fileID: 732749194190579506}
   - component: {fileID: 4308022285393526742}
   - component: {fileID: 3076694545549655091}
+  - component: {fileID: 974172353177670320}
   m_Layer: 0
   m_Name: NoseSprite
   m_TagString: Untagged
@@ -386,6 +415,19 @@ MonoBehaviour:
   translation: {x: 0, y: 0}
   scale: {x: 1, y: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &974172353177670320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3076694545549655090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2f2a54d1bd04ba5a8cb8b8c556d6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  link: {fileID: 11400000, guid: b63a348aabf1e402e88caf626b22298f, type: 2}
 --- !u!1 &3207200257752711160
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +470,7 @@ GameObject:
   - component: {fileID: 4706266243670087862}
   - component: {fileID: 4949196723197007644}
   - component: {fileID: 3673211721114519062}
+  - component: {fileID: 6241785840228576692}
   m_Layer: 0
   m_Name: MouthSprite
   m_TagString: Untagged
@@ -513,6 +556,19 @@ MonoBehaviour:
   translation: {x: 0, y: 0}
   scale: {x: 1, y: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &6241785840228576692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3673211721114519061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2f2a54d1bd04ba5a8cb8b8c556d6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  link: {fileID: 11400000, guid: 1e6065cd3b2d64b77959fd71f9e62ec7, type: 2}
 --- !u!1 &5069951266641771870
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +753,7 @@ GameObject:
   - component: {fileID: 6419565624553697765}
   - component: {fileID: 1976163084774980196}
   - component: {fileID: 8405698739689307423}
+  - component: {fileID: 5683711942870559705}
   m_Layer: 0
   m_Name: RightAntennaSprite
   m_TagString: Untagged
@@ -782,6 +839,19 @@ MonoBehaviour:
   translation: {x: 0.1, y: 0}
   scale: {x: 1, y: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &5683711942870559705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8405698739689307422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2f2a54d1bd04ba5a8cb8b8c556d6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  link: {fileID: 11400000, guid: 43460d0f2d0f34b579cc8d77b98d7c9f, type: 2}
 --- !u!1 &9014721896502073196
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +863,7 @@ GameObject:
   - component: {fileID: 5935175575816627956}
   - component: {fileID: 3198667801806294012}
   - component: {fileID: 9014721896502073197}
+  - component: {fileID: 5522513493499410609}
   m_Layer: 0
   m_Name: LeftEyeSprite
   m_TagString: Untagged
@@ -878,3 +949,16 @@ MonoBehaviour:
   translation: {x: -0.15, y: 0}
   scale: {x: 1, y: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &5522513493499410609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014721896502073196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2f2a54d1bd04ba5a8cb8b8c556d6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  link: {fileID: 11400000, guid: 530c1ddf44d82495a88ec361e5be46c5, type: 2}
