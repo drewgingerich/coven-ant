@@ -23,7 +23,8 @@ using System.Threading;
  * on the integrity of the message. It's up to the one that makes sense of the
  * data.
  */
-public class SerialController : MonoBehaviour
+ [CreateAssetMenu(menuName = "Config/Serial Controller")]
+public class SerialController : ScriptableObject
 {
 	[Tooltip("Automatically connects to the first SerialPort")]
 	public bool guessPortname = true;
@@ -103,7 +104,7 @@ public class SerialController : MonoBehaviour
 	// special messages that mark the start/end of the communication with the
 	// device.
 	// ------------------------------------------------------------------------
-	void Update()
+	public void Update()
 	{
 		if( currentCooldown > 0 ) {
 			currentCooldown -= Time.deltaTime;

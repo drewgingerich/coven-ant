@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450fd395abc524542ac0143a30e06409, type: 3}
+  m_Name: EyeLeftScale-0.5
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 530c1ddf44d82495a88ec361e5be46c5, type: 2}
+  additive: 1
+  scale: {x: -0.5, y: -0.5}
