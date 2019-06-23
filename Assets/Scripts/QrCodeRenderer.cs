@@ -12,7 +12,6 @@ public class QrCodeRenderer : MonoBehaviour
     public void DisplayQrCode(string text)
     {
         var myQR = GenerateQR(text);
-
         var sprite = Sprite.Create(myQR, new Rect(0.0f, 0.0f, myQR.width, myQR.height), new Vector2(0.5f, 0.5f));
         qrImage.sprite = sprite;
     }
