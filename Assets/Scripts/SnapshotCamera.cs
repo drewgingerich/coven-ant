@@ -2,9 +2,6 @@
 
 public class SnapshotCamera : MonoBehaviour
 {
-    public int resWidth = 1920;
-    public int resHeight = 1080;
-
     [System.NonSerialized]
     public new Camera camera;
 
