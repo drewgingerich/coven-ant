@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Effects/ColorChange")]
-public class ColorEffect : Effect
+[CreateAssetMenu(menuName = "Effects/ColorSet")]
+public class ColorSetEffect : Effect
 {
     public Color color = Color.white;
     
