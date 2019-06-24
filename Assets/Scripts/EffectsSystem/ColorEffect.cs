@@ -1,17 +1,12 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Effects/ColorChange")]
-public class ColorEffect : AdditiveEffect
+public class ColorEffect : Effect
 {
     public Color color = Color.white;
-
-    protected override void AbsoluteAction(FeatureController feature)
+    
+    protected override void Action(FeatureController feature)
     {
         feature.SetColor(color);
-    }
-
-    protected override void AdditiveAction(FeatureController feature)
-    {
-        feature.ShiftColor(color);
     }
 }
