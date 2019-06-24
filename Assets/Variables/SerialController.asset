@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac72005a6a1ca443a75a189d673249c, type: 3}
+  m_Name: SerialController
+  m_EditorClassIdentifier: 
+  guessPortname: 1
+  baudRate: 115200
+  messageListener: {fileID: 11400000, guid: 7f0e07706da50d947b517087059efefc, type: 2}
+  cooldown: 0.001
+  currentCooldown: 0.01
+  reconnectionDelay: 1000
+  maxUnreadMessages: 2
