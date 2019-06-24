@@ -57,13 +57,47 @@ public class SerialController : ScriptableObject
 	protected Thread thread;
 	protected SerialThreadLines serialThread;
 
+	/// <summary>
+	/// This function is called when the object becomes enabled and active.
+	/// </summary>
+	void OnEnable()
+	{
+			#if !UNITY_EDITOR
+			Enable();
+			#endif
+	}
+
+	/// <summary>
+	/// This function is called when the behaviour becomes disabled or inactive.
+	/// </summary>
+	void OnDisable()
+	{
+			#if !UNITY_EDITOR
+			Disable();
+			#endif
+	}
+
+	public void EnableConnection()
+	{
+		#if UNITY_EDITOR
+		Enable();
+		#endif
+	}
+
+	public void DisableConnection()
+	{
+		#if UNITY_EDITOR
+		Disable();
+		#endif
+	}
+
 
 	// ------------------------------------------------------------------------
 	// Invoked whenever the SerialController gameobject is activated.
 	// It creates a new thread that tries to connect to the serial device
 	// and start reading from it.
 	// ------------------------------------------------------------------------
-	void OnEnable()
+	void Enable()
 	{
 		serialThread = new SerialThreadLines(portName, baudRate, reconnectionDelay,maxUnreadMessages, guessPortname);
 		thread = new Thread(new ThreadStart(serialThread.RunForever));
@@ -74,7 +108,7 @@ public class SerialController : ScriptableObject
 	// Invoked whenever the SerialController gameobject is deactivated.
 	// It stops and destroys the thread that was reading from the serial device.
 	// ------------------------------------------------------------------------
-	void OnDisable()
+	void Disable()
 	{
 		// If there is a user-defined tear-down function, execute it before
 		// closing the underlying COM port.

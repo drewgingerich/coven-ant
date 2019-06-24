@@ -2,6 +2,8 @@
 using UnityEngine.Events;
 
 public class CharacterCreatorItem : MonoBehaviour {
+
+		public string itemName;
     public UnityEvent OnApply;
 		public UnityEvent OnHover;
 		public UnityEvent OnStopHover;
@@ -11,6 +13,6 @@ public class CharacterCreatorItem : MonoBehaviour {
 		/// This function is called when the MonoBehaviour will be destroyed.
 		/// </summary>
 		void OnDestroy() {
-				OnDiscard.Invoke();
+			OnDiscard.Invoke();
 		}
 }

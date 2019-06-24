@@ -6,7 +6,6 @@ public class PulsateOnCommand : MonoBehaviour
     
     public bool startPulsating = false;
     private bool pulsating = false;
-   
     public Vector3 rotationalRange;
     public float speed = 2f;
     [Range(0,1)]
@@ -28,18 +27,29 @@ public class PulsateOnCommand : MonoBehaviour
      }
 
      public void StopPulsating() {
-         if(pulsating) {
+        if(pulsating) {
             pulsating = false;
             transform.rotation = originalRotation;
             target = Vector3.zero;
         }
-     }
+    }
+
+    ///
+    ///
+    ///
+
+    public void PulsateOneshot(float duration, AnimationCurve animation) {
+
+    }
     
+    ///
+
     void Start() {
         if( startPulsating ) {
             StartPulsating();
         }
     }
+
 
     void Update() {
         if(pulsating) {
