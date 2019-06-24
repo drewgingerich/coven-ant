@@ -62,20 +62,20 @@ public class FeatureController : MonoBehaviour
         SetColor(color);
     }
 
-    public void Rotate(float value)
-    {
-        SetRotation(rotation + value);
-    }
-
     public void SetRotation(float value)
     {
         featureTransform.localRotation = Quaternion.Euler(0, 0, value);
         rotation = value;
     }
 
-    public void Translate(Vector2 value)
+    public void AddRotation(float value)
     {
-        SetTranslation(translation + value);
+        SetRotation(rotation + value);
+    }
+
+    public void MultiplyRotation(float value)
+    {
+        SetRotation(rotation * value);
     }
 
     public void SetTranslation(Vector2 value)
@@ -84,9 +84,14 @@ public class FeatureController : MonoBehaviour
         translation = value;
     }
 
-    public void Scale(Vector2 value)
+    public void AddTranslation(Vector2 value)
     {
-        SetScale(scale + value);
+        SetTranslation(translation + value);
+    }
+
+    public void MultiplyTranslation(Vector2 value)
+    {
+        SetTranslation(translation * value);
     }
 
     public void SetScale(Vector2 value)
@@ -95,15 +100,25 @@ public class FeatureController : MonoBehaviour
         scale = value;
     }
 
-    public void ShiftColor(Color value)
+    public void AddScale(Vector2 value)
     {
-        SetColor(color + value);
+        SetScale(scale + value);
+    }
+
+    public void MultiplyScale(Vector2 value)
+    {
+        SetScale(scale * value);
     }
 
     public void SetColor(Color value)
     {
         featureSprite.color = value;
         color = value;
+    }
+
+    public void ShiftColor(Color value)
+    {
+        SetColor(color + value);
     }
 
     public void SetSprite(Sprite sprite)

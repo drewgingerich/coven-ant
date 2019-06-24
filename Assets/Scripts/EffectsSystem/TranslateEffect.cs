@@ -1,17 +1,21 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Effects/Translation")]
-public class TranslationEffect : AdditiveEffect
+public class TranslationEffect : TransformEffect
 {
     public Vector2 translation = Vector2.one;
 
-    protected override void AbsoluteAction(FeatureController feature)
+    protected override void SetAction(FeatureController feature)
     {
         feature.SetTranslation(translation);
     }
 
-    protected override void AdditiveAction(FeatureController feature)
+    protected override void AddAction(FeatureController feature)
     {
-        feature.Translate(translation);
+        feature.AddTranslation(translation);
+    }
+    protected override void MultiplyAction(FeatureController feature)
+    {
+        feature.MultiplyTranslation(translation);
     }
 }

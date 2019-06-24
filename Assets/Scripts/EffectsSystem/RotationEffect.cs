@@ -1,17 +1,22 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Effects/Rotation")]
-public class RotateEffect : AdditiveEffect
+public class RotateEffect : TransformEffect
 {
     public float rotation = 0;
 
-    protected override void AbsoluteAction(FeatureController feature)
+    protected override void SetAction(FeatureController feature)
     {
         feature.SetRotation(rotation);
     }
 
-    protected override void AdditiveAction(FeatureController feature)
+    protected override void AddAction(FeatureController feature)
     {
-        feature.Rotate(rotation);
+        feature.AddRotation(rotation);
+    }
+
+    protected override void MultiplyAction(FeatureController feature)
+    {
+        feature.MultiplyRotation(rotation);
     }
 }
