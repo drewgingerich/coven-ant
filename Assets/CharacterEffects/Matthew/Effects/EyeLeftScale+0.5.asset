@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EyeLeftScale+0.5
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 530c1ddf44d82495a88ec361e5be46c5, type: 2}
-  additive: 1
+  mode: 1
   scale: {x: 0.5, y: 0.5}

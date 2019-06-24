@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MouthScale+0.5
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 1e6065cd3b2d64b77959fd71f9e62ec7, type: 2}
-  additive: 1
-  scale: {x: 0.5, y: 0.5}
+  mode: 1
+  scale: {x: 1.5, y: 1.5}
