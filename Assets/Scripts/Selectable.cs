@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class Selectable : MonoBehaviour
 {
     public UnityEvent OnUse;
-    bool isHovered;
+    public bool isHovered;
     public UnityEvent OnHover;
     public UnityEvent OnDeHover;
 
@@ -15,7 +15,6 @@ public class Selectable : MonoBehaviour
 
     public void Select()
     {
-        Debug.Log("Hovering!");
         isHovered = true;
         OnHover.Invoke();
     }

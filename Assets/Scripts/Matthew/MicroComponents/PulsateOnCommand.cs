@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class PulsateOnCommand : MonoBehaviour
@@ -7,9 +8,11 @@ public class PulsateOnCommand : MonoBehaviour
     public bool startPulsating = false;
     private bool pulsating = false;
     public Vector3 rotationalRange;
+    private float currentIntensity = 1.0f;
     public float speed = 2f;
     [Range(0,1)]
     public float accelerationPercentage = 0.5f;
+    public AnimationCurve oneshotAnimationCurve;
     private Vector3 relativeRotation;
     private float runTime = 0.0f;
     private Vector3 target;
@@ -34,17 +37,24 @@ public class PulsateOnCommand : MonoBehaviour
         }
     }
 
-    ///
-    ///
-    ///
 
-    public void PulsateOneshot(float duration, AnimationCurve animation) {
+    public void PulsateOneshot(float duration ) {
+        StopAllCoroutines();
+        StartCoroutine(PulsateOneshotRoutine(duration));
+    }
 
+    IEnumerator PulsateOneshotRoutine(float duration ) {
+        StartPulsating();
+        for( float time = 0.0f; time < duration; time += Time.deltaTime ) {
+            currentIntensity = oneshotAnimationCurve.Evaluate(time/duration);
+            yield return null;
+        }
+        StopPulsating();
+        currentIntensity = 1.0f;
     }
     
-    ///
-
     void Start() {
+        currentIntensity = 1.0f;
         if( startPulsating ) {
             StartPulsating();
         }
@@ -54,7 +64,7 @@ public class PulsateOnCommand : MonoBehaviour
     void Update() {
         if(pulsating) {
             for( int i = 0; i < 3; i++ ) {
-                target[i] = rotationalRange[i] * Mathf.Sin(Time.time * speed);
+                target[i] = rotationalRange[i] * Mathf.Sin(Time.time * speed) * currentIntensity;
                 if( invertDirection ) {
                     target[i] = -target[i];
                 }

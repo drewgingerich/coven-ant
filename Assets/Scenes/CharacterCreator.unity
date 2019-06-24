@@ -407,7 +407,7 @@ PrefabInstance:
         type: 3}
       propertyPath: selected
       value: 
-      objectReference: {fileID: 1028897770}
+      objectReference: {fileID: 621070691}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8bfabf9baada4abb936c6dc06cd2ff8, type: 3}
 --- !u!1 &278607187 stripped
@@ -645,6 +645,9 @@ MonoBehaviour:
   onItemSpawned: {fileID: 11400000, guid: 85f3d3bd28bfdff4e877a6ef5a2438a0, type: 2}
   libraryOfItems: {fileID: 11400000, guid: 49997acb50a42154fbec4d351c6eb0f6, type: 2}
   populateItemsOnStart: 1
+  refillContainerOnUse: 1
+  containerEmptiedEvent: {fileID: 11400000, guid: 4968ebfa328733640b8a03a57f5c4a37,
+    type: 2}
   durationBetweenEachItemSpawnAtStart: 0.1
 --- !u!4 &621070689 stripped
 Transform:

@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450fd395abc524542ac0143a30e06409, type: 3}
-  m_Name: EyeRightScale+0.5
+  m_Script: {fileID: 11500000, guid: 5ee500a699421a74ab38acb7b5a4fb73, type: 3}
+  m_Name: ContainerEmptied
   m_EditorClassIdentifier: 
-  target: {fileID: 11400000, guid: 469539c63e9034cea8201b5e1d325265, type: 2}
-  mode: 1
-  scale: {x: 1.5, y: 1.5}
