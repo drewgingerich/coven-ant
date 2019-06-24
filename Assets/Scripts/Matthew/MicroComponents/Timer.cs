@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
     {
         timerRunning = true;
         OnTimerStart.Invoke();
-        if( timeRemaining == 0 ) {
+        if( timeRemaining <= 0 ) {
             timeRemaining = originalTimeRemaining;
         }
     }
@@ -54,6 +54,9 @@ public class Timer : MonoBehaviour
             if( timeRemaining < 0 ) {
                 timeRemaining = 0;
                 OnTimerEnd.Invoke();
+                if(repeatTimer) {
+                    BeginTimer();
+                }
             }
         }
     }
