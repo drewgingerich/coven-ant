@@ -116,7 +116,7 @@ public class FeatureController : MonoBehaviour
         color = value;
     }
 
-    public void ShiftColor(Color value)
+    public void AddColor(Color value)
     {
         SetColor(color + value);
     }
