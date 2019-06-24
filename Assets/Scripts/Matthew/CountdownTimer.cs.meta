@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/Matthew/CountdownTimer.cs.meta
 guid: 2dc8495add1f09143864db7feb6c1e58
+=======
+guid: b766d08851589514b97afb23c6f30a70
+>>>>>>> 0cad698bb3ea7ffb18adba0d8cd0fee06da399cb:Assets/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

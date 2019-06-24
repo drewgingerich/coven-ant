@@ -15,6 +15,7 @@ public class SceneLoader : MonoBehaviour
         FadeManager.Instance.FadeOut(1, Color.black, () =>
         {
             StartCoroutine(LoadAsyncScene(sceneName));
+            MusicManager.Instance.PlaySceneMusic(sceneName);
         });
     }
 
@@ -27,5 +28,5 @@ public class SceneLoader : MonoBehaviour
         {
             yield return null;
         }
-    }
+	}
 }

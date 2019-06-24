@@ -13,11 +13,11 @@ public class ImageUploader : MonoBehaviour
     public string baseUploadUrl;
 
     [System.Serializable]
-    public class QrCodeEvent : UnityEvent<string>
+    public class UploadCompleteEvent : UnityEvent<string>
     {
     }
 
-    public QrCodeEvent generateQrCode;
+    public UploadCompleteEvent onUploadComplete;
 
     public void UploadImage(Texture2D texture)
     {
@@ -27,18 +27,18 @@ public class ImageUploader : MonoBehaviour
         StartCoroutine(
         Upload(base64Image, (response) =>
         {
-            if (generateQrCode != null)
+            if (onUploadComplete != null)
             {
-                Debug.Log("invoking generateQrCode!");
-                generateQrCode.Invoke(response);
+                Debug.Log("invoking onUploadComplete!");
+                onUploadComplete.Invoke(response);
             } else
             {
-                Debug.Log("generateQrCode = null");
+                Debug.Log("onUploadComplete = null");
             }
         }));
     }
 
-    private IEnumerator Upload(string base64Image, Action<string> onUploadCompleted)
+    IEnumerator Upload(string base64Image, Action<string> onUploadCompleted)
     {
         using (var wClient = new WebClient())
         {
