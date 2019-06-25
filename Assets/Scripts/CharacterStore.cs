@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Globalization;
-using System.Linq;
 using System.Net;
-using System.Text;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class UrlStore : MonoBehaviour
+public class CharacterStore : MonoBehaviour
 {
     [System.Serializable]
-    public class GetKeysCompleteEvent : UnityEvent<List<string>>
+    public class GetCharactersCompleteEvent : UnityEvent<List<string>>
     {
     }
 
@@ -21,19 +17,19 @@ public class UrlStore : MonoBehaviour
     public string bucketId;
     public string secretKey;
 
-    public GetKeysCompleteEvent onGetKeysComplete;
-    public UnityEvent onSetKeyComplete;
+    public GetCharactersCompleteEvent onGetCharactersComplete;
+    public UnityEvent onSetCharacterComplete;
 
     const string DATE_FORMAT = "yyyyMMddHHmmss";
 
-    public void GetUrls()
+    public void GetCharacters()
     {
-        StartCoroutine(GetKeys((response) =>
+        StartCoroutine(StartGettingCharacters((response) =>
         {
-            if (onGetKeysComplete != null)
+            if (onGetCharactersComplete != null)
             {
                 Debug.Log("invoking onGetKeysComplete!");
-                onGetKeysComplete.Invoke(response);
+                onGetCharactersComplete.Invoke(response);
             }
             else
             {
@@ -42,14 +38,14 @@ public class UrlStore : MonoBehaviour
         }));
     }
 
-    public void SetUrl(string value)
+    public void SetCharacter(string url, string givenName)
     {
-        StartCoroutine(SetKey(value, () =>
+        StartCoroutine(StartSettingCharacter(url, givenName, () =>
         {
-            if (onSetKeyComplete != null)
+            if (onSetCharacterComplete != null)
             {
                 Debug.Log("invoking onSetKeyComplete!");
-                onSetKeyComplete.Invoke();
+                onSetCharacterComplete.Invoke();
             }
             else
             {
@@ -58,41 +54,37 @@ public class UrlStore : MonoBehaviour
         }));
     }
 
-    IEnumerator GetKeys(Action<List<string>> onGetKeysCompleted)
+    IEnumerator StartGettingCharacters(Action<List<string>> onGetKeysCompleted)
     {
         using (var wClient = new WebClient())
         {
             var fullApiUrl = $"{apiUrl}/{bucketId}/?values=true&format=json&key={secretKey}";
             // curl 'https://kvdb.io/BiqhxhTjZkvNFBus9WC7T2/hello' - d 'world'
 
-            //var provider = CultureInfo.InvariantCulture;
-            //var key = DateTime.Now.ToString(DATE_FORMAT);
-            //var date = DateTime.ParseExact(key, DATE_FORMAT, provider);
-            //Debug.Log(date);
-
             var jsonString = wClient.DownloadString(fullApiUrl);
 
             Debug.Log("key / value list: " + jsonString);
 
             var jankyDictionary = JsonConvert.DeserializeObject<List<List<string>>>(jsonString);
-            var urls = new List<string>();
+            var characters = new List<string>();
 
             foreach(var keyPair in jankyDictionary)
             {
-                urls.Add(keyPair[1]);
+                characters.Add(keyPair[1]);
             }
 
-            onGetKeysCompleted(urls);
+            onGetKeysCompleted(characters);
         }
         yield return null;
     }
 
-    IEnumerator SetKey(string value, Action onSetKeyCompleted)
+    IEnumerator StartSettingCharacter(string url, string givenName, Action onSetKeyCompleted)
     {
         using (var wClient = new WebClient())
         {
             var key = DateTime.Now.ToString(DATE_FORMAT);
             var fullApiUrl = $"{apiUrl}/{bucketId}/{key}";
+            var value = $"{url},{givenName},{DateTime.Today.ToShortDateString()}";
             var jsonString = wClient.UploadString(fullApiUrl, value);
 
             onSetKeyCompleted();
