@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Scriptables.GameEvents;
 
 public class SelectableNavigator : MonoBehaviour
 {

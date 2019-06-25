@@ -9,6 +9,9 @@ public class ItemPopulator : MonoBehaviour {
     public PrefabList libraryOfItems;
     [Header("Item Spawning")]
     public bool populateItemsOnStart;
+    private bool cascadeSpawning = false;
+    public bool refillContainerOnUse;
+    public GameObjectGameEvent containerEmptiedEvent;
     public float durationBetweenEachItemSpawnAtStart;
     private List<ItemContainerTalker> containers = new List<ItemContainerTalker>();
     
@@ -17,21 +20,28 @@ public class ItemPopulator : MonoBehaviour {
             container.DestroyItem();
         }
         int randomItem = Random.Range(0, libraryOfItems.Value.Count);
-        CharacterCreatorItem newItem = Instantiate(
+        Debug.Log("For container '" + container.name + "', Selecting item #" + randomItem + ": " + libraryOfItems.Value[randomItem].name );
+        
+        GameObject newItemGameObject = Instantiate(
             libraryOfItems.Value[randomItem],
             container.transform.position,
             container.transform.rotation,
             container.transform
-        ).GetComponent<CharacterCreatorItem>();
+        );
+
+        CharacterCreatorItem newItem = newItemGameObject.GetComponent<CharacterCreatorItem>();
         if(newItem == null) {
-            Debug.LogError("Item did not contain a CharacterCreatorItem");
+            Debug.LogError("Item " + newItem.name + " did not contain a CharacterCreatorItem");
+            return;
         }
         container.AddItem(newItem);
         onItemSpawned.Raise(newItem.gameObject);
     }
 
     public void ItemUsed(ItemContainerTalker container) {
-
+        if( refillContainerOnUse ) {
+            PopulateSpecificContainer(container);
+        }
     }
 
     void Start() {
@@ -48,9 +58,11 @@ public class ItemPopulator : MonoBehaviour {
     
     
     IEnumerator CascadeSpawnItems() {
+        cascadeSpawning = true;
         foreach (ItemContainerTalker container in containers) {
             PopulateSpecificContainer(container);
             yield return new WaitForSeconds(durationBetweenEachItemSpawnAtStart);
         }
+        cascadeSpawning = false;
     }
 }

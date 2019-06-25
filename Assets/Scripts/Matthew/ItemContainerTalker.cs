@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Scriptables.GameEvents;
 
+[RequireComponent(typeof(Selectable))]
 public class ItemContainerTalker : MonoBehaviour {
     [SerializeField]
     private GameEvent invalidSelection;
@@ -11,14 +12,15 @@ public class ItemContainerTalker : MonoBehaviour {
      */
     public bool hasItem;
     private CharacterCreatorItem item;
+    private Selectable selectable;
     public void ActivateItem() {
         // transform.BroadcastMessage("Apply");
         if(hasItem) {
             item.OnApply.Invoke();
-            Destroy(item);
+            if(item == null) {
+                hasItem = false;
+            }
             SendMessageUpwards("ItemUsed", this, SendMessageOptions.RequireReceiver);
-            hasItem = false;
-            item = null;
         } else {
             if( invalidSelection )
                 invalidSelection.Raise();
@@ -26,8 +28,12 @@ public class ItemContainerTalker : MonoBehaviour {
         }
     }
     public void AddItem( CharacterCreatorItem newItem ) {
+        Debug.Log("Item " + newItem.itemName + " was refreshed!");
         hasItem = true;
         item = newItem;
+        if( selectable.isHovered ) {
+            StartHoverItem();
+        }
     }
 
     public void StartHoverItem() {
@@ -60,4 +66,12 @@ public class ItemContainerTalker : MonoBehaviour {
     //         return item != null && item.isActiveAndEnabled;
     //     }
     // }
+
+    /// <summary>
+    /// This function is called when the object becomes enabled and active.
+    /// </summary>
+    void OnEnable()
+    {
+        selectable = GetComponent<Selectable>();
+    }
 }
