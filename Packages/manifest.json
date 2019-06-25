@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.2d.psdimporter": "1.0.0-preview.4",
     "com.unity.analytics": "3.2.2",
     "com.unity.collab-proxy": "1.2.15",
     "com.unity.package-manager-ui": "2.0.7",
