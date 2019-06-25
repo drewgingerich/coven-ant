@@ -10,7 +10,7 @@ using DG.Tweening;
 public class Gallery : MonoBehaviour
 {
     public GameObject galleryImagePrefab;
-    public int scrollWaitInSeconds = 1;
+    //public int scrollWaitInSeconds = 1;
 
     [Range(0, 2)]
     public float sidePositionPercentage = 1f;
@@ -35,9 +35,9 @@ public class Gallery : MonoBehaviour
         m_FarLeftX = m_LeftX - (m_RightX / 2);
     }
 
-    public void Initialize(List<string> imageUrls)
+    public void Initialize(List<string> characters)
     {
-        StartCoroutine(LoadGallery(imageUrls));
+        StartCoroutine(LoadGallery(characters));
     }
 
     // Update is called once per frame
@@ -142,13 +142,17 @@ public class Gallery : MonoBehaviour
         }
     }
 
-    IEnumerator LoadGallery(List<string> imageUrls)
+    IEnumerator LoadGallery(List<string> characters)
     {
         //var lastTransformX = transform.position.x;
 
-        for (var i = 0; i < imageUrls.Count; i++)
+        for (var i = 0; i < characters.Count; i++)
         {
-            var url = imageUrls[i];
+            var character = characters[i].Split(',');
+            var url = character[0];
+            var characterName = character.ElementAtOrDefault(1);
+            var createdOn = character.ElementAtOrDefault(2);
+
             var www = UnityWebRequestTexture.GetTexture(url);
             yield return www.SendWebRequest();
 
@@ -161,6 +165,9 @@ public class Gallery : MonoBehaviour
                 var myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
                 var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f));
                 var child = Instantiate(galleryImagePrefab, transform);
+
+                var childText = child.GetComponentInChildren<Text>();
+                childText.text = $"{characterName} - {createdOn}";
                 
                 var childImage = child.GetComponent<Image>();
                 childImage.sprite = sprite;
