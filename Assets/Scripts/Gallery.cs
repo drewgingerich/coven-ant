@@ -9,12 +9,12 @@ using DG.Tweening;
 
 public class Gallery : MonoBehaviour
 {
-    public GameObject galleryImagePrefab;
+    public GameObject galleryImagePrefabMid;
+    public GameObject galleryImagePrefabLeft;
+    public GameObject galleryImagePrefabRight;
     public PulsateOnCommand leftArrow;
     public PulsateOnCommand rightArrow;
-
-    [Range(0, 2)]
-    public float sidePositionPercentage = 1f;
+    public float scrollSeconds;
 
     int m_CurrentImageIndex = 0;
     List<RectTransform> m_ImageTransforms = new List<RectTransform>();
@@ -26,15 +26,6 @@ public class Gallery : MonoBehaviour
     float m_FarRightX;
 
     bool m_IsScrolling = false;
-
-    void Start()
-    {
-        m_RightX = Screen.width * sidePositionPercentage;
-        m_LeftX = 0f;
-
-        m_FarRightX = m_RightX * 1.5f;
-        m_FarLeftX = m_LeftX - (m_RightX / 2);
-    }
 
     public void Initialize(List<string> characters)
     {
@@ -80,26 +71,26 @@ public class Gallery : MonoBehaviour
         else
         {
             // move current image
-            m_ImageTransforms[m_CurrentImageIndex].DOMoveX(transform.position.x, 1f).OnComplete(() =>
+            m_ImageTransforms[m_CurrentImageIndex].DOLocalMoveX(0f, scrollSeconds).OnComplete(() =>
             {
                 m_IsScrolling = false;
             });
 
             // move previous image
-            m_ImageTransforms[prevImageIndex].DOMoveX(m_RightX, 1f);
+            m_ImageTransforms[prevImageIndex].DOLocalMoveX(m_RightX, scrollSeconds);
 
             // move previous previous image
             var prevPrevImageIndex = prevImageIndex + 1;
             if (prevPrevImageIndex < m_ImageTransforms.Count)
             {
-                m_ImageTransforms[prevPrevImageIndex].DOMoveX(m_FarRightX, 1f);
+                m_ImageTransforms[prevPrevImageIndex].DOLocalMoveX(m_FarRightX, scrollSeconds);
             }
 
             // move next image
             var nextImageIndex = m_CurrentImageIndex - 1;
             if (nextImageIndex >= 0)
             {
-                m_ImageTransforms[nextImageIndex].DOMoveX(m_LeftX, 1f);
+                m_ImageTransforms[nextImageIndex].DOLocalMoveX(m_LeftX, scrollSeconds);
             }
         }
     }
@@ -123,26 +114,26 @@ public class Gallery : MonoBehaviour
         else
         {
             // move current image
-            m_ImageTransforms[m_CurrentImageIndex].DOMoveX(transform.position.x, 1f).OnComplete(() =>
+            m_ImageTransforms[m_CurrentImageIndex].DOLocalMoveX(0f, scrollSeconds).OnComplete(() =>
             {
                 m_IsScrolling = false;
             });
 
             // move previous image
-            m_ImageTransforms[prevImageIndex].DOMoveX(m_LeftX, 1f);
+            m_ImageTransforms[prevImageIndex].DOLocalMoveX(m_LeftX, scrollSeconds);
 
             // move previous previous image
             var prevPrevImageIndex = prevImageIndex - 1;
             if (prevPrevImageIndex >= 0)
             {
-                m_ImageTransforms[prevPrevImageIndex].DOMoveX(m_FarLeftX, 1f);
+                m_ImageTransforms[prevPrevImageIndex].DOLocalMoveX(m_FarLeftX, scrollSeconds);
             }
 
             // move next image
             var nextImageIndex = m_CurrentImageIndex + 1;
             if (nextImageIndex < m_ImageTransforms.Count)
             {
-                m_ImageTransforms[nextImageIndex].DOMoveX(m_RightX, 1f);
+                m_ImageTransforms[nextImageIndex].DOLocalMoveX(m_RightX, scrollSeconds);
             }
         }
     }
@@ -169,23 +160,49 @@ public class Gallery : MonoBehaviour
             {
                 var myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
                 var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f));
-                var child = Instantiate(galleryImagePrefab, transform);
+                GameObject child = null;
 
-                var childText = child.GetComponentInChildren<Text>();
-                childText.text = $"{characterName} - {createdOn}";
-                
-                var childImage = child.GetComponent<Image>();
-                childImage.sprite = sprite;
+                // Use the prefab with the extra left image if this is the first portrait,
+                // the default prefab for all of the middle portraits,
+                // and the prefab with the extra right image if this is the last portrait
+                if (i == 0)
+                {
+                    child = Instantiate(galleryImagePrefabLeft, transform);
+                } else if (i == characters.Count - 1)
+                {
+                    child = Instantiate(galleryImagePrefabRight, transform);
+                } else
+                {
+                    child = Instantiate(galleryImagePrefabMid, transform);
+                }
 
                 var childRectTransform = child.GetComponent<RectTransform>();
                 m_ImageTransforms.Add(childRectTransform);
 
+                if (i == 0)
+                {
+                    m_RightX = m_ImageTransforms[0].rect.width;
+                    m_LeftX = m_RightX * -1;
+
+                    m_FarRightX = m_RightX * 2;
+                    m_FarLeftX = m_LeftX * 2;
+                }
+
+                var childText = child.GetComponentInChildren<Text>();
+                childText.text = $"{characterName} - {createdOn}";
+
+                var childImage = child.GetComponentsInChildren<Image>()[1];
+                childImage.sprite = sprite;
+
                 if (i > 1)
                 {
-                    childRectTransform.DOMoveX(m_FarRightX, 0f);
+                    childRectTransform.DOLocalMoveX(m_FarRightX, 0f);
                 } else if (i == 1)
                 {
-                    childRectTransform.DOMoveX(m_RightX, 0f);
+                    childRectTransform.DOLocalMoveX(m_RightX, 0f);
+                } else
+                {
+                    childRectTransform.DOLocalMoveX(0f, 0f);
                 }
             }
         }
