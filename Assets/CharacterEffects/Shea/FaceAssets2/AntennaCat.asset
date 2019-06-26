@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AntennaCat
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: c4960f9fa3d024dbebc22c357f8145e3, type: 2}
-  sprite: {fileID: 21300044, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}
+  sprite: {fileID: 21300094, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}

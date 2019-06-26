@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MouthStock
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 1e6065cd3b2d64b77959fd71f9e62ec7, type: 2}
-  sprite: {fileID: 21300018, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}
+  sprite: {fileID: 21300044, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}

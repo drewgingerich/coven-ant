@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EyesStitch
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 728139323bce9492bbb511fe2508ab88, type: 2}
-  sprite: {fileID: 21300034, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}
+  sprite: {fileID: 21300084, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}

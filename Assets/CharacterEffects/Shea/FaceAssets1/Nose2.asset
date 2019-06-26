@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Nose2
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: b63a348aabf1e402e88caf626b22298f, type: 2}
-  sprite: {fileID: 21300008, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}
+  sprite: {fileID: 21300034, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}

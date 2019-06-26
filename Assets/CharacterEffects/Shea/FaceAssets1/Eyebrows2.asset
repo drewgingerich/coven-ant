@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Eyebrows2
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 23c91428d9e634061bcc8380d4a29b48, type: 2}
-  sprite: {fileID: 21300002, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}
+  sprite: {fileID: 21300028, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}

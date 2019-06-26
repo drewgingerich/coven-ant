@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Eyes2
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 728139323bce9492bbb511fe2508ab88, type: 2}
-  sprite: {fileID: 21300004, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}
+  sprite: {fileID: 21300030, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}
