@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CharacterCreator.unity
     guid: 2dc4e8e3548744ddb9cb46683f0f0d67
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
+    path: Assets/Scenes/HallOfFame.unity
     guid: d64677475e8cb4c1aaf70dcbab02cabf
   m_configObjects: {}

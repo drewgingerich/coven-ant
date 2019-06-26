@@ -25,7 +25,7 @@ public class MusicManager : MonoBehaviour
         {
             Instance = this;
         }
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
@@ -59,7 +59,7 @@ public class MusicManager : MonoBehaviour
             case "Introduction":
                 PlayTrack(introMusic);
                 break;
-            case "GameOver":
+            case "HallOfFame":
                 PlayTrack(hallOfFame);
                 break;
             default:

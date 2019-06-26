@@ -279,12 +279,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 7ed1a812c774d4e378d9533ecf987ff0, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 5dc3a938fc1e546088a0f4f8737d6a5e, type: 3}
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 110
+    m_MinSize: 0
+    m_MaxSize: 150
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -760,6 +760,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1819012480}
+  - {fileID: 1823391724}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -805,8 +806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1179, y: -874}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 1447.9, y: -874}
+  m_SizeDelta: {x: 97.4, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1819012481
 MonoBehaviour:
@@ -949,6 +950,101 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1823391723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823391724}
+  - component: {fileID: 1823391726}
+  - component: {fileID: 1823391725}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1823391724
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823391723}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1335053487}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -4, y: -8.1}
+  m_SizeDelta: {x: 1318.3, y: 1746}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1823391725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823391723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5dc3a938fc1e546088a0f4f8737d6a5e, type: 3}
+    m_FontSize: 62
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 150
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus
+    purus lorem, at sodales ante efficitur ut. Nulla in vulputate eros. In fermentum
+    neque in neque iaculis, sed efficitur massa vehicula. Cras condimentum cursus
+    lacinia. Nunc convallis, eros quis cursus convallis, urna est dignissim mi, ut
+    tempor nunc libero sed ante. \n\nPellentesque pulvinar lobortis augue eget interdum.
+    Quisque porttitor leo eros, a blandit ligula suscipit venenatis. Mauris pretium
+    purus libero, eget pellentesque augue bibendum non. Pellentesque tellus mi, sodales
+    a libero quis, elementum convallis libero. Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+    per inceptos himenaeos. Duis tincidunt sit amet tellus eget consectetur. Sed vehicula
+    tellus at felis fringilla ullamcorper. Mauris quam justo, porttitor ut lacus sit
+    amet, euismod porta ante.\n\nMaecenas lacinia dignissim consequat. Pellentesque
+    tincidunt dapibus dignissim. Donec scelerisque semper justo. Fusce laoreet id
+    dolor vel pulvinar. Donec quis orci porta, mollis ligula a, ullamcorper ligula.
+    Duis sagittis pulvinar mauris eu fermentum. Aenean consequat pellentesque sapien,
+    eget tempus purus lobortis quis. Vivamus condimentum auctor ultrices. Maecenas
+    imperdiet tincidunt volutpat. "
+--- !u!222 &1823391726
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823391723}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1898075796
 PrefabInstance:
   m_ObjectHideFlags: 0
