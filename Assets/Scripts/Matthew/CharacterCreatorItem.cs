@@ -4,7 +4,8 @@ using UnityEngine.Events;
 public class CharacterCreatorItem : MonoBehaviour {
 
 		public string itemName;
-    public UnityEvent OnApply;
+        public string itemDescription;
+        public UnityEvent OnApply;
 		public UnityEvent OnHover;
 		public UnityEvent OnStopHover;
 		public UnityEvent OnDiscard;
