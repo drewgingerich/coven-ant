@@ -3,28 +3,108 @@ guid: 3e66ce3ff68d34c7f96fffc0b44b177e
 ScriptedImporter:
   fileIDToRecycleName:
     100000: face assets 2_GO/face assets 2_GO
-    100002: face assets 2_GO/face assets 2_GO/antenna cat
-    100004: face assets 2_GO/face assets 2_GO/brow cat
-    100006: face assets 2_GO/face assets 2_GO/eyes cat
-    100008: face assets 2_GO/face assets 2_GO/mouth cat
-    100010: face assets 2_GO/face assets 2_GO/nose cat
+    100002: face assets 2_GO/face assets 2_GO/antenna bat
+    100004: face assets 2_GO/face assets 2_GO/antenna cat
+    100006: face assets 2_GO/face assets 2_GO/antenna devil
+    100008: face assets 2_GO/face assets 2_GO/antenna mushroom
+    100010: face assets 2_GO/face assets 2_GO/antenna tangled
+    100012: face assets 2_GO/face assets 2_GO/brow cat
+    100014: face assets 2_GO/face assets 2_GO/brow confused
+    100016: face assets 2_GO/face assets 2_GO/brow mushroom
+    100018: face assets 2_GO/face assets 2_GO/brow thick
+    100020: face assets 2_GO/face assets 2_GO/brow unibrow
+    100022: face assets 2_GO/face assets 2_GO/eyes anime
+    100024: face assets 2_GO/face assets 2_GO/eyes cat
+    100026: face assets 2_GO/face assets 2_GO/eyes empty
+    100028: face assets 2_GO/face assets 2_GO/eyes mushroom
+    100030: face assets 2_GO/face assets 2_GO/eyes stitch
+    100032: face assets 2_GO/face assets 2_GO/mouth cat
+    100034: face assets 2_GO/face assets 2_GO/mouth fangs
+    100036: face assets 2_GO/face assets 2_GO/mouth lips
+    100038: face assets 2_GO/face assets 2_GO/mouth mushroom
+    100040: face assets 2_GO/face assets 2_GO/mouth stitch
+    100042: face assets 2_GO/face assets 2_GO/nose broken
+    100044: face assets 2_GO/face assets 2_GO/nose cat
+    100046: face assets 2_GO/face assets 2_GO/nose mushroom
+    100048: face assets 2_GO/face assets 2_GO/nose pig
+    100050: face assets 2_GO/face assets 2_GO/nose stitch
     400000: face assets 2_GO/face assets 2_GO/Transform
-    400002: face assets 2_GO/face assets 2_GO/antenna cat/Transform
-    400004: face assets 2_GO/face assets 2_GO/brow cat/Transform
-    400006: face assets 2_GO/face assets 2_GO/eyes cat/Transform
-    400008: face assets 2_GO/face assets 2_GO/mouth cat/Transform
-    400010: face assets 2_GO/face assets 2_GO/nose cat/Transform
+    400002: face assets 2_GO/face assets 2_GO/antenna bat/Transform
+    400004: face assets 2_GO/face assets 2_GO/antenna cat/Transform
+    400006: face assets 2_GO/face assets 2_GO/antenna devil/Transform
+    400008: face assets 2_GO/face assets 2_GO/antenna mushroom/Transform
+    400010: face assets 2_GO/face assets 2_GO/antenna tangled/Transform
+    400012: face assets 2_GO/face assets 2_GO/brow cat/Transform
+    400014: face assets 2_GO/face assets 2_GO/brow confused/Transform
+    400016: face assets 2_GO/face assets 2_GO/brow mushroom/Transform
+    400018: face assets 2_GO/face assets 2_GO/brow thick/Transform
+    400020: face assets 2_GO/face assets 2_GO/brow unibrow/Transform
+    400022: face assets 2_GO/face assets 2_GO/eyes anime/Transform
+    400024: face assets 2_GO/face assets 2_GO/eyes cat/Transform
+    400026: face assets 2_GO/face assets 2_GO/eyes empty/Transform
+    400028: face assets 2_GO/face assets 2_GO/eyes mushroom/Transform
+    400030: face assets 2_GO/face assets 2_GO/eyes stitch/Transform
+    400032: face assets 2_GO/face assets 2_GO/mouth cat/Transform
+    400034: face assets 2_GO/face assets 2_GO/mouth fangs/Transform
+    400036: face assets 2_GO/face assets 2_GO/mouth lips/Transform
+    400038: face assets 2_GO/face assets 2_GO/mouth mushroom/Transform
+    400040: face assets 2_GO/face assets 2_GO/mouth stitch/Transform
+    400042: face assets 2_GO/face assets 2_GO/nose broken/Transform
+    400044: face assets 2_GO/face assets 2_GO/nose cat/Transform
+    400046: face assets 2_GO/face assets 2_GO/nose mushroom/Transform
+    400048: face assets 2_GO/face assets 2_GO/nose pig/Transform
+    400050: face assets 2_GO/face assets 2_GO/nose stitch/Transform
     2800000: face assets 2
-    21200000: face assets 2_GO/face assets 2_GO/antenna cat/SpriteRenderer
-    21200002: face assets 2_GO/face assets 2_GO/brow cat/SpriteRenderer
-    21200004: face assets 2_GO/face assets 2_GO/eyes cat/SpriteRenderer
-    21200006: face assets 2_GO/face assets 2_GO/mouth cat/SpriteRenderer
-    21200008: face assets 2_GO/face assets 2_GO/nose cat/SpriteRenderer
-    21300000: 406bfd24e15df4d8a99f6ee737c4ca3a
-    21300002: cfbcf5c8ff11544a29d1a30a886f3776
-    21300004: b7ff6795fdce0468fb185cbdd9acfd2c
-    21300006: a5aedb9057d284aee900367751ade9ac
-    21300008: dd6f2a2b5eb794076b2191696a6fc261
+    21200000: face assets 2_GO/face assets 2_GO/antenna bat/SpriteRenderer
+    21200002: face assets 2_GO/face assets 2_GO/antenna cat/SpriteRenderer
+    21200004: face assets 2_GO/face assets 2_GO/antenna devil/SpriteRenderer
+    21200006: face assets 2_GO/face assets 2_GO/antenna mushroom/SpriteRenderer
+    21200008: face assets 2_GO/face assets 2_GO/antenna tangled/SpriteRenderer
+    21200010: face assets 2_GO/face assets 2_GO/brow cat/SpriteRenderer
+    21200012: face assets 2_GO/face assets 2_GO/brow confused/SpriteRenderer
+    21200014: face assets 2_GO/face assets 2_GO/brow mushroom/SpriteRenderer
+    21200016: face assets 2_GO/face assets 2_GO/brow thick/SpriteRenderer
+    21200018: face assets 2_GO/face assets 2_GO/brow unibrow/SpriteRenderer
+    21200020: face assets 2_GO/face assets 2_GO/eyes anime/SpriteRenderer
+    21200022: face assets 2_GO/face assets 2_GO/eyes cat/SpriteRenderer
+    21200024: face assets 2_GO/face assets 2_GO/eyes empty/SpriteRenderer
+    21200026: face assets 2_GO/face assets 2_GO/eyes mushroom/SpriteRenderer
+    21200028: face assets 2_GO/face assets 2_GO/eyes stitch/SpriteRenderer
+    21200030: face assets 2_GO/face assets 2_GO/mouth cat/SpriteRenderer
+    21200032: face assets 2_GO/face assets 2_GO/mouth fangs/SpriteRenderer
+    21200034: face assets 2_GO/face assets 2_GO/mouth lips/SpriteRenderer
+    21200036: face assets 2_GO/face assets 2_GO/mouth mushroom/SpriteRenderer
+    21200038: face assets 2_GO/face assets 2_GO/mouth stitch/SpriteRenderer
+    21200040: face assets 2_GO/face assets 2_GO/nose broken/SpriteRenderer
+    21200042: face assets 2_GO/face assets 2_GO/nose cat/SpriteRenderer
+    21200044: face assets 2_GO/face assets 2_GO/nose mushroom/SpriteRenderer
+    21200046: face assets 2_GO/face assets 2_GO/nose pig/SpriteRenderer
+    21200048: face assets 2_GO/face assets 2_GO/nose stitch/SpriteRenderer
+    21300050: 5eb9d57e843914b75b97f3edbe5a784b
+    21300052: 63ba63f868706446b849edfb77ca34ae
+    21300054: cdca92f3c3b234947a4306aa36503f93
+    21300056: dd25e517b2cf74bf2b758b1315575daa
+    21300058: a25a2cb39fe284fc68def1406e785236
+    21300060: 9f9cfa6185f8a4984a9e420ec3c43e67
+    21300062: 7e688b983311749db93b62c7afabf7a7
+    21300064: f2623453e73e24f07bed0f7569d3cb88
+    21300066: c61e9b6949f054338aec52d7af4ec211
+    21300068: 3f11dff594b6a4b07a16dc34a789461f
+    21300070: f3209e918bc6945369146bacc1b608b5
+    21300072: d817007fdbb9a4d7ca8a7088f6c240eb
+    21300074: ce01ced79ec494cc18909b7dcb899da2
+    21300076: aa0dbb800e6d145b6ac218715fb9b6f2
+    21300078: a65a7b3ab1de3483e97ac21078f660e7
+    21300080: 1e328acd100a94cbf8238b34a09c508f
+    21300082: bfe583957414d4f97861b6a2799007c2
+    21300084: c517152bd07c14b04ade147795ca749a
+    21300086: 76b04182027514dc4899944bf8ce55b8
+    21300088: f639148a0afc344f689dc9ebd6442ee2
+    21300090: 7c8a6f91521a047458a2d2cb4a68be06
+    21300092: 98fa33057cbbf45d2a87584ff029a7f4
+    21300094: b9934818f291340b8b20e481cb340853
+    21300096: 1c0986494a42b4d568287ba1bcb05e61
+    21300098: 5d865313579e6409da5dc6a804d45370
     100100000: face assets 2_GO
   externalObjects: {}
   userData: 
@@ -108,18 +188,18 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: eyes cat
+  - name: nose pig
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1202
-      width: 758
-      height: 160
-    spriteID: 406bfd24e15df4d8a99f6ee737c4ca3a
+      x: 1537
+      y: 1509
+      width: 182
+      height: 134
+    spriteID: 5eb9d57e843914b75b97f3edbe5a784b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -128,7 +208,427 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -572, y: 583}
+    uvTransform: {x: 669, y: 913}
+  - name: mouth lips
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 567
+      y: 2687
+      width: 634
+      height: 213
+    spriteID: 63ba63f868706446b849edfb77ca34ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -63, y: 2321}
+  - name: brow thick
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1209
+      y: 3393
+      width: 715
+      height: 90
+    spriteID: cdca92f3c3b234947a4306aa36503f93
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 614, y: 2548}
+  - name: antenna devil
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 817
+      y: 4
+      width: 852
+      height: 534
+    spriteID: dd25e517b2cf74bf2b758b1315575daa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 268, y: -932}
+  - name: eyes anime
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 817
+      y: 546
+      width: 1109
+      height: 294
+    spriteID: a25a2cb39fe284fc68def1406e785236
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 440, y: -70}
+  - name: mouth fangs
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1464
+      y: 2150
+      width: 579
+      height: 226
+    spriteID: 9f9cfa6185f8a4984a9e420ec3c43e67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 791, y: 1787}
+  - name: antenna tangled
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1265
+      width: 555
+      height: 788
+    spriteID: 7e688b983311749db93b62c7afabf7a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -678, y: 623}
+  - name: eyes empty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 567
+      y: 1724
+      width: 753
+      height: 418
+    spriteID: f2623453e73e24f07bed0f7569d3cb88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7, y: 1316}
+  - name: nose broken
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1677
+      y: 4
+      width: 219
+      height: 214
+    spriteID: c61e9b6949f054338aec52d7af4ec211
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 820, y: -593}
+  - name: brow confused
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1209
+      y: 2687
+      width: 780
+      height: 158
+    spriteID: 3f11dff594b6a4b07a16dc34a789461f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 651, y: 1870}
+  - name: antenna bat
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 880
+      width: 1331
+      height: 377
+    spriteID: f3209e918bc6945369146bacc1b608b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -283, y: -91}
+  - name: brow unibrow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1209
+      y: 3231
+      width: 760
+      height: 154
+    spriteID: d817007fdbb9a4d7ca8a7088f6c240eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 624, y: 2400}
+  - name: mouth mushroom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1209
+      y: 3021
+      width: 595
+      height: 202
+    spriteID: ce01ced79ec494cc18909b7dcb899da2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 553, y: 2689}
+  - name: nose mushroom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1677
+      y: 226
+      width: 201
+      height: 218
+    spriteID: aa0dbb800e6d145b6ac218715fb9b6f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 809, y: -326}
+  - name: eyes mushroom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1343
+      y: 880
+      width: 673
+      height: 202
+    spriteID: a65a7b3ab1de3483e97ac21078f660e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 734, y: 281}
+  - name: brow mushroom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 567
+      y: 2472
+      width: 1228
+      height: 207
+    spriteID: 1e328acd100a94cbf8238b34a09c508f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 225, y: 1666}
+  - name: antenna mushroom
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 567
+      y: 1265
+      width: 962
+      height: 451
+    spriteID: bfe583957414d4f97861b6a2799007c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 103, y: 344}
+  - name: eyes stitch
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1328
+      y: 1724
+      width: 704
+      height: 211
+    spriteID: c517152bd07c14b04ade147795ca749a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 723, y: 1107}
+  - name: mouth stitch
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1328
+      y: 1943
+      width: 639
+      height: 180
+    spriteID: 76b04182027514dc4899944bf8ce55b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 713, y: 1544}
+  - name: nose stitch
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1537
+      y: 1265
+      width: 184
+      height: 236
+    spriteID: f639148a0afc344f689dc9ebd6442ee2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 665, y: 721}
+  - name: eyes cat
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1209
+      y: 2853
+      width: 758
+      height: 160
+    spriteID: 7c8a6f91521a047458a2d2cb4a68be06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 633, y: 2234}
   - name: mouth cat
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -140,7 +640,7 @@ ScriptedImporter:
       y: 4
       width: 805
       height: 868
-    spriteID: cfbcf5c8ff11544a29d1a30a886f3776
+    spriteID: 98fa33057cbbf45d2a87584ff029a7f4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -157,11 +657,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 880
+      x: 567
+      y: 2150
       width: 889
       height: 314
-    spriteID: b7ff6795fdce0468fb185cbdd9acfd2c
+    spriteID: b9934818f291340b8b20e481cb340853
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +670,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -499, y: -67}
+    uvTransform: {x: 64, y: 1203}
   - name: brow cat
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -178,11 +678,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1370
+      x: 1343
+      y: 1090
       width: 692
       height: 125
-    spriteID: a5aedb9057d284aee900367751ade9ac
+    spriteID: 1c0986494a42b4d568287ba1bcb05e61
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -191,7 +691,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -590, y: 552}
+    uvTransform: {x: 749, y: 272}
   - name: nose cat
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -199,11 +699,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 770
-      y: 1202
+      x: 1904
+      y: 4
       width: 122
       height: 81
-    spriteID: dd6f2a2b5eb794076b2191696a6fc261
+    spriteID: 5d865313579e6409da5dc6a804d45370
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +712,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -126, y: 635}
+    uvTransform: {x: 1008, y: -563}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -221,55 +721,209 @@ ScriptedImporter:
   importedTextureWidth: 1024
   importedTextureHeight: 2048
   documentSize: {x: 1942, y: 1777}
-  textureActualWidth: 1024
-  textureActualHeight: 2048
+  textureActualWidth: 2048
+  textureActualHeight: 4096
   spritePackingTag: 
   resliceFromLayer: 0
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: nose pig
+    spriteName: nose pig
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5eb9d57e843914b75b97f3edbe5a784b
+    layerID: 51
+    mosaicPosition: {x: 1537, y: 1509}
+  - name: mouth lips
+    spriteName: mouth lips
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 63ba63f868706446b849edfb77ca34ae
+    layerID: 50
+    mosaicPosition: {x: 567, y: 2687}
+  - name: brow thick
+    spriteName: brow thick
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cdca92f3c3b234947a4306aa36503f93
+    layerID: 49
+    mosaicPosition: {x: 1209, y: 3393}
+  - name: antenna devil
+    spriteName: antenna devil
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dd25e517b2cf74bf2b758b1315575daa
+    layerID: 48
+    mosaicPosition: {x: 817, y: 4}
+  - name: eyes anime
+    spriteName: eyes anime
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a25a2cb39fe284fc68def1406e785236
+    layerID: 47
+    mosaicPosition: {x: 817, y: 546}
+  - name: mouth fangs
+    spriteName: mouth fangs
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9f9cfa6185f8a4984a9e420ec3c43e67
+    layerID: 45
+    mosaicPosition: {x: 1464, y: 2150}
+  - name: antenna tangled
+    spriteName: antenna tangled
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7e688b983311749db93b62c7afabf7a7
+    layerID: 44
+    mosaicPosition: {x: 4, y: 1265}
+  - name: eyes empty
+    spriteName: eyes empty
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f2623453e73e24f07bed0f7569d3cb88
+    layerID: 43
+    mosaicPosition: {x: 567, y: 1724}
+  - name: nose broken
+    spriteName: nose broken
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c61e9b6949f054338aec52d7af4ec211
+    layerID: 42
+    mosaicPosition: {x: 1677, y: 4}
+  - name: brow confused
+    spriteName: brow confused
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3f11dff594b6a4b07a16dc34a789461f
+    layerID: 41
+    mosaicPosition: {x: 1209, y: 2687}
+  - name: antenna bat
+    spriteName: antenna bat
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f3209e918bc6945369146bacc1b608b5
+    layerID: 32
+    mosaicPosition: {x: 4, y: 880}
+  - name: brow unibrow
+    spriteName: brow unibrow
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d817007fdbb9a4d7ca8a7088f6c240eb
+    layerID: 31
+    mosaicPosition: {x: 1209, y: 3231}
+  - name: mushroom
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 79
+    mosaicPosition: {x: 0, y: 0}
+  - name: mouth mushroom
+    spriteName: mouth mushroom
+    isGroup: 0
+    parentIndex: 12
+    spriteID: ce01ced79ec494cc18909b7dcb899da2
+    layerID: 39
+    mosaicPosition: {x: 1209, y: 3021}
+  - name: nose mushroom
+    spriteName: nose mushroom
+    isGroup: 0
+    parentIndex: 12
+    spriteID: aa0dbb800e6d145b6ac218715fb9b6f2
+    layerID: 38
+    mosaicPosition: {x: 1677, y: 226}
+  - name: eyes mushroom
+    spriteName: eyes mushroom
+    isGroup: 0
+    parentIndex: 12
+    spriteID: a65a7b3ab1de3483e97ac21078f660e7
+    layerID: 37
+    mosaicPosition: {x: 1343, y: 880}
+  - name: brow mushroom
+    spriteName: brow mushroom
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 1e328acd100a94cbf8238b34a09c508f
+    layerID: 36
+    mosaicPosition: {x: 567, y: 2472}
+  - name: antenna mushroom
+    spriteName: antenna mushroom
+    isGroup: 0
+    parentIndex: 12
+    spriteID: bfe583957414d4f97861b6a2799007c2
+    layerID: 35
+    mosaicPosition: {x: 567, y: 1265}
+  - name: stitch
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 77
+    mosaicPosition: {x: 0, y: 0}
+  - name: eyes stitch
+    spriteName: eyes stitch
+    isGroup: 0
+    parentIndex: 18
+    spriteID: c517152bd07c14b04ade147795ca749a
+    layerID: 29
+    mosaicPosition: {x: 1328, y: 1724}
+  - name: mouth stitch
+    spriteName: mouth stitch
+    isGroup: 0
+    parentIndex: 18
+    spriteID: 76b04182027514dc4899944bf8ce55b8
+    layerID: 33
+    mosaicPosition: {x: 1328, y: 1943}
+  - name: nose stitch
+    spriteName: nose stitch
+    isGroup: 0
+    parentIndex: 18
+    spriteID: f639148a0afc344f689dc9ebd6442ee2
+    layerID: 30
+    mosaicPosition: {x: 1537, y: 1265}
   - name: cat
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: 
     layerID: 75
     mosaicPosition: {x: 0, y: 0}
   - name: eyes cat
     spriteName: eyes cat
     isGroup: 0
-    parentIndex: 0
-    spriteID: 406bfd24e15df4d8a99f6ee737c4ca3a
+    parentIndex: 22
+    spriteID: 7c8a6f91521a047458a2d2cb4a68be06
     layerID: 23
-    mosaicPosition: {x: 4, y: 1202}
+    mosaicPosition: {x: 1209, y: 2853}
   - name: mouth cat
     spriteName: mouth cat
     isGroup: 0
-    parentIndex: 0
-    spriteID: cfbcf5c8ff11544a29d1a30a886f3776
+    parentIndex: 22
+    spriteID: 98fa33057cbbf45d2a87584ff029a7f4
     layerID: 27
     mosaicPosition: {x: 4, y: 4}
   - name: antenna cat
     spriteName: antenna cat
     isGroup: 0
-    parentIndex: 0
-    spriteID: b7ff6795fdce0468fb185cbdd9acfd2c
+    parentIndex: 22
+    spriteID: b9934818f291340b8b20e481cb340853
     layerID: 26
-    mosaicPosition: {x: 4, y: 880}
+    mosaicPosition: {x: 567, y: 2150}
   - name: brow cat
     spriteName: brow cat
     isGroup: 0
-    parentIndex: 0
-    spriteID: a5aedb9057d284aee900367751ade9ac
+    parentIndex: 22
+    spriteID: 1c0986494a42b4d568287ba1bcb05e61
     layerID: 25
-    mosaicPosition: {x: 4, y: 1370}
+    mosaicPosition: {x: 1343, y: 1090}
   - name: nose cat
     spriteName: nose cat
     isGroup: 0
-    parentIndex: 0
-    spriteID: dd6f2a2b5eb794076b2191696a6fc261
+    parentIndex: 22
+    spriteID: 5d865313579e6409da5dc6a804d45370
     layerID: 24
-    mosaicPosition: {x: 770, y: 1202}
+    mosaicPosition: {x: 1904, y: 4}
   characterData:
     bones: []
     parts: []
