@@ -9,6 +9,10 @@ public class MusicManager : MonoBehaviour
 
     public AudioClip titleMusic;
     public AudioClip introMusic;
+    public AudioClip mainTheme50bpm;
+    public AudioClip mainTheme70bpm;
+    public AudioClip mainTheme90bpm;
+    public AudioClip hallOfFame;
 
     AudioSource m_AudioSource;
 
@@ -55,8 +59,11 @@ public class MusicManager : MonoBehaviour
             case "Introduction":
                 PlayTrack(introMusic);
                 break;
+            case "GameOver":
+                PlayTrack(hallOfFame);
+                break;
             default:
-                PlayTrack(introMusic);
+                PlayTrack(mainTheme50bpm);
                 break;
         }
     }
