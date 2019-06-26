@@ -21,11 +21,10 @@ public class FadeManager : MonoBehaviour
     {
         Instance = this;
 
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
 
         if (m_StartWithFade)
         {
-            m_FadeGroup.alpha = 1f;
             FadeIn(m_StartFadeTime, m_StartFadeColor);
         } else
         {
