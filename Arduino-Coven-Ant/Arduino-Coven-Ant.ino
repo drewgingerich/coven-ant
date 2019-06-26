@@ -7,18 +7,18 @@ const unsigned int SMOOTHING_DURATION_IN_CYCLES = 255;
 
 struct Button {
 	byte pin;
-	byte id;
+	char id;
 	bool inverted;
 	bool isDown;
 	unsigned int smoothTime;
 };
 
 Button buttons[] = {
-	{.pin = 2, .id = 0, .inverted = true, .isDown = false, .smoothTime = 0 },
-	{.pin = 3, .id = 1, .inverted = true, .isDown = false, .smoothTime = 0 },
-	{.pin = 4, .id = 2, .inverted = true, .isDown = false, .smoothTime = 0 },
-	{.pin = 5, .id = 3, .inverted = true, .isDown = false, .smoothTime = 0 },
-	{.pin = 6, .id = 4, .inverted = false, .isDown = false, .smoothTime = 0 }
+	{.pin = 2, .id = 'u', .inverted = true, .isDown = false, .smoothTime = 0 },
+	{.pin = 3, .id = 'd', .inverted = true, .isDown = false, .smoothTime = 0 },
+	{.pin = 4, .id = 'l', .inverted = true, .isDown = false, .smoothTime = 0 },
+	{.pin = 5, .id = 'r', .inverted = true, .isDown = false, .smoothTime = 0 },
+	{.pin = 6, .id = 's', .inverted = false, .isDown = false, .smoothTime = 0 }
 };
 
 char _serial_command_buffer[MAX_SERIAL_BUFFER_LENGTH];
@@ -66,14 +66,14 @@ void ButtonDown(Button& thisButton) {
 
 void setup() {
 	Serial.begin(BAUD_RATE);
-	for (const Button& thisButton : buttons) {
+	for(const Button& thisButton : buttons) {
 		pinMode(thisButton.pin, INPUT_PULLUP);
 	}
 }
 
 void loop() {
 	serial_commands.ReadSerial();
-	for (Button& thisButton : buttons) {
+	for(Button& thisButton : buttons) {
 		CheckButton(thisButton);
 	}
 }
