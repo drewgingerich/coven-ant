@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NoseStock
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: b63a348aabf1e402e88caf626b22298f, type: 2}
-  sprite: {fileID: 21300016, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}
+  sprite: {fileID: 21300042, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}

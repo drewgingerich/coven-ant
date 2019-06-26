@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NoseMushroom
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: b63a348aabf1e402e88caf626b22298f, type: 2}
-  sprite: {fileID: 21300026, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}
+  sprite: {fileID: 21300076, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BrowThick
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 23c91428d9e634061bcc8380d4a29b48, type: 2}
-  sprite: {fileID: 21300004, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}
+  sprite: {fileID: 21300054, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}

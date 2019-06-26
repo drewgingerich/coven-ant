@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MouthFangs
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 1e6065cd3b2d64b77959fd71f9e62ec7, type: 2}
-  sprite: {fileID: 21300010, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}
+  sprite: {fileID: 21300060, guid: 3e66ce3ff68d34c7f96fffc0b44b177e, type: 3}
