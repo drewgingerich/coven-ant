@@ -10,7 +10,8 @@ using DG.Tweening;
 public class Gallery : MonoBehaviour
 {
     public GameObject galleryImagePrefab;
-    //public int scrollWaitInSeconds = 1;
+    public PulsateOnCommand leftArrow;
+    public PulsateOnCommand rightArrow;
 
     [Range(0, 2)]
     public float sidePositionPercentage = 1f;
@@ -62,6 +63,8 @@ public class Gallery : MonoBehaviour
 
     private void ScrollLeft()
     {
+        leftArrow.PulsateOneshot(0.25f);
+
         // disable controls
         m_IsScrolling = true;
 
@@ -103,6 +106,8 @@ public class Gallery : MonoBehaviour
 
     private void ScrollRight()
     {
+        rightArrow.PulsateOneshot(0.25f);
+
         // disable controls
         m_IsScrolling = true;
 

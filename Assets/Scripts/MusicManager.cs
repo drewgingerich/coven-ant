@@ -50,6 +50,7 @@ public class MusicManager : MonoBehaviour
                 PlayTrack(introMusic);
                 break;
             default:
+                PlayTrack(introMusic);
                 break;
         }
     }
