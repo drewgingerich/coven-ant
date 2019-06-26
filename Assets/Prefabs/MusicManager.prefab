@@ -141,5 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c27da90494649c49a8ce04870d5d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleMusic: {fileID: 8300000, guid: 4725a3709e68144b0a73a1f19a194ee9, type: 3}
-  introMusic: {fileID: 8300000, guid: 29ffe20bb5e5344b99acc9bd9d0cb87b, type: 3}
+  titleMusic: {fileID: 8300000, guid: d7d7c81d6d7624ca0b6376dd88046490, type: 3}
+  introMusic: {fileID: 8300000, guid: 8aed78ef39a3945d4a9901352308eaf1, type: 3}
+  mainTheme50bpm: {fileID: 8300000, guid: 0eb0f0699d1d4464f9112011978fb49d, type: 3}
+  mainTheme70bpm: {fileID: 8300000, guid: 58f678704e1094748ab184b66f9389cf, type: 3}
+  mainTheme90bpm: {fileID: 8300000, guid: 1742da3bec645459380c5007b58154f1, type: 3}
+  hallOfFame: {fileID: 8300000, guid: 51d38925958ef41049af714319979da6, type: 3}
