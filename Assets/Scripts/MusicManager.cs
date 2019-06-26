@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class MusicManager : MonoBehaviour
 {
@@ -30,9 +31,14 @@ public class MusicManager : MonoBehaviour
         PlaySceneMusic();
     }
 
+    public void FadeOut(float transitionTime)
+    {
+        m_AudioSource.DOFade(0f, transitionTime);
+    }
+
     void PlayTrack(AudioClip clip)
     {
-        // TODO: use DOTween to mimic crossfade
+        m_AudioSource.volume = 1f;
         m_AudioSource.clip = clip;
         m_AudioSource.Play();
     }
