@@ -28,26 +28,26 @@ void CheckButton(Button& thisButton) {
 	if( thisButton.smoothTime > 0 ) {
 		thisButton.smoothTime -= 1;
 	} else if( digitalRead(thisButton.pin) ) {
-			if(thisButton.inverted) {
-				if(thisButton.isDown) {
-					ButtonUp(thisButton);
-				}
-			} else {
-				if(!thisButton.isDown) {
-					ButtonDown(thisButton);
-				}
+		if(thisButton.inverted) {
+			if(thisButton.isDown) {
+				ButtonUp(thisButton);
 			}
 		} else {
-			if(thisButton.inverted) {
-				if(!thisButton.isDown) {
-					ButtonDown(thisButton);
-				}
-			} else {
-				if(thisButton.isDown) {
-					ButtonUp(thisButton);
-				}
+			if(!thisButton.isDown) {
+				ButtonDown(thisButton);
 			}
 		}
+	} else {
+		if(thisButton.inverted) {
+			if(!thisButton.isDown) {
+				ButtonDown(thisButton);
+			}
+		} else {
+			if(thisButton.isDown) {
+				ButtonUp(thisButton);
+			}
+		}
+	}
 }
 
 void ButtonUp(Button& thisButton) {
