@@ -9,8 +9,8 @@ public class FadeManager : MonoBehaviour
     public static FadeManager Instance;
 
     [Header("Fade references")]
-    [SerializeField] CanvasGroup m_FadeGroup;
-    [SerializeField] Image m_FadeImage;
+    public CanvasGroup m_FadeGroup;
+    public Image m_FadeImage;
 
     [Header("Start Fade")]
     [SerializeField] bool m_StartWithFade = true;

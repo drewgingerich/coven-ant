@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 586100793}
   - component: {fileID: 586100796}
   m_Layer: 5
-  m_Name: FinalizeButton
+  m_Name: FinishButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1511,7 +1511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1114905425
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3032,9 +3032,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846e0af519a0c46ebb6f703dc0ded959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiUrl: 
-  bucketId: 
-  secretKey: 
+  apiUrl: https://kvdb.io/
+  bucketId: XHswQYMv1ndXXgwvhzh1sG
+  secretKey: covenAnt
   onGetCharactersComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -3070,7 +3070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f129bffcd0d6437a9f969baf9198089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clientId: 1a521420f027c51
+  clientId: b448c8366a1c37a
   baseUploadUrl: https://api.imgur.com/3/upload
   onUploadComplete:
     m_PersistentCalls:

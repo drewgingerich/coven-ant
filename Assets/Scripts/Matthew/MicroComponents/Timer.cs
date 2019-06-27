@@ -53,6 +53,7 @@ public class Timer : MonoBehaviour
             timeRemaining -= Time.deltaTime;
             if( timeRemaining < 0 ) {
                 timeRemaining = 0;
+                timerRunning = false;
                 OnTimerEnd.Invoke();
                 if(repeatTimer) {
                     BeginTimer();

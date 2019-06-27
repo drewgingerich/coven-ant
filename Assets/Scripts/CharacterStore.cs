@@ -24,71 +24,57 @@ public class CharacterStore : MonoBehaviour
 
     public void GetCharacters()
     {
-        StartCoroutine(StartGettingCharacters((response) =>
-        {
-            if (onGetCharactersComplete != null)
-            {
-                Debug.Log("invoking onGetKeysComplete!");
-                onGetCharactersComplete.Invoke(response);
-            }
-            else
-            {
-                Debug.Log("onGetKeysComplete = null");
-            }
-        }));
-    }
-
-    public void SetCharacter(string url, string givenName)
-    {
-        StartCoroutine(StartSettingCharacter(url, givenName, () =>
-        {
-            if (onSetCharacterComplete != null)
-            {
-                Debug.Log("invoking onSetKeyComplete!");
-                onSetCharacterComplete.Invoke();
-            }
-            else
-            {
-                Debug.Log("onSetKeyComplete = null");
-            }
-        }));
-    }
-
-    IEnumerator StartGettingCharacters(Action<List<string>> onGetKeysCompleted)
-    {
         using (var wClient = new WebClient())
         {
             var fullApiUrl = $"{apiUrl}/{bucketId}/?values=true&format=json&key={secretKey}";
-            // curl 'https://kvdb.io/BiqhxhTjZkvNFBus9WC7T2/hello' - d 'world'
 
-            var jsonString = wClient.DownloadString(fullApiUrl);
-
-            Debug.Log("key / value list: " + jsonString);
-
-            var jankyDictionary = JsonConvert.DeserializeObject<List<List<string>>>(jsonString);
-            var characters = new List<string>();
-
-            foreach(var keyPair in jankyDictionary)
-            {
-                characters.Add(keyPair[1]);
-            }
-
-            onGetKeysCompleted(characters);
+            wClient.DownloadStringCompleted += WClient_DownloadStringCompleted;
+            wClient.DownloadStringAsync(new System.Uri(fullApiUrl));
         }
-        yield return null;
     }
 
-    IEnumerator StartSettingCharacter(string url, string givenName, Action onSetKeyCompleted)
+    public void SetCharacter(string url, string givenName)
     {
         using (var wClient = new WebClient())
         {
             var key = DateTime.Now.ToString(DATE_FORMAT);
             var fullApiUrl = $"{apiUrl}/{bucketId}/{key}";
             var value = $"{url},{givenName},{DateTime.Today.ToShortDateString()}";
-            var jsonString = wClient.UploadString(fullApiUrl, value);
 
-            onSetKeyCompleted();
+            wClient.UploadStringCompleted += WClient_UploadStringCompleted;
+            wClient.UploadStringAsync(new System.Uri(url), value);
         }
-        yield return null;
+    }
+
+    private void WClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+    {
+        if (e.Error != null)
+        {
+            Debug.Log("error downloading characters: " + e.Error);
+            return;
+        }
+
+        Debug.Log("key / value list: " + e.Result);
+
+        var jankyDictionary = JsonConvert.DeserializeObject<List<List<string>>>(e.Result);
+        var characters = new List<string>();
+
+        foreach (var keyPair in jankyDictionary)
+        {
+            characters.Add(keyPair[1]);
+        }
+
+        onGetCharactersComplete.Invoke(characters);
+    }
+
+    private void WClient_UploadStringCompleted(object sender, UploadStringCompletedEventArgs e)
+    {
+        if(e.Error != null)
+        {
+            Debug.Log("error uploading character: " + e.Error);
+            return;
+        }
+
+        onSetCharacterComplete.Invoke();
     }
 }
