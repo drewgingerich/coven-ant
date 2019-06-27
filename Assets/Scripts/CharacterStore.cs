@@ -42,7 +42,7 @@ public class CharacterStore : MonoBehaviour
             var value = $"{url},{givenName},{DateTime.Today.ToShortDateString()}";
 
             wClient.UploadStringCompleted += WClient_UploadStringCompleted;
-            wClient.UploadStringAsync(new System.Uri(url), value);
+            wClient.UploadStringAsync(new System.Uri(fullApiUrl), value);
         }
     }
 
