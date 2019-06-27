@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apiUrl: https://kvdb.io
-  bucketId: BiqhxhTjZkvNFBus9WC7T2
+  bucketId: XHswQYMv1ndXXgwvhzh1sG
   secretKey: covenAnt
   onGetCharactersComplete:
     m_PersistentCalls:

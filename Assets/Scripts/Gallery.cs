@@ -29,6 +29,7 @@ public class Gallery : MonoBehaviour
 
     public void Initialize(List<string> characters)
     {
+        characters.Reverse();
         StartCoroutine(LoadGallery(characters));
     }
 
@@ -158,8 +159,6 @@ public class Gallery : MonoBehaviour
             }
             else
             {
-                var myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-                var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f));
                 GameObject child = null;
 
                 // Use the prefab with the extra left image if this is the first portrait,
@@ -192,6 +191,16 @@ public class Gallery : MonoBehaviour
                 childText.text = $"{characterName} - {createdOn}";
 
                 var childImage = child.GetComponentsInChildren<Image>()[1];
+                //var childImage = child.GetComponentInChildren<RawImage>();
+
+                var myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+                //childImage.texture = myTexture;
+                //childImage.SizeToParent();
+
+                //childImage.GetComponent<RectTransform>().sizeDelta = new Vector2(100f, 100f);
+
+                //var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
+                var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
                 childImage.sprite = sprite;
 
                 if (i > 1)
