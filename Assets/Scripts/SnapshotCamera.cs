@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Camera))]
 public class SnapshotCamera : MonoBehaviour
 {
     [System.NonSerialized]
     public new Camera camera;
+
+    private void Start()
+    {
+        this.camera = GetComponent<Camera>();
+    }
 
     // https://answers.unity.com/questions/22954/how-to-save-a-picture-take-screenshot-from-a-camer.html
     public Texture2D TakeSnapshot()
