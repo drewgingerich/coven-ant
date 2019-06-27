@@ -1055,6 +1055,7 @@ GameObject:
   - component: {fileID: 3948679512849937113}
   - component: {fileID: 8532411041431487734}
   - component: {fileID: 332230609536097781}
+  - component: {fileID: 662312226318304315}
   m_Layer: 8
   m_Name: FaceSprite
   m_TagString: Untagged
@@ -1114,7 +1115,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300046, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}
-  m_Color: {r: 0.80392164, g: 0.47058827, b: 0.28235295, a: 1}
+  m_Color: {r: 0.7803922, g: 0.47058827, b: 0.32156864, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1137,6 +1138,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   link: {fileID: 11400000, guid: b9e5fe23025af40fabe070565df58619, type: 2}
+--- !u!114 &662312226318304315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6842363797843070141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d7b000ce6eb43ce92de8f2f7001ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 0
+  translation: {x: 0, y: 0}
+  scale: {x: 1, y: 1}
+  color: {r: 0.7803922, g: 0.47058827, b: 0.32156864, a: 1}
 --- !u!1 &6918551494737381774
 GameObject:
   m_ObjectHideFlags: 0
