@@ -50,6 +50,12 @@ MonoBehaviour:
   rotationalRange: {x: 0, y: 0, z: 10}
   speed: 10
   accelerationPercentage: 0.5
+  oneshotAnimationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &6383135810045514026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: 
+  itemDescription: 
   OnApply:
     m_PersistentCalls:
       m_Calls:
@@ -155,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 8639857847878115227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2792, y: 0.2792, z: 0.2792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1865179349719562414}
   m_RootOrder: 0
