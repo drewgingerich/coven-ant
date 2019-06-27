@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 6939493024301695124}
   - component: {fileID: 292281785079646721}
   - component: {fileID: 8142483231335355142}
+  - component: {fileID: 2108014910901058994}
   m_Layer: 8
   m_Name: Brows
   m_TagString: Untagged
@@ -304,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2f2a54d1bd04ba5a8cb8b8c556d6c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  link: {fileID: 11400000, guid: 728139323bce9492bbb511fe2508ab88, type: 2}
+  link: {fileID: 11400000, guid: 23c91428d9e634061bcc8380d4a29b48, type: 2}
 --- !u!212 &8142483231335355142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -343,7 +344,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300040, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}
-  m_Color: {r: 0.80392164, g: 0.47058827, b: 0.28235295, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -353,6 +354,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2108014910901058994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138898777939442880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d7b000ce6eb43ce92de8f2f7001ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 0
+  translation: {x: 0, y: 0}
+  scale: {x: 1, y: 1}
+  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1206741228156400875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1179,7 @@ GameObject:
   - component: {fileID: 6061992619989418425}
   - component: {fileID: 7757500089726126394}
   - component: {fileID: 8713542402283795701}
+  - component: {fileID: 313708505954628613}
   m_Layer: 8
   m_Name: Antennae
   m_TagString: Untagged
@@ -1236,7 +1254,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300036, guid: 07bea6bf6c87549b69b46abcfc10c309, type: 3}
-  m_Color: {r: 0.80392164, g: 0.47058827, b: 0.28235295, a: 1}
+  m_Color: {r: 0.7960785, g: 0.47058827, b: 0.3019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1246,6 +1264,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &313708505954628613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402387310957870105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d7b000ce6eb43ce92de8f2f7001ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 0
+  translation: {x: 0, y: 0}
+  scale: {x: 1, y: 1}
+  color: {r: 0.7960785, g: 0.47058827, b: 0.3019608, a: 1}
 --- !u!1 &8405698739689307422
 GameObject:
   m_ObjectHideFlags: 0
