@@ -44,10 +44,12 @@ public class Gallery : MonoBehaviour
             if (moveHorizontal > 0.1f)
             {
                 ScrollRight();
+                SfxManager.Instance.PlayArrowClick();
             }
             else if (moveHorizontal < -0.1f)
             {
                 ScrollLeft();
+                SfxManager.Instance.PlayArrowClick();
             }
         }
         
