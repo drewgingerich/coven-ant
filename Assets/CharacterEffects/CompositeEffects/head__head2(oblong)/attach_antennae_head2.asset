@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fcd3a79c19bc43038c6526f71567b6d, type: 3}
-  m_Name: effect__head__head3(lumpy)
+  m_Script: {fileID: 11500000, guid: 450fd395abc524542ac0143a30e06409, type: 3}
+  m_Name: New Scale Effect
   m_EditorClassIdentifier: 
-  effects:
-  - {fileID: 11400000, guid: 19c7d8d094bc8416dbadcda97e9d3a1f, type: 2}
-  - {fileID: 11400000, guid: 89b4a938ceb414e72a192bdee1db914e, type: 2}
+  target: {fileID: 11400000, guid: c4960f9fa3d024dbebc22c357f8145e3, type: 2}
+  mode: 0
+  scale: {x: 1.25, y: 1}

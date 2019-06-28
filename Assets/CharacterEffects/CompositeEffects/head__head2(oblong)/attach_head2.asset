@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fcd3a79c19bc43038c6526f71567b6d, type: 3}
-  m_Name: effect__head__head3(lumpy)
+  m_Script: {fileID: 11500000, guid: 64638edad440841c49b2b9f2f5689830, type: 3}
+  m_Name: attach_head2
   m_EditorClassIdentifier: 
-  effects:
-  - {fileID: 11400000, guid: 19c7d8d094bc8416dbadcda97e9d3a1f, type: 2}
-  - {fileID: 11400000, guid: 89b4a938ceb414e72a192bdee1db914e, type: 2}
+  target: {fileID: 11400000, guid: b9e5fe23025af40fabe070565df58619, type: 2}
+  mode: 0
+  translation: {x: 0, y: 0.31}
