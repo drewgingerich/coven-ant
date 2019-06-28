@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450fd395abc524542ac0143a30e06409, type: 3}
-  m_Name: MouthSmaller
+  m_Script: {fileID: 11500000, guid: 77a1c1ba0dfdd489b9a0050b0e3d49e1, type: 3}
+  m_Name: mouth__rotate_counter
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 1e6065cd3b2d64b77959fd71f9e62ec7, type: 2}
-  mode: 2
-  scale: {x: 0.75, y: 0.75}
+  mode: 1
+  rotation: -5

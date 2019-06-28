@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450fd395abc524542ac0143a30e06409, type: 3}
-  m_Name: MouthBigger
+  m_Script: {fileID: 11500000, guid: 64638edad440841c49b2b9f2f5689830, type: 3}
+  m_Name: nose__translate_downleft
   m_EditorClassIdentifier: 
-  target: {fileID: 11400000, guid: 1e6065cd3b2d64b77959fd71f9e62ec7, type: 2}
-  mode: 2
-  scale: {x: 1.25, y: 1.25}
+  target: {fileID: 11400000, guid: b63a348aabf1e402e88caf626b22298f, type: 2}
+  mode: 1
+  translation: {x: -0.05, y: -0.05}
