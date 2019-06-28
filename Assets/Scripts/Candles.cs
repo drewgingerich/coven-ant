@@ -50,5 +50,6 @@ public class Candles : MonoBehaviour
         m_Candles[burningCount - 1].SetTrigger("GoOut");
         burningCount--;
         glows[burningCount - 1].gameObject.SetActive(true);
+        MusicManager.Instance.PlayByCandleCount(burningCount);
     }
 }
