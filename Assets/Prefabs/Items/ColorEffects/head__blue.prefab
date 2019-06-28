@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 6670660246354764739, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_Name
-      value: MouthSmaller
+      value: head__blue
       objectReference: {fileID: 0}
     - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
@@ -86,7 +86,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: 90c6c2442ba114b6da2ac4d9618600e3,
+      objectReference: {fileID: 11400000, guid: c5e9ea6fb398c46bfb9b1e9d6db6f01f,
         type: 2}
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
@@ -101,7 +101,7 @@ PrefabInstance:
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: itemName
-      value: rtrtrrt
+      value: 'I Just Blue Myself '
       objectReference: {fileID: 0}
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
@@ -132,13 +132,13 @@ PrefabInstance:
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: itemDescription
-      value: An ode to our favorite demonic "cheese."
+      value: 'Eye of newt, tongue of dog, you''ll find yourself in a blue hue fog. '
       objectReference: {fileID: 0}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: af3d61b4e348248b5ada81fa551789f3,
+      objectReference: {fileID: 21300000, guid: aa3ae49cedb3a4dc38e0a2fd67da935e,
         type: 3}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
