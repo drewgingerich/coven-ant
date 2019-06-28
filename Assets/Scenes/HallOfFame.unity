@@ -1323,6 +1323,7 @@ GameObject:
   - component: {fileID: 1948801515}
   - component: {fileID: 1948801516}
   - component: {fileID: 1948801517}
+  - component: {fileID: 1948801518}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -1525,8 +1526,8 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1948801512}
-        m_MethodName: Select
+      - m_Target: {fileID: 1948801518}
+        m_MethodName: Submit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1538,6 +1539,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1948801518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948801510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185250958555f2a43a3c28ef5a73a54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2118292181
 GameObject:
   m_ObjectHideFlags: 0
