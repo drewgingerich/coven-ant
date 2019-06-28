@@ -19,11 +19,18 @@ public class SnapshotCamera : MonoBehaviour
         camera.targetTexture = rt;
         camera.Render();
 
+        //Rect snapshotRect = new Rect(
+        //    camera.pixelWidth * 0.25f,
+        //    camera.pixelHeight * 0.25f,
+        //    camera.pixelWidth * 0.5f, 
+        //    camera.pixelHeight * 0.5f
+        //);
+
         Rect snapshotRect = new Rect(
-            camera.pixelWidth * 0.25f,
-            camera.pixelHeight * 0.25f,
-            camera.pixelWidth * 0.5f, 
-            camera.pixelHeight * 0.5f
+            0,
+            0,
+            camera.pixelWidth,
+            camera.pixelHeight
         );
 
         Texture2D snapshot = new Texture2D(camera.pixelWidth, camera.pixelHeight, TextureFormat.RGB24, false);

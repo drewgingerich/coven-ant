@@ -11,11 +11,14 @@ public class ItemContainerTalker : MonoBehaviour {
      * </summary>
      */
     public bool hasItem;
+    public SpriteRenderer poof;
+    public ItemDescriptionViewer descriptionViewer;
     private CharacterCreatorItem item;
     private Selectable selectable;
     public void ActivateItem() {
         // transform.BroadcastMessage("Apply");
         if(hasItem) {
+            poof.color = item.gameObject.GetComponentInChildren<SpriteRenderer>().color;
             item.OnApply.Invoke();
             if(item == null) {
                 hasItem = false;
