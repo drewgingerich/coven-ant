@@ -1748,7 +1748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginTimerOnStart: 1
-  timeRemaining: 1
+  timeRemaining: 10
   repeatTimer: 0
   OnTimerStart:
     m_PersistentCalls:
@@ -2472,7 +2472,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.8
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -2489,7 +2489,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10

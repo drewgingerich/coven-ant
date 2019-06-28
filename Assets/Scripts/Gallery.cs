@@ -15,6 +15,7 @@ public class Gallery : MonoBehaviour
     public PulsateOnCommand leftArrow;
     public PulsateOnCommand rightArrow;
     public float scrollSeconds;
+    public int maxCharactersToLoad = 10;
 
     int m_CurrentImageIndex = 0;
     List<RectTransform> m_ImageTransforms = new List<RectTransform>();
@@ -30,7 +31,7 @@ public class Gallery : MonoBehaviour
     public void Initialize(List<string> characters)
     {
         characters.Reverse();
-        StartCoroutine(LoadGallery(characters));
+        StartCoroutine(LoadGallery(characters.Take(maxCharactersToLoad).ToList()));
     }
 
     // Update is called once per frame
