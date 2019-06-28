@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Scriptables.GameEvents;
+using System;
 
 public class ItemDescriptionViewer : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class ItemDescriptionViewer : MonoBehaviour
 		CharacterCreatorItem characterItem = item.GetComponentInChildren<CharacterCreatorItem>();
 
 		if(characterItem) {
-            m_NameText.text = characterItem.itemName;
+            m_NameText.text = characterItem.itemName.ToUpper();
             m_DescriptionText.text = characterItem.itemDescription;
 		} else {
 			Debug.Log("Item was not a Character Creator Item!");

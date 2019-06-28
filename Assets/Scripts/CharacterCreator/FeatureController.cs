@@ -118,7 +118,7 @@ public class FeatureController : MonoBehaviour
 
     public void AddColor(Color value)
     {
-        SetColor(color + value);
+        SetColor((color + value) / 2);
     }
 
     public void SetSprite(Sprite sprite)

@@ -11,19 +11,40 @@ public class ItemContainerTalker : MonoBehaviour {
      * </summary>
      */
     public bool hasItem;
+    [Range(0f, 1f)]
+    public float chanceToPlayAntSound = 0.1f;
     public SpriteRenderer poof;
     public ItemDescriptionViewer descriptionViewer;
+    public float globalCooldownTime = 1f;
+    public Timer globalCooldown;
     private CharacterCreatorItem item;
     private Selectable selectable;
+
     public void ActivateItem() {
         // transform.BroadcastMessage("Apply");
         if(hasItem) {
-            poof.color = item.gameObject.GetComponentInChildren<SpriteRenderer>().color;
-            item.OnApply.Invoke();
-            if(item == null) {
-                hasItem = false;
+            // Check whether the cooldown is finished
+            if (globalCooldown.timeRemaining <= 0)
+            {
+                poof.color = item.gameObject.GetComponentInChildren<SpriteRenderer>().color;
+                poof.GetComponent<Animator>().SetTrigger("Poof");
+                SfxManager.Instance.PlayPoof();
+
+                if (Random.value <= chanceToPlayAntSound)
+                {
+                    SfxManager.Instance.PlayAntSound();
+                }
+                item.OnApply.Invoke();
+                if (item == null)
+                {
+                    hasItem = false;
+                }
+                SendMessageUpwards("ItemUsed", this, SendMessageOptions.RequireReceiver);
+
+                // Start the cooldown
+                globalCooldown.BeginTimer(globalCooldownTime);
             }
-            SendMessageUpwards("ItemUsed", this, SendMessageOptions.RequireReceiver);
+            
         } else {
             if( invalidSelection )
                 invalidSelection.Raise();

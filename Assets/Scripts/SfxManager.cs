@@ -4,17 +4,37 @@ using UnityEngine;
 
 public class SfxManager : MonoBehaviour
 {
+    public static SfxManager Instance { get; private set; }
+
     public List<AudioClip> witchLaughs;
-    public List<AudioClip> antScreams;
-    public List<AudioClip> antConcerned;
-    public AudioClip antGasp;
-    public AudioClip antNervousLaugh;
-    public AudioClip antSigh;
+    public List<AudioClip> antSounds;
+
+    public AudioClip arrowClick;
+    public AudioClip cameraShutter;
+    public AudioClip candleOut;
+    public AudioClip itemSwitch;
+    public AudioClip poof;
+    public AudioClip start1;
+    public AudioClip start2;
 
     AudioSource m_Audiosource;
 
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            Instance = this;
+        }
+        //DontDestroyOnLoad(this.gameObject);
+    }
+
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         m_Audiosource = GetComponent<AudioSource>();
     }
@@ -24,29 +44,39 @@ public class SfxManager : MonoBehaviour
         PlayRandom(witchLaughs);
     }
 
-    public void PlayAntScream()
+    public void PlayAntSound()
     {
-        PlayRandom(antScreams);
+        PlayRandom(antSounds);
     }
 
-    public void PlayAntConcerned()
+    public void PlayArrowClick()
     {
-        PlayRandom(antConcerned);
+        m_Audiosource.PlayOneShot(arrowClick);
     }
 
-    public void PlayAntGasp()
+    public void PlayCameraShutter()
     {
-        m_Audiosource.PlayOneShot(antGasp);
+        m_Audiosource.PlayOneShot(cameraShutter);
     }
 
-    public void PlayAntNervousLaugh()
+    public void PlayCandleOut()
     {
-        m_Audiosource.PlayOneShot(antNervousLaugh);
+        m_Audiosource.PlayOneShot(candleOut);
     }
 
-    public void PlayAntSigh()
+    public void PlayItemSwitch()
     {
-        m_Audiosource.PlayOneShot(antSigh);
+        m_Audiosource.PlayOneShot(itemSwitch);
+    }
+
+    public void PlayPoof()
+    {
+        m_Audiosource.PlayOneShot(poof);
+    }
+
+    public void PlayStart()
+    {
+        m_Audiosource.PlayOneShot(start1);
     }
 
     void PlayRandom(List<AudioClip> clips)

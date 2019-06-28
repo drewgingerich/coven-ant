@@ -15,6 +15,8 @@ public class MusicManager : MonoBehaviour
     public AudioClip hallOfFame;
 
     AudioSource m_AudioSource;
+    float m_TimeMultiplier70bpm = 7 / 5;
+    float m_TimeMultiplier90bpm = 9 / 5;
 
     void Awake()
     {
@@ -40,11 +42,12 @@ public class MusicManager : MonoBehaviour
         m_AudioSource.DOFade(0f, transitionTime);
     }
 
-    void PlayTrack(AudioClip clip)
+    void PlayTrack(AudioClip clip, float time = 0f)
     {
         m_AudioSource.volume = 1f;
         m_AudioSource.clip = clip;
         m_AudioSource.Play();
+        m_AudioSource.time = time;
     }
 
     public void PlaySceneMusic(string sceneName = null)
@@ -64,6 +67,25 @@ public class MusicManager : MonoBehaviour
                 break;
             default:
                 PlayTrack(mainTheme50bpm);
+                break;
+        }
+    }
+
+    public void PlayByCandleCount(int candleCount)
+    {
+        switch (candleCount)
+        {
+            case 3:
+                PlayTrack(mainTheme50bpm, m_AudioSource.time);
+                break;
+            case 2:
+                PlayTrack(mainTheme70bpm, m_AudioSource.time * m_TimeMultiplier70bpm);
+                break;
+            case 1:
+                PlayTrack(mainTheme90bpm, m_AudioSource.time * m_TimeMultiplier90bpm);
+                break;
+            default:
+                PlayTrack(mainTheme50bpm, m_AudioSource.time);
                 break;
         }
     }

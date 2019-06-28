@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcd3a79c19bc43038c6526f71567b6d, type: 3}
+  m_Name: effect__head__red
+  m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 11400000, guid: c316ac5e28af941148fde7d4c7823d03, type: 2}
+  - {fileID: 11400000, guid: 4fad61616731b489b81157953bbbbd2d, type: 2}
+  - {fileID: 11400000, guid: 733af6929e17541c48f36fed9208880f, type: 2}
+  - {fileID: 11400000, guid: b602e47430afd4baa8099c2d4c039a42, type: 2}
+  - {fileID: 11400000, guid: d4fbb6275b85240ff9f68f32b6b1751f, type: 2}
+  - {fileID: 11400000, guid: 379779a86a9754e48911dad612991b37, type: 2}

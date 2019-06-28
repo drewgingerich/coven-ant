@@ -211,7 +211,7 @@ ScriptedImporter:
     uvTransform: {x: 669, y: 913}
   - name: mouth lips
     originalName: 
-    pivot: {x: 0.51961315, y: 0.7043262}
+    pivot: {x: 0.51961315, y: 0.575224}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -253,7 +253,7 @@ ScriptedImporter:
     uvTransform: {x: 614, y: 2548}
   - name: antenna devil
     originalName: 
-    pivot: {x: 0.4757934, y: 0.11377593}
+    pivot: {x: 0.4757934, y: 0.28113976}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -274,8 +274,8 @@ ScriptedImporter:
     uvTransform: {x: 268, y: -932}
   - name: eyes anime
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5309956, y: 0.42985025}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -295,8 +295,8 @@ ScriptedImporter:
     uvTransform: {x: 440, y: -70}
   - name: mouth fangs
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.50000024, y: 0.65209854}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -316,8 +316,8 @@ ScriptedImporter:
     uvTransform: {x: 791, y: 1787}
   - name: antenna tangled
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5000003, y: 0.5436225}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -400,7 +400,7 @@ ScriptedImporter:
     uvTransform: {x: 651, y: 1870}
   - name: antenna bat
     originalName: 
-    pivot: {x: 0.49999994, y: 0.15352544}
+    pivot: {x: 0.49999994, y: 0.17176151}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -442,7 +442,7 @@ ScriptedImporter:
     uvTransform: {x: 624, y: 2400}
   - name: mouth mushroom
     originalName: 
-    pivot: {x: 0.5000004, y: 0.70420307}
+    pivot: {x: 0.5000004, y: 0.8063058}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -568,7 +568,7 @@ ScriptedImporter:
     uvTransform: {x: 723, y: 1107}
   - name: mouth stitch
     originalName: 
-    pivot: {x: 0.49999982, y: 0.67270374}
+    pivot: {x: 0.52151763, y: 0.51993275}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -652,7 +652,7 @@ ScriptedImporter:
     uvTransform: {x: -696, y: -421}
   - name: antenna cat
     originalName: 
-    pivot: {x: 0.49226707, y: 0.19348145}
+    pivot: {x: 0.49226707, y: 0.3248493}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
