@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 6670660246354764739, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_Name
-      value: MouthSmaller
+      value: BrowsSmaller
       objectReference: {fileID: 0}
     - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
@@ -86,7 +86,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: 90c6c2442ba114b6da2ac4d9618600e3,
+      objectReference: {fileID: 11400000, guid: 568e1368b77424295ac0df55d084d8fb,
         type: 2}
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
@@ -138,7 +138,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: af3d61b4e348248b5ada81fa551789f3,
+      objectReference: {fileID: 21300000, guid: 77ec0dfa1ae384f89ad5f00e32001044,
         type: 3}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
