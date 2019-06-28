@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450fd395abc524542ac0143a30e06409, type: 3}
-  m_Name: EyesSmaller
+  m_Script: {fileID: 11500000, guid: 77a1c1ba0dfdd489b9a0050b0e3d49e1, type: 3}
+  m_Name: eyes__rotate_clockwise
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 728139323bce9492bbb511fe2508ab88, type: 2}
-  mode: 2
-  scale: {x: 0.75, y: 0.75}
+  mode: 1
+  rotation: 2
