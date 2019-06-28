@@ -253,8 +253,8 @@ ScriptedImporter:
     uvTransform: {x: 614, y: 2548}
   - name: antenna devil
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.4757934, y: 0.11377593}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -337,8 +337,8 @@ ScriptedImporter:
     uvTransform: {x: -678, y: 623}
   - name: eyes empty
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5182598, y: 0.73025674}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -400,8 +400,8 @@ ScriptedImporter:
     uvTransform: {x: 651, y: 1870}
   - name: antenna bat
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.49999994, y: 0.15352544}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -442,8 +442,8 @@ ScriptedImporter:
     uvTransform: {x: 624, y: 2400}
   - name: mouth mushroom
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5000004, y: 0.70420307}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -505,8 +505,8 @@ ScriptedImporter:
     uvTransform: {x: 734, y: 281}
   - name: brow mushroom
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: 0.40036705}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -526,8 +526,8 @@ ScriptedImporter:
     uvTransform: {x: 225, y: 1666}
   - name: antenna mushroom
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.514293, y: 0.13415799}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -631,8 +631,8 @@ ScriptedImporter:
     uvTransform: {x: 633, y: 2234}
   - name: mouth cat
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.32065782, y: 0.09606683}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -652,8 +652,8 @@ ScriptedImporter:
     uvTransform: {x: -696, y: -421}
   - name: antenna cat
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.49226707, y: 0.19348145}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2

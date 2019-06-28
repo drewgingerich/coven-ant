@@ -559,7 +559,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 1102
+      y: 1105
       width: 225
       height: 261
     spriteID: b2d604da03b6e4e66bc37c3b580d5954
@@ -1067,7 +1067,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 80
     mosaicPosition: {x: 0, y: 0}
   - name: eye hurt left
@@ -1102,7 +1102,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 61
     mosaicPosition: {x: 0, y: 0}
   - name: antenna left kawaii
@@ -1144,7 +1144,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 53
     mosaicPosition: {x: 0, y: 0}
   - name: mouth smol
@@ -1207,7 +1207,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 42
     mosaicPosition: {x: 0, y: 0}
   - name: mouth pill
@@ -1228,7 +1228,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 76
     mosaicPosition: {x: 0, y: 0}
   - name: eye tired left
@@ -1249,7 +1249,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 78
     mosaicPosition: {x: 0, y: 0}
   - name: Layer 30
