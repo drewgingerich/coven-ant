@@ -3,6 +3,7 @@ using Scriptables.GameEvents;
 
 [RequireComponent(typeof(Selectable))]
 public class ItemContainerTalker : MonoBehaviour {
+    public bool instantlyRespawn = false;
     [SerializeField]
     private GameEvent invalidSelection;
     /**
@@ -29,7 +30,9 @@ public class ItemContainerTalker : MonoBehaviour {
             if(item == null) {
                 hasItem = false;
             }
-            SendMessageUpwards("ItemUsed", this, SendMessageOptions.RequireReceiver);
+            if(instantlyRespawn) {
+                SendMessageUpwards("ItemUsed", this, SendMessageOptions.RequireReceiver);
+            }
         } else {
             if( invalidSelection )
                 invalidSelection.Raise();
