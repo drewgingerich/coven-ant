@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fcd3a79c19bc43038c6526f71567b6d, type: 3}
-  m_Name: effect__antenna__pierced
+  m_Name: effect__antenna__kawaii
   m_EditorClassIdentifier: 
   effects:
-  - {fileID: 11400000, guid: 92f2e097d862640cd8baeaeae627175d, type: 2}
+  - {fileID: 11400000, guid: c0e457e617d3b497fb51edd0819682d0, type: 2}
