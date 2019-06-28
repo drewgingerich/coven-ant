@@ -1,0 +1,785 @@
+fileFormatVersion: 2
+guid: 436ef7ef74835454e9a10f93215b3559
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: face assets 3 edited_GO/face assets 3 edited_GO
+    100002: face assets 3 edited_GO/face assets 3 edited_GO/antenna bolt
+    100004: face assets 3 edited_GO/face assets 3 edited_GO/antenna clown hair
+    100006: face assets 3 edited_GO/face assets 3 edited_GO/antenna kawaii
+    100008: face assets 3 edited_GO/face assets 3 edited_GO/antenna pierced
+    100010: face assets 3 edited_GO/face assets 3 edited_GO/brow curvy
+    100012: face assets 3 edited_GO/face assets 3 edited_GO/brow sparse
+    100014: face assets 3 edited_GO/face assets 3 edited_GO/brow zigzag
+    100016: face assets 3 edited_GO/face assets 3 edited_GO/eye smol
+    100018: face assets 3 edited_GO/face assets 3 edited_GO/eyes clown
+    100020: face assets 3 edited_GO/face assets 3 edited_GO/eyes hurt
+    100022: face assets 3 edited_GO/face assets 3 edited_GO/eyes kawaii
+    100024: face assets 3 edited_GO/face assets 3 edited_GO/eyes tired
+    100026: face assets 3 edited_GO/face assets 3 edited_GO/mouth clown
+    100028: face assets 3 edited_GO/face assets 3 edited_GO/mouth drool
+    100030: face assets 3 edited_GO/face assets 3 edited_GO/mouth kawaii
+    100032: face assets 3 edited_GO/face assets 3 edited_GO/mouth pill
+    100034: face assets 3 edited_GO/face assets 3 edited_GO/mouth smol
+    100036: face assets 3 edited_GO/face assets 3 edited_GO/mouth trapped
+    100038: face assets 3 edited_GO/face assets 3 edited_GO/nose clown
+    100040: face assets 3 edited_GO/face assets 3 edited_GO/nose snotty
+    100042: face assets 3 edited_GO/face assets 3 edited_GO/nose witch
+    400000: face assets 3 edited_GO/face assets 3 edited_GO/Transform
+    400002: face assets 3 edited_GO/face assets 3 edited_GO/antenna bolt/Transform
+    400004: face assets 3 edited_GO/face assets 3 edited_GO/antenna clown hair/Transform
+    400006: face assets 3 edited_GO/face assets 3 edited_GO/antenna kawaii/Transform
+    400008: face assets 3 edited_GO/face assets 3 edited_GO/antenna pierced/Transform
+    400010: face assets 3 edited_GO/face assets 3 edited_GO/brow curvy/Transform
+    400012: face assets 3 edited_GO/face assets 3 edited_GO/brow sparse/Transform
+    400014: face assets 3 edited_GO/face assets 3 edited_GO/brow zigzag/Transform
+    400016: face assets 3 edited_GO/face assets 3 edited_GO/eye smol/Transform
+    400018: face assets 3 edited_GO/face assets 3 edited_GO/eyes clown/Transform
+    400020: face assets 3 edited_GO/face assets 3 edited_GO/eyes hurt/Transform
+    400022: face assets 3 edited_GO/face assets 3 edited_GO/eyes kawaii/Transform
+    400024: face assets 3 edited_GO/face assets 3 edited_GO/eyes tired/Transform
+    400026: face assets 3 edited_GO/face assets 3 edited_GO/mouth clown/Transform
+    400028: face assets 3 edited_GO/face assets 3 edited_GO/mouth drool/Transform
+    400030: face assets 3 edited_GO/face assets 3 edited_GO/mouth kawaii/Transform
+    400032: face assets 3 edited_GO/face assets 3 edited_GO/mouth pill/Transform
+    400034: face assets 3 edited_GO/face assets 3 edited_GO/mouth smol/Transform
+    400036: face assets 3 edited_GO/face assets 3 edited_GO/mouth trapped/Transform
+    400038: face assets 3 edited_GO/face assets 3 edited_GO/nose clown/Transform
+    400040: face assets 3 edited_GO/face assets 3 edited_GO/nose snotty/Transform
+    400042: face assets 3 edited_GO/face assets 3 edited_GO/nose witch/Transform
+    2800000: face assets 3 edited
+    21200000: face assets 3 edited_GO/face assets 3 edited_GO/antenna bolt/SpriteRenderer
+    21200002: face assets 3 edited_GO/face assets 3 edited_GO/antenna clown hair/SpriteRenderer
+    21200004: face assets 3 edited_GO/face assets 3 edited_GO/antenna kawaii/SpriteRenderer
+    21200006: face assets 3 edited_GO/face assets 3 edited_GO/antenna pierced/SpriteRenderer
+    21200008: face assets 3 edited_GO/face assets 3 edited_GO/brow curvy/SpriteRenderer
+    21200010: face assets 3 edited_GO/face assets 3 edited_GO/brow sparse/SpriteRenderer
+    21200012: face assets 3 edited_GO/face assets 3 edited_GO/brow zigzag/SpriteRenderer
+    21200014: face assets 3 edited_GO/face assets 3 edited_GO/eye smol/SpriteRenderer
+    21200016: face assets 3 edited_GO/face assets 3 edited_GO/eyes clown/SpriteRenderer
+    21200018: face assets 3 edited_GO/face assets 3 edited_GO/eyes hurt/SpriteRenderer
+    21200020: face assets 3 edited_GO/face assets 3 edited_GO/eyes kawaii/SpriteRenderer
+    21200022: face assets 3 edited_GO/face assets 3 edited_GO/eyes tired/SpriteRenderer
+    21200024: face assets 3 edited_GO/face assets 3 edited_GO/mouth clown/SpriteRenderer
+    21200026: face assets 3 edited_GO/face assets 3 edited_GO/mouth drool/SpriteRenderer
+    21200028: face assets 3 edited_GO/face assets 3 edited_GO/mouth kawaii/SpriteRenderer
+    21200030: face assets 3 edited_GO/face assets 3 edited_GO/mouth pill/SpriteRenderer
+    21200032: face assets 3 edited_GO/face assets 3 edited_GO/mouth smol/SpriteRenderer
+    21200034: face assets 3 edited_GO/face assets 3 edited_GO/mouth trapped/SpriteRenderer
+    21200036: face assets 3 edited_GO/face assets 3 edited_GO/nose clown/SpriteRenderer
+    21200038: face assets 3 edited_GO/face assets 3 edited_GO/nose snotty/SpriteRenderer
+    21200040: face assets 3 edited_GO/face assets 3 edited_GO/nose witch/SpriteRenderer
+    21300000: e02d75c010d7a4becbeff521c30dfbc5
+    21300002: d4348728fc0ea4a19acdf8f2e3e80bdf
+    21300004: bd3e767889691423ba5d536f7b730921
+    21300006: b65a2d6cdcf8f458889cae7d28393239
+    21300008: e70b1773b4000457592aef60aff6002b
+    21300010: 18896272ae44f432583788766281fed6
+    21300012: cca3ceefcef9c424a85978192faf0199
+    21300014: 7ae7cf967e4a546c3a653e56f3f0b404
+    21300016: 60c8e10aeef1b45c5baca689c71430e3
+    21300018: 3455176c46cd64f5b8914ff0df0074b4
+    21300020: 5fc81f1b33c514652886622daeb4016f
+    21300022: bc2f770fc45b34c5f9da96abdfd9f154
+    21300024: ab3be496dd46646359b3622ef990676d
+    21300026: b38b21994adca4810a89180267a08800
+    21300028: 9993749a6da5f43f499758e4426ff21c
+    21300030: 6215febaba377486091332e3910b46bc
+    21300032: b5ec210d2f48d477bb8fcc02d0d811c5
+    21300034: fe53cab571aee487d875744a6a57814c
+    21300036: 3c6ca2fc131364f649eee2b2fa773c70
+    21300038: b6766e02b94604c368735272e1dc7e3b
+    21300040: 19487a9ad1ea74876be03ff0334d68b6
+    100100000: face assets 3 edited_GO
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: antenna pierced
+    originalName: 
+    pivot: {x: 0.50503457, y: 0.058568623}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1066
+      height: 462
+    spriteID: e02d75c010d7a4becbeff521c30dfbc5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -390, y: -1048}
+  - name: brow sparse
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1078
+      y: 291
+      width: 811
+      height: 135
+    spriteID: d4348728fc0ea4a19acdf8f2e3e80bdf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 538, y: -534}
+  - name: mouth drool
+    originalName: 
+    pivot: {x: 0.49999976, y: 0.6533395}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1491
+      y: 878
+      width: 482
+      height: 210
+    spriteID: bd3e767889691423ba5d536f7b730921
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 765, y: 544}
+  - name: eyes hurt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1193
+      y: 1422
+      width: 784
+      height: 229
+    spriteID: b65a2d6cdcf8f458889cae7d28393239
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 629, y: 850}
+  - name: nose witch
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1367
+      y: 1747
+      width: 211
+      height: 290
+    spriteID: e70b1773b4000457592aef60aff6002b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 510, y: 1217}
+  - name: antenna kawaii
+    originalName: 
+    pivot: {x: 0.49999985, y: 0.09604182}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1078
+      y: 4
+      width: 773
+      height: 279
+    spriteID: 18896272ae44f432583788766281fed6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 512, y: -896}
+  - name: mouth kawaii
+    originalName: 
+    pivot: {x: 0.49999997, y: 0.88198406}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1133
+      width: 687
+      height: 281
+    spriteID: cca3ceefcef9c424a85978192faf0199
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -604, y: 810}
+  - name: eyes kawaii
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1002
+      y: 474
+      width: 868
+      height: 249
+    spriteID: 7ae7cf967e4a546c3a653e56f3f0b404
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 479, y: -111}
+  - name: mouth smol
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1897
+      y: 291
+      width: 75
+      height: 51
+    spriteID: 60c8e10aeef1b45c5baca689c71430e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 985, y: -237}
+  - name: eye smol
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1678
+      y: 731
+      width: 347
+      height: 64
+    spriteID: 3455176c46cd64f5b8914ff0df0074b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 902, y: 61}
+  - name: mouth trapped
+    originalName: 
+    pivot: {x: 0.49999994, y: 0.743212}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1422
+      width: 577
+      height: 331
+    spriteID: 5fc81f1b33c514652886622daeb4016f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -635, y: 1077}
+  - name: antenna bolt
+    originalName: 
+    pivot: {x: 0.49318925, y: 0.08716339}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 878
+      width: 788
+      height: 247
+    spriteID: bc2f770fc45b34c5f9da96abdfd9f154
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -561, y: -116}
+  - name: brow zigzag
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 589
+      y: 1747
+      width: 770
+      height: 91
+    spriteID: ab3be496dd46646359b3622ef990676d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 13, y: 921}
+  - name: mouth pill
+    originalName: 
+    pivot: {x: 0.4999997, y: 0.7200928}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 589
+      y: 1422
+      width: 596
+      height: 317
+    spriteID: b38b21994adca4810a89180267a08800
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -59, y: 1182}
+  - name: eyes tired
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 699
+      y: 1133
+      width: 664
+      height: 221
+    spriteID: 9993749a6da5f43f499758e4426ff21c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 77, y: 535}
+  - name: nose snotty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1586
+      y: 1747
+      width: 206
+      height: 253
+    spriteID: 6215febaba377486091332e3910b46bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 723, y: 1190}
+  - name: brow curvy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1002
+      y: 731
+      width: 668
+      height: 126
+    spriteID: b5ec210d2f48d477bb8fcc02d0d811c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 375, y: -104}
+  - name: antenna clown hair
+    originalName: 
+    pivot: {x: 0.4999999, y: 0.07986573}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 474
+      width: 990
+      height: 396
+    spriteID: fe53cab571aee487d875744a6a57814c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -442, y: -558}
+  - name: mouth clown
+    originalName: 
+    pivot: {x: 0.49999958, y: 0.60271543}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1371
+      y: 1133
+      width: 595
+      height: 209
+    spriteID: 3c6ca2fc131364f649eee2b2fa773c70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 710, y: 786}
+  - name: nose clown
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1800
+      y: 1747
+      width: 227
+      height: 199
+    spriteID: b6766e02b94604c368735272e1dc7e3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 953, y: 1189}
+  - name: eyes clown
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 800
+      y: 878
+      width: 683
+      height: 242
+    spriteID: 19487a9ad1ea74876be03ff0334d68b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 188, y: 295}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 1942, y: 1777}
+  textureActualWidth: 2048
+  textureActualHeight: 2048
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: antenna pierced
+    spriteName: antenna pierced
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e02d75c010d7a4becbeff521c30dfbc5
+    layerID: 756369347
+    mosaicPosition: {x: 4, y: 4}
+  - name: brow sparse
+    spriteName: brow sparse
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d4348728fc0ea4a19acdf8f2e3e80bdf
+    layerID: 274173300
+    mosaicPosition: {x: 1078, y: 291}
+  - name: mouth drool
+    spriteName: mouth drool
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bd3e767889691423ba5d536f7b730921
+    layerID: -1963102847
+    mosaicPosition: {x: 1491, y: 878}
+  - name: eyes hurt
+    spriteName: eyes hurt
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b65a2d6cdcf8f458889cae7d28393239
+    layerID: 1597000941
+    mosaicPosition: {x: 1193, y: 1422}
+  - name: nose witch
+    spriteName: nose witch
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e70b1773b4000457592aef60aff6002b
+    layerID: 1921431814
+    mosaicPosition: {x: 1367, y: 1747}
+  - name: antenna kawaii
+    spriteName: antenna kawaii
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 18896272ae44f432583788766281fed6
+    layerID: 1586239511
+    mosaicPosition: {x: 1078, y: 4}
+  - name: mouth kawaii
+    spriteName: mouth kawaii
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cca3ceefcef9c424a85978192faf0199
+    layerID: -320218861
+    mosaicPosition: {x: 4, y: 1133}
+  - name: eyes kawaii
+    spriteName: eyes kawaii
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7ae7cf967e4a546c3a653e56f3f0b404
+    layerID: 2120372238
+    mosaicPosition: {x: 1002, y: 474}
+  - name: mouth smol
+    spriteName: mouth smol
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 60c8e10aeef1b45c5baca689c71430e3
+    layerID: 1981097252
+    mosaicPosition: {x: 1897, y: 291}
+  - name: eye smol
+    spriteName: eye smol
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3455176c46cd64f5b8914ff0df0074b4
+    layerID: -2008090422
+    mosaicPosition: {x: 1678, y: 731}
+  - name: mouth trapped
+    spriteName: mouth trapped
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5fc81f1b33c514652886622daeb4016f
+    layerID: -102737487
+    mosaicPosition: {x: 4, y: 1422}
+  - name: antenna bolt
+    spriteName: antenna bolt
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bc2f770fc45b34c5f9da96abdfd9f154
+    layerID: -99151816
+    mosaicPosition: {x: 4, y: 878}
+  - name: brow zigzag
+    spriteName: brow zigzag
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ab3be496dd46646359b3622ef990676d
+    layerID: 1336706984
+    mosaicPosition: {x: 589, y: 1747}
+  - name: mouth pill
+    spriteName: mouth pill
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b38b21994adca4810a89180267a08800
+    layerID: -1392989648
+    mosaicPosition: {x: 589, y: 1422}
+  - name: eyes tired
+    spriteName: eyes tired
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9993749a6da5f43f499758e4426ff21c
+    layerID: 2018735818
+    mosaicPosition: {x: 699, y: 1133}
+  - name: nose snotty
+    spriteName: nose snotty
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6215febaba377486091332e3910b46bc
+    layerID: 472032158
+    mosaicPosition: {x: 1586, y: 1747}
+  - name: brow curvy
+    spriteName: brow curvy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b5ec210d2f48d477bb8fcc02d0d811c5
+    layerID: 633979603
+    mosaicPosition: {x: 1002, y: 731}
+  - name: antenna clown hair
+    spriteName: antenna clown hair
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fe53cab571aee487d875744a6a57814c
+    layerID: -2112521180
+    mosaicPosition: {x: 4, y: 474}
+  - name: mouth clown
+    spriteName: mouth clown
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3c6ca2fc131364f649eee2b2fa773c70
+    layerID: -1680774704
+    mosaicPosition: {x: 1371, y: 1133}
+  - name: nose clown
+    spriteName: nose clown
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b6766e02b94604c368735272e1dc7e3b
+    layerID: 1849008196
+    mosaicPosition: {x: 1800, y: 1747}
+  - name: eyes clown
+    spriteName: eyes clown
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 19487a9ad1ea74876be03ff0334d68b6
+    layerID: 0
+    mosaicPosition: {x: 800, y: 878}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+  boneGOs: []
+  generateGOHierarchy: 0
+  textureAssetName: face assets 3 edited
+  prefabAssetName: face assets 3 edited_GO
