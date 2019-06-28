@@ -189,7 +189,9 @@ public class Gallery : MonoBehaviour
                 }
 
                 var childText = child.GetComponentInChildren<Text>();
-                childText.text = $"{characterName} - {createdOn}";
+                // NOTE: not enough room for date
+                //childText.text = $"{characterName} - {createdOn}";
+                childText.text = characterName;
 
                 var childImage = child.GetComponentsInChildren<Image>()[1];
                 //var childImage = child.GetComponentInChildren<RawImage>();
