@@ -14,17 +14,10 @@ public class SnapshotCamera : MonoBehaviour
     // https://answers.unity.com/questions/22954/how-to-save-a-picture-take-screenshot-from-a-camer.html
     public Texture2D TakeSnapshot()
     {
-        RenderTexture rt = new RenderTexture(camera.pixelWidth, camera.pixelHeight, 24);
+        RenderTexture rt = new RenderTexture(camera.pixelWidth, camera.pixelHeight, 32);
         RenderTexture.active = rt;
         camera.targetTexture = rt;
         camera.Render();
-
-        //Rect snapshotRect = new Rect(
-        //    camera.pixelWidth * 0.25f,
-        //    camera.pixelHeight * 0.25f,
-        //    camera.pixelWidth * 0.5f, 
-        //    camera.pixelHeight * 0.5f
-        //);
 
         Rect snapshotRect = new Rect(
             0,
@@ -33,7 +26,7 @@ public class SnapshotCamera : MonoBehaviour
             camera.pixelHeight
         );
 
-        Texture2D snapshot = new Texture2D(camera.pixelWidth, camera.pixelHeight, TextureFormat.RGB24, false);
+        Texture2D snapshot = new Texture2D(camera.pixelWidth, camera.pixelHeight, TextureFormat.RGBA32, false);
         snapshot.ReadPixels(snapshotRect, 0, 0);
 
         camera.targetTexture = null;
