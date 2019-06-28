@@ -12,4 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c02aa3034634851a4b9b399afa2f5b, type: 3}
   m_Name: Eyebrows
   m_EditorClassIdentifier: 
-  feature: {fileID: 0}
