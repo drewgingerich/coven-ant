@@ -54,8 +54,13 @@ public class Gallery : MonoBehaviour
         // TODO: autoscroll if arrow key not pressed
     }
 
-    private void ScrollLeft()
+    public void ScrollLeft()
     {
+        // Added early exit if called as a public function
+        if( m_IsScrolling) {
+            return;
+        }
+        
         leftArrow.PulsateOneshot(0.25f);
 
         // disable controls
@@ -97,8 +102,13 @@ public class Gallery : MonoBehaviour
         }
     }
 
-    private void ScrollRight()
+    public void ScrollRight()
     {
+        // Added early exit if called as a public function
+        if( m_IsScrolling) {
+            return;
+        }
+
         rightArrow.PulsateOneshot(0.25f);
 
         // disable controls

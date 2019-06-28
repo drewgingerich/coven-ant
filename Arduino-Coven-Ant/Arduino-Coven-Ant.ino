@@ -14,11 +14,11 @@ struct Button {
 };
 
 Button buttons[] = {
-	{.pin = 2, .id = 0, .inverted = true, .isDown = false, .smoothTime = 0 },
-	{.pin = 3, .id = 1, .inverted = true, .isDown = false, .smoothTime = 0 },
-	{.pin = 4, .id = 2, .inverted = true, .isDown = false, .smoothTime = 0 },
-	{.pin = 5, .id = 3, .inverted = true, .isDown = false, .smoothTime = 0 },
-	{.pin = 6, .id = 4, .inverted = false, .isDown = false, .smoothTime = 0 }
+	{.pin = 9, .id = 0, .inverted = true, .isDown = false, .smoothTime = 0 },
+	{.pin = 8, .id = 1, .inverted = true, .isDown = false, .smoothTime = 0 },
+	{.pin = 10, .id = 2, .inverted = true, .isDown = false, .smoothTime = 0 },
+	{.pin = 11, .id = 3, .inverted = true, .isDown = false, .smoothTime = 0 },
+	{.pin = 4, .id = 4, .inverted = true, .isDown = false, .smoothTime = 0 }
 };
 
 char _serial_command_buffer[MAX_SERIAL_BUFFER_LENGTH];
