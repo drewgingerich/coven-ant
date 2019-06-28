@@ -810,7 +810,7 @@ MonoBehaviour:
     m_PressedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: Normal
+    m_NormalTrigger: Highlighted
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
@@ -1392,7 +1392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1013410593
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1842,7 +1842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginTimerOnStart: 1
-  timeRemaining: 10
+  timeRemaining: 2
   repeatTimer: 0
   OnTimerStart:
     m_PersistentCalls:
@@ -1903,6 +1903,28 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2114379237}
         m_MethodName: OnGameEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1013410592}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1733432350}
+        m_MethodName: PlayWitchLaugh
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2546,10 +2568,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51124d91d5d8a4a2c83d2e4d199b19c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  witchLaugh1: {fileID: 8300000, guid: 312a39c23936e416d95a0103dea69811, type: 3}
-  witchLaugh2: {fileID: 8300000, guid: d1db274b8cbc846a49c608f8bea0c0a0, type: 3}
-  witchLaugh3: {fileID: 8300000, guid: 1a730f17708554bdd902aa6a3b727c07, type: 3}
-  witchLaugh4: {fileID: 8300000, guid: c6b8a9b7585ea4538a5fe06f6c5f2d91, type: 3}
+  witchLaughs:
+  - {fileID: 8300000, guid: 312a39c23936e416d95a0103dea69811, type: 3}
+  - {fileID: 8300000, guid: d1db274b8cbc846a49c608f8bea0c0a0, type: 3}
+  - {fileID: 8300000, guid: 1a730f17708554bdd902aa6a3b727c07, type: 3}
+  - {fileID: 8300000, guid: c6b8a9b7585ea4538a5fe06f6c5f2d91, type: 3}
+  antScreams:
+  - {fileID: 8300000, guid: 82c2f1c2a98254e82a6d0c2ba818e8e2, type: 3}
+  - {fileID: 8300000, guid: 5cfa61cd674274e98941ad0ba09e8167, type: 3}
+  - {fileID: 8300000, guid: 6a19765382d7445e996f0f5c05491134, type: 3}
+  antConcerned:
+  - {fileID: 8300000, guid: 00cdca67843a0401ea628e37245549f1, type: 3}
+  - {fileID: 8300000, guid: 557fb571e7a3e4822b6d2f67964aa2f6, type: 3}
+  - {fileID: 8300000, guid: d86db81ccfbb24e02bf855cc3571a3da, type: 3}
+  antGasp: {fileID: 8300000, guid: f5c254d0d4e2945ef899d0337b10b4ee, type: 3}
+  antNervousLaugh: {fileID: 8300000, guid: bcc96db9eaa3442ef904b68fcc2c91da, type: 3}
+  antSigh: {fileID: 8300000, guid: 46a63f62ac09c4533bb937b169c5fd94, type: 3}
 --- !u!82 &1733432351
 AudioSource:
   m_ObjectHideFlags: 0
