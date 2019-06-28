@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64b3662fca501467cac8668ec1702d40, type: 3}
-  m_Name: NoseAddRandom
+  m_Name: EyesAddRandom
   m_EditorClassIdentifier: 
-  target: {fileID: 11400000, guid: b63a348aabf1e402e88caf626b22298f, type: 2}
+  target: {fileID: 11400000, guid: 728139323bce9492bbb511fe2508ab88, type: 2}
