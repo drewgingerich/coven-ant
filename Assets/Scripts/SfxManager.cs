@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class SfxManager : MonoBehaviour
 {
+    public static SfxManager Instance { get; private set; }
+
     public List<AudioClip> witchLaughs;
-    public List<AudioClip> antScreams;
-    public List<AudioClip> antConcerned;
-    public AudioClip antGasp;
-    public AudioClip antNervousLaugh;
-    public AudioClip antSigh;
+    public List<AudioClip> antSounds;
 
     AudioSource m_Audiosource;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            Instance = this;
+        }
+        //DontDestroyOnLoad(this.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,29 +36,9 @@ public class SfxManager : MonoBehaviour
         PlayRandom(witchLaughs);
     }
 
-    public void PlayAntScream()
+    public void PlayAntSound()
     {
-        PlayRandom(antScreams);
-    }
-
-    public void PlayAntConcerned()
-    {
-        PlayRandom(antConcerned);
-    }
-
-    public void PlayAntGasp()
-    {
-        m_Audiosource.PlayOneShot(antGasp);
-    }
-
-    public void PlayAntNervousLaugh()
-    {
-        m_Audiosource.PlayOneShot(antNervousLaugh);
-    }
-
-    public void PlayAntSigh()
-    {
-        m_Audiosource.PlayOneShot(antSigh);
+        PlayRandom(antSounds);
     }
 
     void PlayRandom(List<AudioClip> clips)

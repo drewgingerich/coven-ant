@@ -751,6 +751,11 @@ PrefabInstance:
       propertyPath: poof
       value: 
       objectReference: {fileID: 918061072}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: chanceToPlayAntSound
+      value: 0.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd6bffadd70dcc46ba218c205395749, type: 3}
 --- !u!1 &243746460
@@ -2704,6 +2709,11 @@ PrefabInstance:
       propertyPath: poof
       value: 
       objectReference: {fileID: 918061072}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: chanceToPlayAntSound
+      value: 0.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd6bffadd70dcc46ba218c205395749, type: 3}
 --- !u!1 &918061070
@@ -3215,6 +3225,11 @@ PrefabInstance:
       propertyPath: poof
       value: 
       objectReference: {fileID: 918061072}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: chanceToPlayAntSound
+      value: 0.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd6bffadd70dcc46ba218c205395749, type: 3}
 --- !u!1 &1013410592
@@ -3543,6 +3558,11 @@ PrefabInstance:
       propertyPath: poof
       value: 
       objectReference: {fileID: 918061072}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: chanceToPlayAntSound
+      value: 0.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd6bffadd70dcc46ba218c205395749, type: 3}
 --- !u!114 &1028897770 stripped
@@ -3967,6 +3987,11 @@ PrefabInstance:
       propertyPath: poof
       value: 
       objectReference: {fileID: 918061072}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: chanceToPlayAntSound
+      value: 0.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd6bffadd70dcc46ba218c205395749, type: 3}
 --- !u!1 &1214455178
@@ -4167,7 +4192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginTimerOnStart: 1
-  timeRemaining: 2
+  timeRemaining: 50
   repeatTimer: 0
   OnTimerStart:
     m_PersistentCalls:
@@ -4183,9 +4208,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1733432350}
+        m_MethodName: PlayWitchLaugh
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4923,6 +4948,11 @@ PrefabInstance:
       propertyPath: poof
       value: 
       objectReference: {fileID: 918061072}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: chanceToPlayAntSound
+      value: 0.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd6bffadd70dcc46ba218c205395749, type: 3}
 --- !u!1 &1417003680 stripped
@@ -5438,17 +5468,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d1db274b8cbc846a49c608f8bea0c0a0, type: 3}
   - {fileID: 8300000, guid: 1a730f17708554bdd902aa6a3b727c07, type: 3}
   - {fileID: 8300000, guid: c6b8a9b7585ea4538a5fe06f6c5f2d91, type: 3}
-  antScreams:
-  - {fileID: 8300000, guid: 82c2f1c2a98254e82a6d0c2ba818e8e2, type: 3}
-  - {fileID: 8300000, guid: 5cfa61cd674274e98941ad0ba09e8167, type: 3}
-  - {fileID: 8300000, guid: 6a19765382d7445e996f0f5c05491134, type: 3}
-  antConcerned:
+  antSounds:
   - {fileID: 8300000, guid: 00cdca67843a0401ea628e37245549f1, type: 3}
   - {fileID: 8300000, guid: 557fb571e7a3e4822b6d2f67964aa2f6, type: 3}
   - {fileID: 8300000, guid: d86db81ccfbb24e02bf855cc3571a3da, type: 3}
-  antGasp: {fileID: 8300000, guid: f5c254d0d4e2945ef899d0337b10b4ee, type: 3}
-  antNervousLaugh: {fileID: 8300000, guid: bcc96db9eaa3442ef904b68fcc2c91da, type: 3}
-  antSigh: {fileID: 8300000, guid: 46a63f62ac09c4533bb937b169c5fd94, type: 3}
+  - {fileID: 8300000, guid: f5c254d0d4e2945ef899d0337b10b4ee, type: 3}
+  - {fileID: 8300000, guid: bcc96db9eaa3442ef904b68fcc2c91da, type: 3}
+  - {fileID: 8300000, guid: 82c2f1c2a98254e82a6d0c2ba818e8e2, type: 3}
+  - {fileID: 8300000, guid: 5cfa61cd674274e98941ad0ba09e8167, type: 3}
+  - {fileID: 8300000, guid: 6a19765382d7445e996f0f5c05491134, type: 3}
+  - {fileID: 8300000, guid: 46a63f62ac09c4533bb937b169c5fd94, type: 3}
 --- !u!82 &1733432351
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5974,6 +6003,11 @@ PrefabInstance:
       propertyPath: poof
       value: 
       objectReference: {fileID: 918061072}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: chanceToPlayAntSound
+      value: 0.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd6bffadd70dcc46ba218c205395749, type: 3}
 --- !u!1 &1823778770
@@ -6353,6 +6387,11 @@ PrefabInstance:
       propertyPath: poof
       value: 
       objectReference: {fileID: 918061072}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: chanceToPlayAntSound
+      value: 0.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd6bffadd70dcc46ba218c205395749, type: 3}
 --- !u!1001 &1851597213

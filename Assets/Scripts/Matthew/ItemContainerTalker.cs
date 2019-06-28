@@ -11,6 +11,8 @@ public class ItemContainerTalker : MonoBehaviour {
      * </summary>
      */
     public bool hasItem;
+    [Range(0f, 1f)]
+    public float chanceToPlayAntSound = 0.1f;
     public SpriteRenderer poof;
     public ItemDescriptionViewer descriptionViewer;
     private CharacterCreatorItem item;
@@ -19,6 +21,10 @@ public class ItemContainerTalker : MonoBehaviour {
         // transform.BroadcastMessage("Apply");
         if(hasItem) {
             poof.color = item.gameObject.GetComponentInChildren<SpriteRenderer>().color;
+            if (Random.value <= chanceToPlayAntSound)
+            {
+                SfxManager.Instance.PlayAntSound();
+            }
             item.OnApply.Invoke();
             if(item == null) {
                 hasItem = false;
