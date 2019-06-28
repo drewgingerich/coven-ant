@@ -211,8 +211,8 @@ ScriptedImporter:
     uvTransform: {x: 669, y: 913}
   - name: mouth lips
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.51961315, y: 0.7043262}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -568,8 +568,8 @@ ScriptedImporter:
     uvTransform: {x: 723, y: 1107}
   - name: mouth stitch
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.49999982, y: 0.67270374}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -631,7 +631,7 @@ ScriptedImporter:
     uvTransform: {x: 633, y: 2234}
   - name: mouth cat
     originalName: 
-    pivot: {x: 0.32065782, y: 0.09606683}
+    pivot: {x: 0.32065785, y: 0.11039277}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
