@@ -12,6 +12,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potion to See You With
       objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.size
@@ -74,60 +129,10 @@ PrefabInstance:
       propertyPath: itemName
       value: Potion to See You With Dearie
       objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      propertyPath: itemDescription
+      value: Hooray for descriptions
       objectReference: {fileID: 0}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}

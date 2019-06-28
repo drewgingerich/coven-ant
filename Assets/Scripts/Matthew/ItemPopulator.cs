@@ -35,6 +35,7 @@ public class ItemPopulator : MonoBehaviour {
             return;
         }
         container.AddItem(newItem);
+        container.descriptionViewer.UpdateDescriptionFromItem(newItem.gameObject);
         onItemSpawned.Raise(newItem.gameObject);
     }
 

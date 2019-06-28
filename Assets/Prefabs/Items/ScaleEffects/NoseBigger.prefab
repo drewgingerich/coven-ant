@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7441026861514046975, guid: 2d3f9ac498e354d4688c777d7b2cc3f2,
         type: 3}
       propertyPath: m_Name
-      value: nose__cat
+      value: NoseBigger
       objectReference: {fileID: 0}
     - target: {fileID: 2464408098749097618, guid: 2d3f9ac498e354d4688c777d7b2cc3f2,
         type: 3}
@@ -66,6 +66,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152930706689232662, guid: 2d3f9ac498e354d4688c777d7b2cc3f2,
+        type: 3}
+      propertyPath: itemDescription
+      value: Test
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3f9ac498e354d4688c777d7b2cc3f2, type: 3}

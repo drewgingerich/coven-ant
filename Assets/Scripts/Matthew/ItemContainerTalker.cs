@@ -11,6 +11,7 @@ public class ItemContainerTalker : MonoBehaviour {
      * </summary>
      */
     public bool hasItem;
+    public ItemDescriptionViewer descriptionViewer;
     private CharacterCreatorItem item;
     private Selectable selectable;
     public void ActivateItem() {

@@ -12,42 +12,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potion of Smash
       objectReference: {fileID: 0}
-    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 11400000, guid: 4008476cb3bb7d24aa0fc7dd4ebe4f88,
-        type: 2}
-    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Apply
-      objectReference: {fileID: 0}
-    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
-        type: 3}
-      propertyPath: itemName
-      value: Potion of Smash Mouth
-      objectReference: {fileID: 0}
     - target: {fileID: 1865179349719562414, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,6 +66,47 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 4008476cb3bb7d24aa0fc7dd4ebe4f88,
+        type: 2}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: itemName
+      value: Potion of Smash Mouth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: itemDescription
+      value: Smashy smash smash
       objectReference: {fileID: 0}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
