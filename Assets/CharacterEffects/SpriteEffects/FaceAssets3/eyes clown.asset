@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88967b78e89e244caa257156be73bf34, type: 3}
-  m_Name: eyes tired
+  m_Name: eyes clown
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 728139323bce9492bbb511fe2508ab88, type: 2}
-  sprite: {fileID: 21300028, guid: 436ef7ef74835454e9a10f93215b3559, type: 3}
+  sprite: {fileID: 21300040, guid: 436ef7ef74835454e9a10f93215b3559, type: 3}

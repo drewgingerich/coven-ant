@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: effects__eyes__clown
   m_EditorClassIdentifier: 
   effects:
-  - {fileID: 11400000, guid: 8ec7e3b90832345819884315cd432f38, type: 2}
+  - {fileID: 11400000, guid: 8a9e37064bb7b4935a996f6c5ece5638, type: 2}

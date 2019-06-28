@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd3a79c19bc43038c6526f71567b6d, type: 3}
   m_Name: effects__mouth__drool
   m_EditorClassIdentifier: 
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 61608589daf1f424b8ab1e91348ed200, type: 2}

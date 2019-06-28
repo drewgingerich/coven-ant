@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd3a79c19bc43038c6526f71567b6d, type: 3}
   m_Name: effect__eyes__hurt
   m_EditorClassIdentifier: 
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 2fb924b4223464143b1f3cbc5998464a, type: 2}

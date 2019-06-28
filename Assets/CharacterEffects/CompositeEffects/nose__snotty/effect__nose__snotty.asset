@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd3a79c19bc43038c6526f71567b6d, type: 3}
   m_Name: effect__nose__snotty
   m_EditorClassIdentifier: 
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: aeff82a4496ee4191b47c337d6a496f4, type: 2}
