@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 23c91428d9e634061bcc8380d4a29b48, type: 2}
   mode: 1
-  rotation: 5
+  rotation: 2

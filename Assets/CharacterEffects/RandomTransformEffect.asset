@@ -12,4 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d793100b7c4e4a5cae0e7a1d617e363, type: 3}
   m_Name: RandomTransformEffect
   m_EditorClassIdentifier: 
-  effectPool: []
+  effectPool:
+  - {fileID: 11400000, guid: 5810a36a27d874c37b68b1dc150d207e, type: 2}
+  - {fileID: 11400000, guid: 424dbe23b83ab4bd7aaa91149e3542cb, type: 2}
+  - {fileID: 11400000, guid: b2c4e47acc53844978deb6ce875e7984, type: 2}
+  - {fileID: 11400000, guid: be9bd909dd1f34cc6a3c20eff6058255, type: 2}
+  - {fileID: 11400000, guid: 830b0c19e44224317b085386cac6a4fc, type: 2}
+  - {fileID: 11400000, guid: b20ffe94b7fc14cb6b5bf69dc435853a, type: 2}
+  - {fileID: 11400000, guid: 4f1188e69d90846bb8a0f85c0fb52f84, type: 2}
+  - {fileID: 11400000, guid: 4ced38a7308504fb382d7d86b001759f, type: 2}
+  - {fileID: 11400000, guid: b869b2d5fd11e4e98b3eeaae784d416a, type: 2}
+  - {fileID: 11400000, guid: 568e1368b77424295ac0df55d084d8fb, type: 2}
+  - {fileID: 11400000, guid: 89aaa73258bbb4b6c99e151840e1ab31, type: 2}
+  - {fileID: 11400000, guid: f4ee6f4b557ba464b933537c85544bd5, type: 2}
+  - {fileID: 11400000, guid: ac20fb3c2c02e48ce854686db1b76856, type: 2}
+  - {fileID: 11400000, guid: 90c6c2442ba114b6da2ac4d9618600e3, type: 2}
+  - {fileID: 11400000, guid: 27b01b203256c4cefb169d9b234c0159, type: 2}
+  - {fileID: 11400000, guid: b0562d22fc5744b219f2734343efc148, type: 2}
+  - {fileID: 11400000, guid: 2f9d93b5be5cc474e9ee33e49e62ff03, type: 2}
+  - {fileID: 11400000, guid: 8c82f89b2335745d381fd67b42f8dfde, type: 2}
+  - {fileID: 11400000, guid: 30bccb1fd0fe348bf968081c58102074, type: 2}
+  - {fileID: 11400000, guid: 756d2011db5b84d34bf657f1bcf77cbc, type: 2}
+  - {fileID: 11400000, guid: 96dafff109e324eb1a5e1a89c391ffca, type: 2}
+  - {fileID: 11400000, guid: d52ce4534079e4cc5a8fe3d276794c94, type: 2}
+  - {fileID: 11400000, guid: 7b4397bafb48f42d2a3d8ddc71f4cb3c, type: 2}
+  - {fileID: 11400000, guid: 42c7547ab88ce4e0499671770d33f12e, type: 2}
