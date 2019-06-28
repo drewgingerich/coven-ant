@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using ZXing;
 using ZXing.QrCode;
@@ -8,6 +9,7 @@ using ZXing.QrCode;
 public class QrCodeRenderer : MonoBehaviour
 {
     public Image qrImage;
+    public UnityEvent onQrCodeDisplayed;
 
     public void DisplayQrCode(string text)
     {
@@ -16,6 +18,7 @@ public class QrCodeRenderer : MonoBehaviour
 
         qrImage.gameObject.SetActive(true);
         qrImage.sprite = sprite;
+        onQrCodeDisplayed.Invoke();
     }
 
 	private Texture2D GenerateQR(string text)

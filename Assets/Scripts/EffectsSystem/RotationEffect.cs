@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Effects/Rotation")]
-public class RotateEffect : TransformEffect
+public class RotationEffect : TransformEffect
 {
     public float rotation = 0;
 

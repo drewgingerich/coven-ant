@@ -142,8 +142,8 @@ ScriptedImporter:
   rigSpriteImportData:
   - name: antenna 2
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.50000024, y: 0.27377316}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -205,8 +205,8 @@ ScriptedImporter:
     uvTransform: {x: -561, y: 3201}
   - name: mouth 2
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.51195675, y: 0.8638481}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -247,8 +247,8 @@ ScriptedImporter:
     uvTransform: {x: -91, y: 3212}
   - name: antenna stock
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.52091724, y: 0.0742676}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -352,8 +352,8 @@ ScriptedImporter:
     uvTransform: {x: -45, y: 3497}
   - name: head stock
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.47949857, y: 0.034001507}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -373,8 +373,8 @@ ScriptedImporter:
     uvTransform: {x: -449, y: -276}
   - name: head 3
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.49306267, y: 0.039549645}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -394,8 +394,8 @@ ScriptedImporter:
     uvTransform: {x: -446, y: 2428}
   - name: head 2
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5000001, y: 0.028986806}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2

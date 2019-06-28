@@ -9,8 +9,11 @@ public class FadeManager : MonoBehaviour
     public static FadeManager Instance;
 
     [Header("Fade references")]
-    [SerializeField] CanvasGroup m_FadeGroup;
-    [SerializeField] Image m_FadeImage;
+    public CanvasGroup m_FadeGroup;
+    public Image m_FadeImage;
+
+    public CanvasGroup creditsParent;
+    public Image credits;
 
     [Header("Start Fade")]
     [SerializeField] bool m_StartWithFade = true;
@@ -18,6 +21,7 @@ public class FadeManager : MonoBehaviour
     [SerializeField] Color m_StartFadeColor = Color.black;
 
 	Text m_Text;
+    Image m_Credits;
 
     void Awake()
     {
@@ -98,6 +102,11 @@ public class FadeManager : MonoBehaviour
         StartCoroutine(UpdateFadeOutText(transitionTime, func));
     }
 
+    public void ShowCredits(float transitionTime, float showCreditsTime, Action func)
+    {
+        StartCoroutine(UpdateShowCredits(transitionTime, showCreditsTime, func));
+    }
+
     IEnumerator UpdateFadeOut(float transitionTime, Action func)
     {
         var t = 0f;
@@ -136,5 +145,38 @@ public class FadeManager : MonoBehaviour
             m_Text.color = new Color(m_Text.color.r, m_Text.color.g, m_Text.color.b, 0f);
             func?.Invoke();
         }
+    }
+
+    IEnumerator UpdateShowCredits(float transitionTime, float showCreditsTime, Action func)
+    {
+        var t = 0f;
+
+        creditsParent.alpha = 0f;
+        credits.color = new Color(credits.color.r, credits.color.g, credits.color.b, 1f);
+
+        // Fade in credits and background
+        for (t = 0f; t <= 1; t += Time.deltaTime / transitionTime)
+        {
+            creditsParent.alpha = t;
+            yield return null;
+        }
+
+        creditsParent.alpha = 1f;
+
+        // Show credits for a while
+        yield return new WaitForSeconds(showCreditsTime);
+
+        credits.color = new Color(credits.color.r, credits.color.g, credits.color.b, 1f);
+
+        // Fade out credits
+        for (t = 0f; t <= 1; t += Time.deltaTime / transitionTime)
+        {
+            credits.color = new Color(credits.color.r, credits.color.g, credits.color.b, 1f - t);
+            yield return null;
+        }
+
+        credits.color = new Color(credits.color.r, credits.color.g, credits.color.b, 0f);
+
+        func?.Invoke();
     }
 }

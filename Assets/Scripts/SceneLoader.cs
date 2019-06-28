@@ -23,11 +23,19 @@ public class SceneLoader : MonoBehaviour
         MusicManager.Instance.FadeOut(0.5f);
     }
 
+    //public void FadeSceneWithCredits(string sceneName)
+    //{
+    //    FadeManager.Instance.FadeOut(0.5f, Color.black, () =>
+    //    {
+    //        StartCoroutine(LoadAsyncSceneWithCredits(sceneName));
+    //    });
+    //}
+
     public void FadeSceneWithCredits(string sceneName)
     {
-        FadeManager.Instance.FadeOut(0.5f, Color.black, () =>
+        FadeManager.Instance.ShowCredits(0.5f, waitAfterFade, () =>
         {
-            StartCoroutine(LoadAsyncSceneWithCredits(sceneName));
+            StartCoroutine(LoadAsyncScene(sceneName));
         });
     }
 
@@ -42,13 +50,13 @@ public class SceneLoader : MonoBehaviour
         }
 	}
 
-    IEnumerator LoadAsyncSceneWithCredits(string sceneName)
-    {
-        yield return new WaitForSeconds(waitAfterFade);
+    //IEnumerator LoadAsyncSceneWithCredits(string sceneName)
+    //{
+    //    yield return new WaitForSeconds(waitAfterFade);
 
-        FadeManager.Instance.FadeOutText(fadeTime, () =>
-        {
-            StartCoroutine(LoadAsyncScene(sceneName));
-        });
-    }
+    //    FadeManager.Instance.FadeOutText(fadeTime, () =>
+    //    {
+    //        StartCoroutine(LoadAsyncScene(sceneName));
+    //    });
+    //}
 }

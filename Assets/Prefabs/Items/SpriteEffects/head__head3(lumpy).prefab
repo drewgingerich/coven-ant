@@ -103,6 +103,32 @@ PrefabInstance:
       propertyPath: itemName
       value: Awe, Nuts
       objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: cc4d3e7b3e6d14cc89f8723314093d37,
+        type: 2}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_Sprite

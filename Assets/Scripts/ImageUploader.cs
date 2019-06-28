@@ -24,22 +24,6 @@ public class ImageUploader : MonoBehaviour
         var imageData = texture.EncodeToPNG();
         var base64Image = Convert.ToBase64String(imageData);
 
-        StartCoroutine(
-        Upload(base64Image, (response) =>
-        {
-            if (onUploadComplete != null)
-            {
-                Debug.Log("invoking onUploadComplete!");
-                onUploadComplete.Invoke(response);
-            } else
-            {
-                Debug.Log("onUploadComplete = null");
-            }
-        }));
-    }
-
-    IEnumerator Upload(string base64Image, Action<string> onUploadCompleted)
-    {
         using (var wClient = new WebClient())
         {
             wClient.Headers.Add("Authorization", "Client-ID " + clientId);
@@ -47,17 +31,27 @@ public class ImageUploader : MonoBehaviour
                 { "image", base64Image }
             };
 
-            byte[] response = wClient.UploadValues(baseUploadUrl, parameters);
-            string uploadJsonString = Encoding.UTF8.GetString(response);
-
-            Debug.Log("uploaded image: " + uploadJsonString);
-
-            var json = TinyJson.JSONParser.FromJson<object>(uploadJsonString);
-            var uploadData = ((Dictionary<string, object>)json)["data"];
-            var link = ((Dictionary<string, object>)uploadData)["link"].ToString();
-
-            onUploadCompleted(link);
+            wClient.UploadValuesCompleted += WClient_UploadValuesCompleted;
+            wClient.UploadValuesAsync(new System.Uri(baseUploadUrl), parameters);
         }
-        yield return null;
+    }
+
+    private void WClient_UploadValuesCompleted(object sender, UploadValuesCompletedEventArgs e)
+    {
+        if (e.Error != null)
+        {
+            Debug.Log("error uploading image: " + e.Error);
+            return;
+        }
+
+        var uploadJsonString = Encoding.UTF8.GetString(e.Result);
+
+        Debug.Log("uploaded image: " + uploadJsonString);
+
+        var json = TinyJson.JSONParser.FromJson<object>(uploadJsonString);
+        var uploadData = ((Dictionary<string, object>)json)["data"];
+        var link = ((Dictionary<string, object>)uploadData)["link"].ToString();
+
+        onUploadComplete.Invoke(link);
     }
 }
