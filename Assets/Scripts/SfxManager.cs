@@ -26,7 +26,7 @@ public class SfxManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         m_Audiosource = GetComponent<AudioSource>();
     }
