@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7441026861514046975, guid: 68b56c08575e4479fa642890e8de0c1c,
         type: 3}
       propertyPath: m_Name
-      value: mouth__cat
+      value: MouthBigger
       objectReference: {fileID: 0}
     - target: {fileID: 2464408098749097618, guid: 68b56c08575e4479fa642890e8de0c1c,
         type: 3}
@@ -66,6 +66,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152930706689232662, guid: 68b56c08575e4479fa642890e8de0c1c,
+        type: 3}
+      propertyPath: itemDescription
+      value: Test
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b56c08575e4479fa642890e8de0c1c, type: 3}

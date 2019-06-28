@@ -2,26 +2,28 @@
 using UnityEngine.UI;
 using Scriptables.GameEvents;
 
-[RequireComponent(typeof(Text))]
 public class ItemDescriptionViewer : MonoBehaviour
 {
-	private Text text;
+    Text m_NameText;
+    Text m_DescriptionText;
 
-	public void UpdateDescriptionFromItem(GameObject item)
+    void Start()
+    {
+        var texts = GetComponentsInChildren<Text>();
+        m_NameText = texts[0];
+        m_DescriptionText = texts[1];
+        gameObject.SetActive(false);
+    }
+
+    public void UpdateDescriptionFromItem(GameObject item)
 	{
 		CharacterCreatorItem characterItem = item.GetComponentInChildren<CharacterCreatorItem>();
+
 		if(characterItem) {
-			text.text = characterItem.itemName;
+            m_NameText.text = characterItem.itemName;
+            m_DescriptionText.text = characterItem.itemDescription;
 		} else {
 			Debug.Log("Item was not a Character Creator Item!");
 		}
-	}
-
-	/// <summary>
-	/// This function is called when the object becomes enabled and active.
-	/// </summary>
-	void OnEnable()
-	{
-		text = GetComponent<Text>();
 	}
 }
