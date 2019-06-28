@@ -13,6 +13,8 @@ public class GameEndHandler : MonoBehaviour
     public CharacterStore characterStore;
     public NameGenerator nameGenerator;
 
+    public GameObject finalizePanel;
+
     public void OnGameEnd()
     {
         navigator.gameObject.SetActive(false);
@@ -26,10 +28,15 @@ public class GameEndHandler : MonoBehaviour
 
     private void HandleUpload(string imageUrl)
     {
+        qrCodeRenderer.onQrCodeDisplayed.AddListener(() =>
+        {
+            finalizePanel.SetActive(true);
+
+            // Persist character data
+            characterStore.SetCharacter(imageUrl, nameGenerator.GenerateName());
+        });
+
         // Display a QR code for the imgur link
         qrCodeRenderer.DisplayQrCode(imageUrl);
-
-        // Persist character data
-        characterStore.SetCharacter(imageUrl, nameGenerator.GenerateName());
     }
 }
