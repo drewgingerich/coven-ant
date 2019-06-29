@@ -284,12 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177324ba06fa72242964c0d22294f5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &124017346 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9046593678903610551, guid: 0dd6bffadd70dcc46ba218c205395749,
-    type: 3}
-  m_PrefabInstance: {fileID: 1122991819}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &166048060
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,18 +363,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &169762628 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
-    type: 3}
-  m_PrefabInstance: {fileID: 196790478}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a419524b0faf9a41a91a60ac214dc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &177791851
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +818,11 @@ PrefabInstance:
       propertyPath: chanceToPlayAntSound
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: globalCooldown
+      value: 
+      objectReference: {fileID: 615512563}
     - target: {fileID: 7741536646560407535, guid: 0dd6bffadd70dcc46ba218c205395749,
         type: 3}
       propertyPath: onCooldownComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3106,6 +3093,11 @@ PrefabInstance:
       propertyPath: chanceToPlayAntSound
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: globalCooldown
+      value: 
+      objectReference: {fileID: 615512563}
     - target: {fileID: 5388051961045696175, guid: 0dd6bffadd70dcc46ba218c205395749,
         type: 3}
       propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.size
@@ -3742,6 +3734,11 @@ PrefabInstance:
       propertyPath: chanceToPlayAntSound
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: globalCooldown
+      value: 
+      objectReference: {fileID: 615512563}
     - target: {fileID: 7741536646560407535, guid: 0dd6bffadd70dcc46ba218c205395749,
         type: 3}
       propertyPath: onCooldownComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4163,6 +4160,11 @@ PrefabInstance:
       propertyPath: chanceToPlayAntSound
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: globalCooldown
+      value: 
+      objectReference: {fileID: 615512563}
     - target: {fileID: 5388051961045696175, guid: 0dd6bffadd70dcc46ba218c205395749,
         type: 3}
       propertyPath: OnTimerEnd.m_PersistentCalls.m_Calls.Array.size
@@ -4667,6 +4669,11 @@ PrefabInstance:
       propertyPath: chanceToPlayAntSound
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: globalCooldown
+      value: 
+      objectReference: {fileID: 615512563}
     - target: {fileID: 7741536646560407535, guid: 0dd6bffadd70dcc46ba218c205395749,
         type: 3}
       propertyPath: onCooldownComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5092,18 +5099,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8441212d382764002936a54514b959e9, type: 3}
---- !u!114 &1328533113 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
-    type: 3}
-  m_PrefabInstance: {fileID: 1415065684}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a419524b0faf9a41a91a60ac214dc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1351739132
 GameObject:
   m_ObjectHideFlags: 0
@@ -5740,6 +5735,11 @@ PrefabInstance:
       propertyPath: chanceToPlayAntSound
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: globalCooldown
+      value: 
+      objectReference: {fileID: 615512563}
     - target: {fileID: 7741536646560407535, guid: 0dd6bffadd70dcc46ba218c205395749,
         type: 3}
       propertyPath: onCooldownComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6111,19 +6111,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eedfd2aac2bfbbc489b6aef2605bf549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1624466222 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9046593678903610551, guid: 0dd6bffadd70dcc46ba218c205395749,
-    type: 3}
-  m_PrefabInstance: {fileID: 908729119}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1624466223 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
     type: 3}
   m_PrefabInstance: {fileID: 908729119}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624466222}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a419524b0faf9a41a91a60ac214dc4d, type: 3}
@@ -6372,18 +6366,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1767760147 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
-    type: 3}
-  m_PrefabInstance: {fileID: 1122991819}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a419524b0faf9a41a91a60ac214dc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1795095576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6706,6 +6688,11 @@ PrefabInstance:
       propertyPath: chanceToPlayAntSound
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: globalCooldown
+      value: 
+      objectReference: {fileID: 615512563}
     - target: {fileID: 7741536646560407535, guid: 0dd6bffadd70dcc46ba218c205395749,
         type: 3}
       propertyPath: onCooldownComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7185,6 +7172,11 @@ PrefabInstance:
       propertyPath: chanceToPlayAntSound
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 6388551925177893733, guid: 0dd6bffadd70dcc46ba218c205395749,
+        type: 3}
+      propertyPath: globalCooldown
+      value: 
+      objectReference: {fileID: 615512563}
     - target: {fileID: 7741536646560407535, guid: 0dd6bffadd70dcc46ba218c205395749,
         type: 3}
       propertyPath: onCooldownComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
