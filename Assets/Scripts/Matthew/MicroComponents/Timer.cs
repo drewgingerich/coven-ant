@@ -17,18 +17,24 @@ public class Timer : MonoBehaviour
 
     public void BeginTimer()
     {
-        timerRunning = true;
-        OnTimerStart.Invoke();
-        if( timeRemaining <= 0 ) {
-            timeRemaining = originalTimeRemaining;
+        if(!timerRunning) 
+        {
+            timerRunning = true;
+            OnTimerStart.Invoke();
+            if( timeRemaining <= 0 ) {
+                timeRemaining = originalTimeRemaining;
+            }
         }
     }
 
     public void BeginTimer(float newDuration)
     {
-        timeRemaining = newDuration;
-        originalTimeRemaining = newDuration;
-        BeginTimer();
+        if(!timerRunning)
+        {
+            timeRemaining = newDuration;
+            originalTimeRemaining = newDuration;
+            BeginTimer();
+        }
     }
 
     public void PauseTimer()
