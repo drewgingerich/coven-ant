@@ -101,7 +101,7 @@ PrefabInstance:
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: itemName
-      value: rtrtrrt
+      value: Smallville
       objectReference: {fileID: 0}
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
@@ -132,7 +132,7 @@ PrefabInstance:
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: itemDescription
-      value: An ode to our favorite demonic "cheese."
+      value: 'Population: Your mouth'
       objectReference: {fileID: 0}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
