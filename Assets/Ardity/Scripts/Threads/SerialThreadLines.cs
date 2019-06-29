@@ -7,9 +7,9 @@
  */
 
 using UnityEngine;
-
+#if NET_4_6
 using System.IO.Ports;
-
+#endif
 /**
  * This class contains methods that must be run from inside a thread and others
  * that must be invoked from Unity. Both types of methods are clearly marked in
@@ -29,14 +29,16 @@ public class SerialThreadLines : AbstractSerialThread
         : base(portName, baudRate, delayBeforeReconnecting, maxUnreadMessages, true, guessPortName)
     {
     }
-
+#if NET_4_6
     protected override void SendToWire(object message, SerialPort serialPort)
     {
         serialPort.WriteLine((string) message);
     }
-
+#endif
+#if NET_4_6
     protected override object ReadFromWire(SerialPort serialPort)
     {
         return serialPort.ReadLine();
     }
+#endif
 }

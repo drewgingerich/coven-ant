@@ -10,7 +10,9 @@ using UnityEngine;
 
 using System;
 using System.IO;
+#if NET_4_6
 using System.IO.Ports;
+#endif
 using System.Collections;
 using System.Threading;
 
@@ -30,8 +32,10 @@ public abstract class AbstractSerialThread
     private int delayBeforeReconnecting;
     private int maxUnreadMessages;
 
+#if NET_4_6
     // Object from the .Net framework used to communicate with serial devices.
     private SerialPort serialPort;
+#endif
 
     // Amount of milliseconds alloted to a single read or connect. An
     // exception is thrown when such operations take more than this time
@@ -170,7 +174,9 @@ public abstract class AbstractSerialThread
             // from the output queue to reach the other endpoint.
             while (outputQueue.Count != 0)
             {
+                #if NET_4_6
                 SendToWire(outputQueue.Dequeue(), serialPort);
+                #endif
             }
 
             // Attempt to do a final cleanup. This method doesn't fail even if
@@ -188,6 +194,7 @@ public abstract class AbstractSerialThread
     // ------------------------------------------------------------------------
     private void AttemptConnection()
     {
+#if NET_4_6
         if( guessPortName ) {
             portName = GuessPortName();
         }
@@ -198,6 +205,7 @@ public abstract class AbstractSerialThread
 
         if (enqueueStatusMessages)
             inputQueue.Enqueue(SerialController.SERIAL_DEVICE_CONNECTED);
+#endif
     }
 
     // ------------------------------------------------------------------------
@@ -205,6 +213,7 @@ public abstract class AbstractSerialThread
     // ------------------------------------------------------------------------
     private void CloseDevice()
     {
+#if NET_4_6
         if (serialPort == null)
             return;
 
@@ -218,6 +227,7 @@ public abstract class AbstractSerialThread
         }
 
         serialPort = null;
+#endif
     }
 
     // ------------------------------------------------------------------------
@@ -240,6 +250,7 @@ public abstract class AbstractSerialThread
     // ------------------------------------------------------------------------
     private void RunOnce()
     {
+#if NET_4_6
         try
         {
             // Send a message.
@@ -271,8 +282,9 @@ public abstract class AbstractSerialThread
         {
             // This is normal, not everytime we have a report from the serial device
         }
+#endif
     }
-
+#if NET_4_6
     // ------------------------------------------------------------------------
     // Sends a message through the serialPort.
     // ------------------------------------------------------------------------
@@ -282,6 +294,7 @@ public abstract class AbstractSerialThread
     // Reads and returns a message from the serial port.
     // ------------------------------------------------------------------------
     protected abstract object ReadFromWire(SerialPort serialPort);
+#endif
 
     //
     // Automatically guess portname for Windows and Unix systems
@@ -304,6 +317,7 @@ public abstract class AbstractSerialThread
 	
 	static string GuessPortNameWindows()
 	{
+    #if NET_4_6
 		string[] devices = System.IO.Ports.SerialPort.GetPortNames();
 		
 		if (devices.Length == 0) {
@@ -311,12 +325,16 @@ public abstract class AbstractSerialThread
 		} else {
 			Debug.Log("Guessing that arduino is device: " + devices[0]);
 			return devices[0];	
-        }			
+        }
+    #else
+        return null;
+    #endif	
 	}
 
 	static string GuessPortNameUnix()
 	{			
-		string[] devices = System.IO.Ports.SerialPort.GetPortNames();
+    #if NET_4_6
+        string[] devices = System.IO.Ports.SerialPort.GetPortNames();
 		
 		if (devices.Length == 0) {
 			devices = System.IO.Directory.GetFiles("/dev/");		
@@ -329,6 +347,9 @@ public abstract class AbstractSerialThread
 				break;
 			}
 		}		
-		return selectedDevice;		
+		return selectedDevice;	
+    #else
+        return null;
+    #endif	
 	}
 }
