@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3625668186238523530}
   - component: {fileID: 3625668186238523531}
   - component: {fileID: 3625668186238523525}
+  - component: {fileID: 4149491190135150106}
   m_Layer: 0
   m_Name: Snapshot Camera
   m_TagString: MainCamera
@@ -58,7 +59,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.2963433
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -84,5 +85,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea1831413d37848dba48cc2ad12fdb40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4149491190135150106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3625668186238523526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458bfcaa6b4c2411a8bbd5559088beed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
