@@ -44,7 +44,7 @@ public class Timer : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         originalTimeRemaining = timeRemaining;
         if(beginTimerOnStart) {
