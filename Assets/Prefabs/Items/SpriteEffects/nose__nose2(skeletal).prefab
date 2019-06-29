@@ -106,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: itemDescription
-      value: Creepy, spooky, skeletons
+      value: Spooky, scary, spooky, skeletons
       objectReference: {fileID: 0}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}

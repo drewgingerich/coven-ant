@@ -205,7 +205,7 @@ ScriptedImporter:
     uvTransform: {x: -561, y: 3201}
   - name: mouth 2
     originalName: 
-    pivot: {x: 0.51195675, y: 0.8638481}
+    pivot: {x: 0.51195675, y: 0.76809937}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:

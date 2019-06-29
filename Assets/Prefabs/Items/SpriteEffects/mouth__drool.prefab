@@ -124,6 +124,16 @@ PrefabInstance:
       propertyPath: OnApply.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: itemName
+      value: Waterworks
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383135810045514026, guid: da3ea27ea6cdeed4989e56f59512ec31,
+        type: 3}
+      propertyPath: itemDescription
+      value: 'A steady stream of spit. '
+      objectReference: {fileID: 0}
     - target: {fileID: 8639857847878115220, guid: da3ea27ea6cdeed4989e56f59512ec31,
         type: 3}
       propertyPath: m_Sprite

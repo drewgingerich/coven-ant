@@ -253,7 +253,7 @@ ScriptedImporter:
     uvTransform: {x: 614, y: 2548}
   - name: antenna devil
     originalName: 
-    pivot: {x: 0.4757934, y: 0.28113976}
+    pivot: {x: 0.48386237, y: 0.306888}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -400,7 +400,7 @@ ScriptedImporter:
     uvTransform: {x: 651, y: 1870}
   - name: antenna bat
     originalName: 
-    pivot: {x: 0.49999994, y: 0.17176151}
+    pivot: {x: 0.4948348, y: 0.20823318}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -526,7 +526,7 @@ ScriptedImporter:
     uvTransform: {x: 225, y: 1666}
   - name: antenna mushroom
     originalName: 
-    pivot: {x: 0.514293, y: 0.13415799}
+    pivot: {x: 0.50000024, y: 0.25610623}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -652,7 +652,7 @@ ScriptedImporter:
     uvTransform: {x: -696, y: -421}
   - name: antenna cat
     originalName: 
-    pivot: {x: 0.49226707, y: 0.3248493}
+    pivot: {x: 0.49226707, y: 0.36863834}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
