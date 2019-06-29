@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using Scriptables.GameEvents;
 
 [RequireComponent(typeof(Selectable))]
@@ -20,6 +21,7 @@ public class ItemContainerTalker : MonoBehaviour {
     public Timer globalCooldown;
     private CharacterCreatorItem item;
     private Selectable selectable;
+    public UnityEvent onItemActivated;
 
     public void ActivateItem() {
         // transform.BroadcastMessage("Apply");
@@ -36,6 +38,7 @@ public class ItemContainerTalker : MonoBehaviour {
                     SfxManager.Instance.PlayAntSound();
                 }
                 item.OnApply.Invoke();
+                onItemActivated.Invoke();
                 // if (item == null)
                 // {
                 hasItem = false;
@@ -47,6 +50,9 @@ public class ItemContainerTalker : MonoBehaviour {
 
                 // Start the cooldown
                 globalCooldown.BeginTimer(globalCooldownTime);
+            } else {
+                if( invalidSelection )
+                    invalidSelection.Raise();
             }
             
         } else {
