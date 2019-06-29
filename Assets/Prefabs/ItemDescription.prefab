@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.8, y: -78}
-  m_SizeDelta: {x: 550.8, y: 376.5}
+  m_AnchoredPosition: {x: 4.8, y: -86}
+  m_SizeDelta: {x: 550.8, y: 350.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3512945107052206356
 CanvasRenderer:
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -67,19 +67,20 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5dc3a938fc1e546088a0f4f8737d6a5e, type: 3}
-    m_FontSize: 50
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 150
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Description of stuff, yep, just testing out how this looks with a bunch
-    of text. Who needs lorum ipsum. Not me I tell ya. Nope. Not at all.
+  m_Text: 'Fact #1: Cats see great in the dark.
+
+    Fact #2: Cats can''t resist a warm laptop.'
 --- !u!1 &1049436485763895279
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,8 +115,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.8, y: 193}
-  m_SizeDelta: {x: 550.8, y: 139.4}
+  m_AnchoredPosition: {x: 4.8, y: 174.5}
+  m_SizeDelta: {x: 550.8, y: 176.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3890706396587181181
 CanvasRenderer:
@@ -147,18 +148,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5dc3a938fc1e546088a0f4f8737d6a5e, type: 3}
-    m_FontSize: 50
+    m_FontSize: 67
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 150
+    m_BestFit: 1
+    m_MinSize: 6
+    m_MaxSize: 85
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Super very long named thingymajig
+  m_Text: ALL CAPS STUFF IS EASIER TO
 --- !u!1 &3675624138673820355
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +184,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3675624138673820355}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children:
