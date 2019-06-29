@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class SfxManager : MonoBehaviour
 {
     public static SfxManager Instance { get; private set; }
@@ -51,36 +52,50 @@ public class SfxManager : MonoBehaviour
 
     public void PlayArrowClick()
     {
-        m_Audiosource.PlayOneShot(arrowClick);
+        PlayOneShot(arrowClick);
     }
 
     public void PlayCameraShutter()
     {
-        m_Audiosource.PlayOneShot(cameraShutter);
+        PlayOneShot(cameraShutter);
     }
 
     public void PlayCandleOut()
     {
-        m_Audiosource.PlayOneShot(candleOut);
+        PlayOneShot(candleOut);
     }
 
     public void PlayItemSwitch()
     {
-        m_Audiosource.PlayOneShot(itemSwitch);
+        PlayOneShot(itemSwitch);
     }
 
     public void PlayPoof()
     {
-        m_Audiosource.PlayOneShot(poof);
+        PlayOneShot(poof);
     }
 
     public void PlayStart()
     {
-        m_Audiosource.PlayOneShot(start1);
+        PlayOneShot(start1);
     }
 
     void PlayRandom(List<AudioClip> clips)
     {
-        m_Audiosource.PlayOneShot(clips[Random.Range(0, clips.Count)]);
+        PlayOneShot(clips[Random.Range(0, clips.Count)]);
+    }
+
+    void PlayOneShot(AudioClip clip)
+    {
+        if(m_Audiosource == null)
+        {
+            m_Audiosource = GetComponent<AudioSource>();
+            if(m_Audiosource == null)
+            {
+                Debug.LogError("Couldn't get AudioSource on SfxManager");
+                return;
+            }
+        }
+        m_Audiosource.PlayOneShot(clip);
     }
 }

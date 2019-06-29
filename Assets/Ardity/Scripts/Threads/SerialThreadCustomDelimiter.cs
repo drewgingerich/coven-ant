@@ -7,9 +7,9 @@
  */
 
 using UnityEngine;
-
+#if NET_4_6
 using System.IO.Ports;
-
+#endif
 /**
  * This class contains methods that must be run from inside a thread and others
  * that must be invoked from Unity. Both types of methods are clearly marked in
@@ -41,12 +41,15 @@ public class SerialThreadBinaryDelimited : AbstractSerialThread
     // Must include the separator already (as it shold have been passed to
     // the SendMessage method).
     // ------------------------------------------------------------------------
+#if NET_4_6
     protected override void SendToWire(object message, SerialPort serialPort)
     {
         byte[] binaryMessage = (byte[])message;
         serialPort.Write(binaryMessage, 0, binaryMessage.Length);
     }
+#endif
 
+#if NET_4_6
     protected override object ReadFromWire(SerialPort serialPort)
     {
         // Try to fill the internal buffer
@@ -67,6 +70,7 @@ public class SerialThreadBinaryDelimited : AbstractSerialThread
 
         return returnBuffer;
     }
+#endif
 
     private bool IsSeparator(byte aByte)
     {
