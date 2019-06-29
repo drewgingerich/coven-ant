@@ -39,6 +39,10 @@ public class ItemPopulator : MonoBehaviour {
         onItemSpawned.Raise(newItem.gameObject);
     }
 
+    public void PopulateSpecificContainer(GameObject container) {
+        PopulateSpecificContainer(container.GetComponent<ItemContainerTalker>());
+    }
+
     public void ItemUsed(ItemContainerTalker container) {
         if( refillContainerOnUse ) {
             PopulateSpecificContainer(container);

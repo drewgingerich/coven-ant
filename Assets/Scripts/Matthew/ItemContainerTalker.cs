@@ -3,6 +3,7 @@ using Scriptables.GameEvents;
 
 [RequireComponent(typeof(Selectable))]
 public class ItemContainerTalker : MonoBehaviour {
+    public bool instantlyRespawn = false;
     [SerializeField]
     private GameEvent invalidSelection;
     /**
@@ -35,11 +36,14 @@ public class ItemContainerTalker : MonoBehaviour {
                     SfxManager.Instance.PlayAntSound();
                 }
                 item.OnApply.Invoke();
-                if (item == null)
+                // if (item == null)
+                // {
+                hasItem = false;
+                // }
+                if (instantlyRespawn)
                 {
-                    hasItem = false;
+                    SendMessageUpwards("ItemUsed", this, SendMessageOptions.RequireReceiver);
                 }
-                SendMessageUpwards("ItemUsed", this, SendMessageOptions.RequireReceiver);
 
                 // Start the cooldown
                 globalCooldown.BeginTimer(globalCooldownTime);
