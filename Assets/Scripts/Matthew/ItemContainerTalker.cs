@@ -36,10 +36,10 @@ public class ItemContainerTalker : MonoBehaviour {
                     SfxManager.Instance.PlayAntSound();
                 }
                 item.OnApply.Invoke();
-                if (item == null)
-                {
-                    hasItem = false;
-                }
+                // if (item == null)
+                // {
+                hasItem = false;
+                // }
                 if (instantlyRespawn)
                 {
                     SendMessageUpwards("ItemUsed", this, SendMessageOptions.RequireReceiver);
