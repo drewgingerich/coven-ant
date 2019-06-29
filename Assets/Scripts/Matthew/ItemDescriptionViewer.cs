@@ -5,14 +5,14 @@ using System;
 
 public class ItemDescriptionViewer : MonoBehaviour
 {
-    Text m_NameText;
-    Text m_DescriptionText;
+    public Text m_NameText;
+    public Text m_DescriptionText;
 
     void Start()
     {
-        var texts = GetComponentsInChildren<Text>();
-        m_NameText = texts[0];
-        m_DescriptionText = texts[1];
+        // var texts = GetComponentsInChildren<Text>();
+        // m_NameText = texts[0];
+        // m_DescriptionText = texts[1];
         gameObject.SetActive(false);
     }
 

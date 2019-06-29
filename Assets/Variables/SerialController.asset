@@ -16,6 +16,6 @@ MonoBehaviour:
   baudRate: 115200
   messageListener: {fileID: 11400000, guid: 7f0e07706da50d947b517087059efefc, type: 2}
   cooldown: 0.001
-  currentCooldown: 0.01
+  currentCooldown: 0
   reconnectionDelay: 1000
   maxUnreadMessages: 2
