@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using Scriptables.GameEvents;
-
+using Scriptables.UnityEvents;
 public class SelectableNavigator : MonoBehaviour
 {
     public Selectable selected;
+    public GameObjectUnityEvent onInvalidSelection;
 
     public void Use()
     {
@@ -37,6 +37,11 @@ public class SelectableNavigator : MonoBehaviour
             selected.Deselect();
             selected = next;
             selected.Select();
+        }
+        else
+        {  
+            if(onInvalidSelection != null)
+                onInvalidSelection.Invoke(selected.gameObject);
         }
     }
 
