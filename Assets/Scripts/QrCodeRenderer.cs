@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+
+#if UNITY_STANDALONE
 using ZXing;
 using ZXing.QrCode;
+#endif
 
 public class QrCodeRenderer : MonoBehaviour
 {
@@ -32,6 +35,7 @@ public class QrCodeRenderer : MonoBehaviour
 
     private static Color32[] Encode(string textForEncoding, int width, int height)
     {
+#if UNITY_STANDALONE
         var writer = new BarcodeWriter
         {
             Format = BarcodeFormat.QR_CODE,
@@ -42,5 +46,9 @@ public class QrCodeRenderer : MonoBehaviour
             }
         };
         return writer.Write(textForEncoding);
+#else
+        return new Color32[0];
+#endif
+
     }
 }

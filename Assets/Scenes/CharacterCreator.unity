@@ -5009,7 +5009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginTimerOnStart: 1
-  timeRemaining: 50
+  timeRemaining: 2
   repeatTimer: 0
   OnTimerStart:
     m_PersistentCalls:
@@ -7699,6 +7699,7 @@ MonoBehaviour:
   qrCodeRenderer: {fileID: 2114379239}
   characterStore: {fileID: 2114379238}
   nameGenerator: {fileID: 11400000, guid: aaa751752e6094d7a99a78a426db6b42, type: 2}
+  sceneLoader: {fileID: 2114379235}
   finalizePanel: {fileID: 1823778770}
 --- !u!114 &2114379238
 MonoBehaviour:
@@ -7756,7 +7757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clientId: b448c8366a1c37a
-  baseUploadUrl: https://api.imgur.com/3/upload
+  baseUploadUrl: https://api.imgur.com/3/image
   onUploadComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -7773,6 +7774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snapshot Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625668186238523526, guid: ee84699a734d945b6b88807682116354,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3625668186238523530, guid: ee84699a734d945b6b88807682116354,
         type: 3}

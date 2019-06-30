@@ -158,7 +158,13 @@ public class Gallery : MonoBehaviour
 
         for (var i = 0; i < characters.Count; i++)
         {
-            var character = characters[i].Split(',');
+            var characterString = characters[i];
+            //if (!characterString.Contains(','))
+            //{
+            //    characterString = WWW.UnEscapeURL(characterString);
+            //}
+
+            var character = characterString.Split(',');
             var url = character[0];
             var characterName = character.ElementAtOrDefault(1);
             var createdOn = character.ElementAtOrDefault(2);

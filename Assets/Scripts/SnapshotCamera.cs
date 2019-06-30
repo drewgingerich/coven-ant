@@ -9,11 +9,14 @@ public class SnapshotCamera : MonoBehaviour
     private void Start()
     {
         this.camera = GetComponent<Camera>();
+        this.camera.gameObject.SetActive(false);
     }
 
     // https://answers.unity.com/questions/22954/how-to-save-a-picture-take-screenshot-from-a-camer.html
     public Texture2D TakeSnapshot()
     {
+        this.camera.gameObject.SetActive(true);
+
         RenderTexture rt = new RenderTexture(camera.pixelWidth, camera.pixelHeight, 32);
         RenderTexture.active = rt;
         camera.targetTexture = rt;
@@ -32,6 +35,8 @@ public class SnapshotCamera : MonoBehaviour
         camera.targetTexture = null;
         RenderTexture.active = null; // JC: added to avoid errors
         Destroy(rt);
+
+        this.camera.gameObject.SetActive(false);
 
         return snapshot;
     }

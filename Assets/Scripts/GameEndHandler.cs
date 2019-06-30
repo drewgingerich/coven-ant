@@ -12,6 +12,7 @@ public class GameEndHandler : MonoBehaviour
     public QrCodeRenderer qrCodeRenderer;
     public CharacterStore characterStore;
     public NameGenerator nameGenerator;
+    public SceneLoader sceneLoader;
 
     public GameObject finalizePanel;
 
@@ -28,6 +29,7 @@ public class GameEndHandler : MonoBehaviour
 
     private void HandleUpload(string imageUrl)
     {
+#if UNITY_STANDALONE
         qrCodeRenderer.onQrCodeDisplayed.AddListener(() =>
         {
             finalizePanel.SetActive(true);
@@ -38,5 +40,10 @@ public class GameEndHandler : MonoBehaviour
 
         // Display a QR code for the imgur link
         qrCodeRenderer.DisplayQrCode(imageUrl);
+#else
+        // Persist character data
+        characterStore.SetCharacter(imageUrl, nameGenerator.GenerateName());
+        sceneLoader.FadeScene("HallOfFame");
+#endif
     }
 }
