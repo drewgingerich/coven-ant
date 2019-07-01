@@ -25,6 +25,10 @@ public class InputSelector : MonoBehaviour
         StartCoroutine(InputDelay());
     }
 
+    public void SubmitNow() {
+        onHackSubmit.Invoke();
+    }
+
     // HACK: needed to have the "Finish" button display and be selected so that
     // the user could just hit enter / space to click it, but for some reason
     // Unity wouldn't let me. So I added an InputField, which Unity does allow selecting,
