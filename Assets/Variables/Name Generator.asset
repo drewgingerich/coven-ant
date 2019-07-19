@@ -41,19 +41,19 @@ MonoBehaviour:
   - Peanut
   - Cuddles
   - Octorque
-  - Mx. Greenhorn
   - Beembo
   - Feebass
-  - Esquire
   - 'Spaghetti '
   - Ujarak
-  - Voyyozaa
   - George
+  - Trov
+  - 'Sarawswati '
+  - Zoll
   - Glork
   - Strider
-  - Ghuddedio
+  - Flogfooz
   - Annelida
-  - Lhaccujoi
+  - ItsyBitsy
   - Chip
   - Woolslayer
   - Vin
@@ -63,18 +63,8 @@ MonoBehaviour:
   - Pebbleskull
   - Orifel
   - Atahez
-  - Blolphork
-  - Slasgh
-  - Tilly
-  - Ovepaq
-  - Dhaudax
   - iBite
-  - Zechchenoa
-  - Trov
-  - 'Sarawswati '
-  - ItsyBitsy
-  - Zoll
-  - Flogfooz
+  - Tilly
   titles:
   - Silent
   - Candid
@@ -83,7 +73,7 @@ MonoBehaviour:
   - Giant
   - Thoughtless
   - Clumsy
-  - Fubar
+  - FUBAR
   - Smol
   - Builder
   - Toy
@@ -104,7 +94,7 @@ MonoBehaviour:
   - Wagonslayer
   - Seeker
   - Nameless
-  - Action Figure
+  - Demi-God
   - Lazy
   - Eager
   - Aggressive
@@ -121,7 +111,7 @@ MonoBehaviour:
   - Part-Time Czar
   - Hair Boiler
   - Chief Biscuit Dunker
-  - 'Pet with Tourette''s '
+  - Slaughterer
   - 'Nefarious '
   - Petulant
   - 'Tenacious '
@@ -136,5 +126,3 @@ MonoBehaviour:
   - Freckle Counter
   - Jelly Bean Forager
   - 'Custard Custodian '
-  - Demi-God
-  - Slaughterer
