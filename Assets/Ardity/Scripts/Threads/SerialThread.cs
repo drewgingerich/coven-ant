@@ -7,9 +7,9 @@
  */
 
 using UnityEngine;
-
+#if NET_4_6
 using System.IO.Ports;
-
+#endif
 /**
  * This class contains methods that must be run from inside a thread and others
  * that must be invoked from Unity. Both types of methods are clearly marked in
