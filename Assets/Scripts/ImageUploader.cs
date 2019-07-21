@@ -1,57 +1,44 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Net;
-using System.Text;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Networking;
 
 public class ImageUploader : MonoBehaviour
 {
-    public string clientId;
-    public string baseUploadUrl;
+	public string clientId = "b448c8366a1c37a";
+	public string baseUploadUrl = "https://api.imgur.com/3/upload";
 
-    [System.Serializable]
-    public class UploadCompleteEvent : UnityEvent<string>
-    {
-    }
+	[System.Serializable]
+	public class UploadCompleteEvent : UnityEvent<string> { }
 
-    public UploadCompleteEvent onUploadComplete;
+	public UploadCompleteEvent onUploadComplete;
 
-    public void UploadImage(Texture2D texture)
-    {
-        var imageData = texture.EncodeToPNG();
-        var base64Image = Convert.ToBase64String(imageData);
+	public void UploadImage(Texture2D texture)
+	{
+		StartCoroutine(UploadImageRoutine(texture));
+	}
 
-        using (var wClient = new WebClient())
-        {
-            wClient.Headers.Add("Authorization", "Client-ID " + clientId);
-            var parameters = new NameValueCollection(){
-                { "image", base64Image }
-            };
+	private IEnumerator UploadImageRoutine(Texture2D texture)
+	{
+		var imageData = texture.EncodeToPNG();
+		var base64Image = Convert.ToBase64String(imageData);
 
-            wClient.UploadValuesCompleted += WClient_UploadValuesCompleted;
-            wClient.UploadValuesAsync(new System.Uri(baseUploadUrl), parameters);
-        }
-    }
+		WWWForm data = new WWWForm();
+		data.AddField("image", base64Image);
 
-    private void WClient_UploadValuesCompleted(object sender, UploadValuesCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            Debug.Log("error uploading image: " + e.Error);
-            return;
-        }
+		UnityWebRequest uploadRequest = UnityWebRequest.Post(baseUploadUrl, data);
+		uploadRequest.SetRequestHeader("Authorization", "Client-ID" + clientId);
 
-        var uploadJsonString = Encoding.UTF8.GetString(e.Result);
+		yield return uploadRequest.SendWebRequest();
 
-        Debug.Log("uploaded image: " + uploadJsonString);
-
-        var json = TinyJson.JSONParser.FromJson<object>(uploadJsonString);
-        var uploadData = ((Dictionary<string, object>)json)["data"];
-        var link = ((Dictionary<string, object>)uploadData)["link"].ToString();
-
-        onUploadComplete.Invoke(link);
-    }
+		if (uploadRequest.isNetworkError)
+		{
+			Debug.Log("Error While Sending: " + uploadRequest.error);
+		}
+		else
+		{
+			Debug.Log("Received: " + uploadRequest.downloadHandler.text);
+		}
+	}
 }
