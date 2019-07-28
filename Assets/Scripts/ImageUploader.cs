@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
@@ -12,6 +13,7 @@ public class ImageUploader : MonoBehaviour
 	[System.Serializable]
 	public class UploadCompleteEvent : UnityEvent<string> { }
 
+	// Consumed by GameEndHandler via script
 	public UploadCompleteEvent onUploadComplete;
 
 	public void UploadImage(Texture2D texture)
@@ -28,7 +30,7 @@ public class ImageUploader : MonoBehaviour
 		data.AddField("image", base64Image);
 
 		UnityWebRequest uploadRequest = UnityWebRequest.Post(baseUploadUrl, data);
-		uploadRequest.SetRequestHeader("Authorization", "Client-ID" + clientId);
+		uploadRequest.SetRequestHeader("Authorization", "Client-ID " + clientId);
 
 		yield return uploadRequest.SendWebRequest();
 
@@ -38,7 +40,12 @@ public class ImageUploader : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("Received: " + uploadRequest.downloadHandler.text);
+			var jsonResponseString = uploadRequest.downloadHandler.text;
+			var json = TinyJson.JSONParser.FromJson<object>(jsonResponseString);
+			var uploadData = ((Dictionary<string, object>)json)["data"];
+			var link = ((Dictionary<string, object>)uploadData)["link"].ToString();
+			Debug.Log("Image accessible at: " + link);
+			onUploadComplete.Invoke(link);
 		}
 	}
 }
