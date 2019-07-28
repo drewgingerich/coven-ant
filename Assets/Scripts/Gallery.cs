@@ -31,7 +31,7 @@ public class Gallery : MonoBehaviour
     public void Initialize(List<string> characters)
     {
         characters.Reverse();
-        StartCoroutine(LoadGallery(characters.Take(maxCharactersToLoad).ToList()));
+        StartCoroutine(LoadGallery(characters));
     }
 
     // Update is called once per frame
@@ -155,9 +155,16 @@ public class Gallery : MonoBehaviour
     IEnumerator LoadGallery(List<string> characters)
     {
         //var lastTransformX = transform.position.x;
-
-        for (var i = 0; i < characters.Count; i++)
+        var openPortraits = maxCharactersToLoad;
+        var i = -1;
+        while (openPortraits > 0)
         {
+            i++;
+            if (i == characters.Count)
+            {
+                break;
+            }
+
             var character = characters[i].Split(',');
             var url = character[0];
             var characterName = character.ElementAtOrDefault(1);
@@ -169,65 +176,66 @@ public class Gallery : MonoBehaviour
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.error);
+                continue;
             }
-            else
+
+            openPortraits--;
+
+            GameObject child = null;
+
+            // Use the prefab with the extra left image if this is the first portrait,
+            // the default prefab for all of the middle portraits,
+            // and the prefab with the extra right image if this is the last portrait
+            if (i == 0)
             {
-                GameObject child = null;
+                child = Instantiate(galleryImagePrefabLeft, transform);
+            } else if (i == characters.Count - 1)
+            {
+                child = Instantiate(galleryImagePrefabRight, transform);
+            } else
+            {
+                child = Instantiate(galleryImagePrefabMid, transform);
+            }
 
-                // Use the prefab with the extra left image if this is the first portrait,
-                // the default prefab for all of the middle portraits,
-                // and the prefab with the extra right image if this is the last portrait
-                if (i == 0)
-                {
-                    child = Instantiate(galleryImagePrefabLeft, transform);
-                } else if (i == characters.Count - 1)
-                {
-                    child = Instantiate(galleryImagePrefabRight, transform);
-                } else
-                {
-                    child = Instantiate(galleryImagePrefabMid, transform);
-                }
+            var childRectTransform = child.GetComponent<RectTransform>();
+            m_ImageTransforms.Add(childRectTransform);
 
-                var childRectTransform = child.GetComponent<RectTransform>();
-                m_ImageTransforms.Add(childRectTransform);
+            if (i == 0)
+            {
+                m_RightX = m_ImageTransforms[0].rect.width;
+                m_LeftX = m_RightX * -1;
 
-                if (i == 0)
-                {
-                    m_RightX = m_ImageTransforms[0].rect.width;
-                    m_LeftX = m_RightX * -1;
+                m_FarRightX = m_RightX * 2;
+                m_FarLeftX = m_LeftX * 2;
+            }
 
-                    m_FarRightX = m_RightX * 2;
-                    m_FarLeftX = m_LeftX * 2;
-                }
+            var childText = child.GetComponentInChildren<Text>();
+            // NOTE: not enough room for date
+            //childText.text = $"{characterName} - {createdOn}";
+            childText.text = characterName;
 
-                var childText = child.GetComponentInChildren<Text>();
-                // NOTE: not enough room for date
-                //childText.text = $"{characterName} - {createdOn}";
-                childText.text = characterName;
+            var childImage = child.GetComponentsInChildren<Image>()[1];
+            //var childImage = child.GetComponentInChildren<RawImage>();
 
-                var childImage = child.GetComponentsInChildren<Image>()[1];
-                //var childImage = child.GetComponentInChildren<RawImage>();
+            var myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+            //childImage.texture = myTexture;
+            //childImage.SizeToParent();
 
-                var myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-                //childImage.texture = myTexture;
-                //childImage.SizeToParent();
+            //childImage.GetComponent<RectTransform>().sizeDelta = new Vector2(100f, 100f);
 
-                //childImage.GetComponent<RectTransform>().sizeDelta = new Vector2(100f, 100f);
+            //var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
+            var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
+            childImage.sprite = sprite;
 
-                //var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
-                var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
-                childImage.sprite = sprite;
-
-                if (i > 1)
-                {
-                    childRectTransform.DOLocalMoveX(m_FarRightX, 0f);
-                } else if (i == 1)
-                {
-                    childRectTransform.DOLocalMoveX(m_RightX, 0f);
-                } else
-                {
-                    childRectTransform.DOLocalMoveX(0f, 0f);
-                }
+            if (i > 1)
+            {
+                childRectTransform.DOLocalMoveX(m_FarRightX, 0f);
+            } else if (i == 1)
+            {
+                childRectTransform.DOLocalMoveX(m_RightX, 0f);
+            } else
+            {
+                childRectTransform.DOLocalMoveX(0f, 0f);
             }
         }
     }
