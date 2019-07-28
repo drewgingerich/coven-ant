@@ -5,76 +5,75 @@ using System.Net;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Networking;
 
 public class CharacterStore : MonoBehaviour
 {
-    [System.Serializable]
-    public class GetCharactersCompleteEvent : UnityEvent<List<string>>
-    {
-    }
+	[System.Serializable]
+	public class GetCharactersCompleteEvent : UnityEvent<List<string>> { }
 
-    public string apiUrl;
-    public string bucketId;
-    public string secretKey;
+	const string apiUrl = "https://kvdb.io";
+	const string bucketId = "XHswQYMv1ndXXgwvhzh1sG";
+	const string secretKey = "covenAnt";
 
-    public GetCharactersCompleteEvent onGetCharactersComplete;
-    public UnityEvent onSetCharacterComplete;
+	public GetCharactersCompleteEvent onGetCharactersComplete;
+	public UnityEvent onSetCharacterComplete;
 
-    const string DATE_FORMAT = "yyyyMMddHHmmss";
+	const string DATE_FORMAT = "yyyyMMddHHmmss";
 
-    public void GetCharacters()
-    {
-        using (var wClient = new WebClient())
-        {
-            var fullApiUrl = $"{apiUrl}/{bucketId}/?values=true&format=json&key={secretKey}";
+	public void GetCharacters()
+	{
+		StartCoroutine(GetCharactersRoutine());
+	}
 
-            wClient.DownloadStringCompleted += WClient_DownloadStringCompleted;
-            wClient.DownloadStringAsync(new System.Uri(fullApiUrl));
-        }
-    }
+	public IEnumerator GetCharactersRoutine()
+	{
+		var fullApiUrl = $"{apiUrl}/{bucketId}/?values=true&format=json&key={secretKey}";
 
-    public void SetCharacter(string url, string givenName)
-    {
-        using (var wClient = new WebClient())
-        {
-            var key = DateTime.Now.ToString(DATE_FORMAT);
-            var fullApiUrl = $"{apiUrl}/{bucketId}/{key}";
-            var value = $"{url},{givenName},{DateTime.Today.ToShortDateString()}";
+		UnityWebRequest request = UnityWebRequest.Get(fullApiUrl);
+		yield return request.SendWebRequest();
 
-            wClient.UploadStringCompleted += WClient_UploadStringCompleted;
-            wClient.UploadStringAsync(new System.Uri(fullApiUrl), value);
-        }
-    }
+		if (request.isNetworkError)
+		{
+			Debug.Log("Error uploading character: " + request.error);
+		}
+		else
+		{
+			Debug.Log("key / value list: " + request.downloadHandler.text);
 
-    private void WClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
-    {
-        if (e.Error != null)
-        {
-            Debug.Log("error downloading characters: " + e.Error);
-            return;
-        }
+			var jankyDictionary = JsonConvert.DeserializeObject<List<List<string>>>(request.downloadHandler.text);
+			var characters = new List<string>();
 
-        Debug.Log("key / value list: " + e.Result);
+			foreach (var keyPair in jankyDictionary)
+			{
+				characters.Add(keyPair[1]);
+			}
 
-        var jankyDictionary = JsonConvert.DeserializeObject<List<List<string>>>(e.Result);
-        var characters = new List<string>();
+			onGetCharactersComplete.Invoke(characters);
+		}
+	}
 
-        foreach (var keyPair in jankyDictionary)
-        {
-            characters.Add(keyPair[1]);
-        }
+	public void SetCharacter(string url, string givenName)
+	{
+		StartCoroutine(SetCharacterRoutine(url, givenName));
+	}
 
-        onGetCharactersComplete.Invoke(characters);
-    }
+	public IEnumerator SetCharacterRoutine(string url, string givenName)
+	{
+		var key = DateTime.Now.ToString(DATE_FORMAT);
+		var fullApiUrl = $"{apiUrl}/{bucketId}/{key}";
+		var value = $"{url},{givenName},{DateTime.Today.ToShortDateString()}";
 
-    private void WClient_UploadStringCompleted(object sender, UploadStringCompletedEventArgs e)
-    {
-        if(e.Error != null)
-        {
-            Debug.Log("error uploading character: " + e.Error);
-            return;
-        }
+		UnityWebRequest uploadRequest = UnityWebRequest.Post(fullApiUrl, value);
+		yield return uploadRequest.SendWebRequest();
 
-        onSetCharacterComplete.Invoke();
-    }
+		if (uploadRequest.isNetworkError)
+		{
+			Debug.Log("Error uploading character: " + uploadRequest.error);
+		}
+		else
+		{
+			onSetCharacterComplete.Invoke();
+		}
+	}
 }
