@@ -462,11 +462,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1579873408068356405, guid: 5a124d7b1fa6342eabb90779eaadff65,
-        type: 3}
-      propertyPath: m_Alpha
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1579873408068356402, guid: 5a124d7b1fa6342eabb90779eaadff65,
         type: 3}
       propertyPath: m_StartWithFade
@@ -500,6 +495,11 @@ PrefabInstance:
     - target: {fileID: 1579873408068356402, guid: 5a124d7b1fa6342eabb90779eaadff65,
         type: 3}
       propertyPath: m_StartFadeColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579873408068356405, guid: 5a124d7b1fa6342eabb90779eaadff65,
+        type: 3}
+      propertyPath: m_Alpha
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1130,7 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f684d61476b904afb90e22d42d4bc622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  galleryImagePrefabMid: {fileID: 8602892174298712581, guid: 071b8745222344ef79dacb718d3fd5c0,
+  galleryImagePrefab: {fileID: 8602892174298712581, guid: 071b8745222344ef79dacb718d3fd5c0,
     type: 3}
   galleryImagePrefabLeft: {fileID: 700481711757316641, guid: 60df8dd39b7d44fa0bd2082352e665a5,
     type: 3}
@@ -1733,9 +1733,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846e0af519a0c46ebb6f703dc0ded959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiUrl: https://kvdb.io
-  bucketId: XHswQYMv1ndXXgwvhzh1sG
-  secretKey: covenAnt
   onGetCharactersComplete:
     m_PersistentCalls:
       m_Calls:

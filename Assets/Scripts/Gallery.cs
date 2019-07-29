@@ -9,9 +9,7 @@ using DG.Tweening;
 
 public class Gallery : MonoBehaviour
 {
-    public GameObject galleryImagePrefabMid;
-    public GameObject galleryImagePrefabLeft;
-    public GameObject galleryImagePrefabRight;
+    public GameObject galleryImagePrefab;
     public PulsateOnCommand leftArrow;
     public PulsateOnCommand rightArrow;
     public float scrollSeconds;
@@ -19,6 +17,8 @@ public class Gallery : MonoBehaviour
 
     int m_CurrentImageIndex = 0;
     List<RectTransform> m_ImageTransforms = new List<RectTransform>();
+    RectTransform firstImage;
+    RectTransform lastImage;
 
     float m_LeftX;
     float m_RightX;
@@ -43,12 +43,12 @@ public class Gallery : MonoBehaviour
 
             if (moveHorizontal > 0.1f)
             {
-                ScrollRight();
+                StartCoroutine(ScrollRight());
                 SfxManager.Instance.PlayArrowClick();
             }
             else if (moveHorizontal < -0.1f)
             {
-                ScrollLeft();
+                StartCoroutine(ScrollLeft());
                 SfxManager.Instance.PlayArrowClick();
             }
         }
@@ -56,11 +56,11 @@ public class Gallery : MonoBehaviour
         // TODO: autoscroll if arrow key not pressed
     }
 
-    public void ScrollLeft()
+    public IEnumerator ScrollLeft()
     {
         // Added early exit if called as a public function
         if( m_IsScrolling) {
-            return;
+            yield break;
         }
         
         leftArrow.PulsateOneshot(0.25f);
@@ -102,13 +102,14 @@ public class Gallery : MonoBehaviour
                 m_ImageTransforms[nextImageIndex].DOLocalMoveX(m_LeftX, scrollSeconds);
             }
         }
+        yield return new WaitForSeconds(scrollSeconds);
     }
 
-    public void ScrollRight()
+    public IEnumerator ScrollRight()
     {
         // Added early exit if called as a public function
         if( m_IsScrolling) {
-            return;
+            yield break;
         }
 
         rightArrow.PulsateOneshot(0.25f);
@@ -150,25 +151,26 @@ public class Gallery : MonoBehaviour
                 m_ImageTransforms[nextImageIndex].DOLocalMoveX(m_RightX, scrollSeconds);
             }
         }
+        yield return new WaitForSeconds(scrollSeconds);
     }
 
-    IEnumerator LoadGallery(List<string> characters)
+    private IEnumerator LoadGallery(List<string> characters)
     {
-        //var lastTransformX = transform.position.x;
-        var openPortraits = maxCharactersToLoad;
-        var i = -1;
-        while (openPortraits > 0)
-        {
-            i++;
-            if (i == characters.Count)
-            {
-                break;
-            }
+        m_RightX = galleryImagePrefab.GetComponent<RectTransform>().rect.width;
+        m_LeftX = m_RightX * -1;
+        m_FarRightX = m_RightX * 2;
+        m_FarLeftX = m_LeftX * 2;
 
-            var character = characters[i].Split(',');
-            var url = character[0];
-            var characterName = character.ElementAtOrDefault(1);
-            var createdOn = character.ElementAtOrDefault(2);
+        firstImage = Instantiate(galleryImagePrefab, transform).GetComponent<RectTransform>();
+        m_ImageTransforms.Add(firstImage);
+
+        int filledPortraits = 0;
+        for (int i = 0; filledPortraits < maxCharactersToLoad && i < characters.Count; i++)
+        {
+            var characterData = characters[i].Split(',');
+            var url = characterData[0];
+            var characterName = characterData.ElementAtOrDefault(1);
+            var createdOn = characterData.ElementAtOrDefault(2);
 
             var www = UnityWebRequestTexture.GetTexture(url);
             yield return www.SendWebRequest();
@@ -179,35 +181,10 @@ public class Gallery : MonoBehaviour
                 continue;
             }
 
-            openPortraits--;
 
-            GameObject child = null;
-
-            // Use the prefab with the extra left image if this is the first portrait,
-            // the default prefab for all of the middle portraits,
-            // and the prefab with the extra right image if this is the last portrait
-            if (i == 0)
-            {
-                child = Instantiate(galleryImagePrefabLeft, transform);
-            } else if (i == characters.Count - 1)
-            {
-                child = Instantiate(galleryImagePrefabRight, transform);
-            } else
-            {
-                child = Instantiate(galleryImagePrefabMid, transform);
-            }
-
+            var child = Instantiate(galleryImagePrefab, transform);
             var childRectTransform = child.GetComponent<RectTransform>();
             m_ImageTransforms.Add(childRectTransform);
-
-            if (i == 0)
-            {
-                m_RightX = m_ImageTransforms[0].rect.width;
-                m_LeftX = m_RightX * -1;
-
-                m_FarRightX = m_RightX * 2;
-                m_FarLeftX = m_LeftX * 2;
-            }
 
             var childText = child.GetComponentInChildren<Text>();
             // NOTE: not enough room for date
@@ -215,7 +192,6 @@ public class Gallery : MonoBehaviour
             childText.text = characterName;
 
             var childImage = child.GetComponentsInChildren<Image>()[1];
-            //var childImage = child.GetComponentInChildren<RawImage>();
 
             var myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
             //childImage.texture = myTexture;
@@ -226,17 +202,20 @@ public class Gallery : MonoBehaviour
             //var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
             var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
             childImage.sprite = sprite;
-
-            if (i > 1)
-            {
-                childRectTransform.DOLocalMoveX(m_FarRightX, 0f);
-            } else if (i == 1)
-            {
-                childRectTransform.DOLocalMoveX(m_RightX, 0f);
-            } else
-            {
-                childRectTransform.DOLocalMoveX(0f, 0f);
-            }
+            
+            filledPortraits++;
         }
+
+        lastImage = Instantiate(galleryImagePrefab, transform).GetComponent<RectTransform>();
+        m_ImageTransforms.Add(lastImage);
+
+        m_ImageTransforms[0].DOLocalMoveX(m_LeftX, 0f);
+        m_ImageTransforms[1].DOLocalMoveX(0f, 0f);
+        m_ImageTransforms[2].DOLocalMoveX(m_RightX, 0f);
+        
+        for (int i = 3; i < m_ImageTransforms.Count; i++)
+        {
+            m_ImageTransforms[i].DOLocalMoveX(m_FarRightX, 0f);
+        } 
     }
 }
