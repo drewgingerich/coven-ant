@@ -72,9 +72,9 @@ public class Gallery : MonoBehaviour
 
         // update and constrain the current image index
         m_CurrentImageIndex--;
-        if (m_CurrentImageIndex < 0)
+        if (m_CurrentImageIndex < 1)
         {
-            m_CurrentImageIndex = 0;
+            m_CurrentImageIndex = 1;
             m_IsScrolling = false;
         }
         else
@@ -121,9 +121,9 @@ public class Gallery : MonoBehaviour
 
         // update and constrain the current image index
         m_CurrentImageIndex++;
-        if (m_CurrentImageIndex >= m_ImageTransforms.Count)
+        if (m_CurrentImageIndex >= m_ImageTransforms.Count - 1)
         {
-            m_CurrentImageIndex = m_ImageTransforms.Count - 1;
+            m_CurrentImageIndex = m_ImageTransforms.Count - 2;
             m_IsScrolling = false;
         }
         else
