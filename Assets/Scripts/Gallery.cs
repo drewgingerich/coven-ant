@@ -20,6 +20,7 @@ public class Gallery : MonoBehaviour
     RectTransform firstImage;
     RectTransform lastImage;
 
+    float portraitWidth;
     float m_LeftX;
     float m_RightX;
 
@@ -43,119 +44,103 @@ public class Gallery : MonoBehaviour
 
             if (moveHorizontal > 0.1f)
             {
-                StartCoroutine(ScrollRight());
-                SfxManager.Instance.PlayArrowClick();
+                ScrollRight();
             }
             else if (moveHorizontal < -0.1f)
             {
-                StartCoroutine(ScrollLeft());
-                SfxManager.Instance.PlayArrowClick();
+                ScrollLeft();
             }
         }
         
         // TODO: autoscroll if arrow key not pressed
     }
 
-    public IEnumerator ScrollLeft()
+    public void ScrollLeft()
     {
-        // Added early exit if called as a public function
-        if( m_IsScrolling) {
-            yield break;
-        }
-        
-        leftArrow.PulsateOneshot(0.25f);
-
-        // disable controls
-        m_IsScrolling = true;
-
-        var prevImageIndex = m_CurrentImageIndex;
-
-        // update and constrain the current image index
-        m_CurrentImageIndex--;
-        if (m_CurrentImageIndex < 1)
-        {
-            m_CurrentImageIndex = 1;
-            m_IsScrolling = false;
-        }
-        else
-        {
-            // move current image
-            m_ImageTransforms[m_CurrentImageIndex].DOLocalMoveX(0f, scrollSeconds).OnComplete(() =>
-            {
-                m_IsScrolling = false;
-            });
-
-            // move previous image
-            m_ImageTransforms[prevImageIndex].DOLocalMoveX(m_RightX, scrollSeconds);
-
-            // move previous previous image
-            var prevPrevImageIndex = prevImageIndex + 1;
-            if (prevPrevImageIndex < m_ImageTransforms.Count)
-            {
-                m_ImageTransforms[prevPrevImageIndex].DOLocalMoveX(m_FarRightX, scrollSeconds);
-            }
-
-            // move next image
-            var nextImageIndex = m_CurrentImageIndex - 1;
-            if (nextImageIndex >= 0)
-            {
-                m_ImageTransforms[nextImageIndex].DOLocalMoveX(m_LeftX, scrollSeconds);
-            }
-        }
-        yield return new WaitForSeconds(scrollSeconds);
+        Scroll(-1);
     }
 
-    public IEnumerator ScrollRight()
+    public void ScrollRight()
     {
-        // Added early exit if called as a public function
-        if( m_IsScrolling) {
+        Scroll(1);
+    }
+
+    public void Scroll (int value)
+    {
+        if (value == 0)
+        {
+            return;
+        }
+        StartCoroutine(ScrollTo(m_CurrentImageIndex + value));
+    }
+
+    public IEnumerator ScrollTo(int targetIndex)
+    {
+        if (targetIndex < 1)
+        {
+            targetIndex = 1;
+        }
+        else if (targetIndex > m_ImageTransforms.Count - 2)
+        {
+            targetIndex = m_ImageTransforms.Count - 2;
+        }
+
+        if (targetIndex == m_CurrentImageIndex)
+        {
             yield break;
         }
 
-        rightArrow.PulsateOneshot(0.25f);
-
-        // disable controls
         m_IsScrolling = true;
 
-        var prevImageIndex = m_CurrentImageIndex;
-
-        // update and constrain the current image index
-        m_CurrentImageIndex++;
-        if (m_CurrentImageIndex >= m_ImageTransforms.Count - 1)
+        if (targetIndex < m_CurrentImageIndex)
         {
-            m_CurrentImageIndex = m_ImageTransforms.Count - 2;
-            m_IsScrolling = false;
+            leftArrow.PulsateOneshot(0.1f);
+        }
+        else if (targetIndex > m_CurrentImageIndex)
+        {
+            rightArrow.PulsateOneshot(0.1f);
+        }
+
+        SfxManager.Instance.PlayArrowClick();
+
+        yield return new WaitForSeconds(0.1f);
+
+        leftArrow.gameObject.SetActive(false);
+        rightArrow.gameObject.SetActive(false);
+
+        for (int i = 0; i < m_ImageTransforms.Count; i++)
+        {
+            var indexDiff = targetIndex - i;
+            var transform = m_ImageTransforms[i];
+            var targetX = indexDiff * portraitWidth * -1;
+            transform.DOLocalMoveX(targetX, scrollSeconds);
+        }
+
+        yield return new WaitForSeconds(scrollSeconds);
+
+        if (targetIndex == 1)
+        {
+            leftArrow.gameObject.SetActive(false);
+            rightArrow.gameObject.SetActive(true);
+        }
+        else if (targetIndex == m_ImageTransforms.Count - 2)
+        {
+            leftArrow.gameObject.SetActive(true);
+            rightArrow.gameObject.SetActive(false);
         }
         else
         {
-            // move current image
-            m_ImageTransforms[m_CurrentImageIndex].DOLocalMoveX(0f, scrollSeconds).OnComplete(() =>
-            {
-                m_IsScrolling = false;
-            });
-
-            // move previous image
-            m_ImageTransforms[prevImageIndex].DOLocalMoveX(m_LeftX, scrollSeconds);
-
-            // move previous previous image
-            var prevPrevImageIndex = prevImageIndex - 1;
-            if (prevPrevImageIndex >= 0)
-            {
-                m_ImageTransforms[prevPrevImageIndex].DOLocalMoveX(m_FarLeftX, scrollSeconds);
-            }
-
-            // move next image
-            var nextImageIndex = m_CurrentImageIndex + 1;
-            if (nextImageIndex < m_ImageTransforms.Count)
-            {
-                m_ImageTransforms[nextImageIndex].DOLocalMoveX(m_RightX, scrollSeconds);
-            }
+            leftArrow.gameObject.SetActive(true);
+            rightArrow.gameObject.SetActive(true);
         }
-        yield return new WaitForSeconds(scrollSeconds);
+
+        m_CurrentImageIndex = targetIndex;
+        m_IsScrolling = false;
     }
 
     private IEnumerator LoadGallery(List<string> characters)
     {
+        portraitWidth = galleryImagePrefab.GetComponent<RectTransform>().rect.width;
         m_RightX = galleryImagePrefab.GetComponent<RectTransform>().rect.width;
         m_LeftX = m_RightX * -1;
         m_FarRightX = m_RightX * 2;
@@ -181,7 +166,6 @@ public class Gallery : MonoBehaviour
                 continue;
             }
 
-
             var child = Instantiate(galleryImagePrefab, transform);
             var childRectTransform = child.GetComponent<RectTransform>();
             m_ImageTransforms.Add(childRectTransform);
@@ -202,20 +186,13 @@ public class Gallery : MonoBehaviour
             //var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
             var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
             childImage.sprite = sprite;
-            
+
             filledPortraits++;
         }
 
         lastImage = Instantiate(galleryImagePrefab, transform).GetComponent<RectTransform>();
         m_ImageTransforms.Add(lastImage);
 
-        m_ImageTransforms[0].DOLocalMoveX(m_LeftX, 0f);
-        m_ImageTransforms[1].DOLocalMoveX(0f, 0f);
-        m_ImageTransforms[2].DOLocalMoveX(m_RightX, 0f);
-        
-        for (int i = 3; i < m_ImageTransforms.Count; i++)
-        {
-            m_ImageTransforms[i].DOLocalMoveX(m_FarRightX, 0f);
-        } 
+        StartCoroutine(ScrollTo(1));
     }
 }
