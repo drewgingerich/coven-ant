@@ -1132,13 +1132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   galleryImagePrefab: {fileID: 8602892174298712581, guid: 071b8745222344ef79dacb718d3fd5c0,
     type: 3}
-  galleryImagePrefabLeft: {fileID: 700481711757316641, guid: 60df8dd39b7d44fa0bd2082352e665a5,
-    type: 3}
-  galleryImagePrefabRight: {fileID: 6349628335056566999, guid: 111312aa1535a4db2a8c2f13c88d1c14,
-    type: 3}
   leftArrow: {fileID: 275299605}
   rightArrow: {fileID: 1477449515}
-  scrollSeconds: 2
+  scrollSeconds: 0.5
   maxCharactersToLoad: 10
 --- !u!114 &1616217570
 MonoBehaviour:
