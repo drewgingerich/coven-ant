@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
 public class CaptureSpriteWidth : MonoBehaviour
 {
@@ -19,13 +20,10 @@ public class CaptureSpriteWidth : MonoBehaviour
         }
     }
 
-    const float targetAspectRatio = 16 / 9;
-
     private void Update()
     {
-        var currentPosition = transform.position;
         var targetPosition= spriteRenderer.sprite.bounds.center;
-        targetPosition.z = currentPosition.z;
+        targetPosition.z = transform.position.z;
         transform.position = targetPosition;
 
         var spriteScale = spriteRenderer.transform.lossyScale;
