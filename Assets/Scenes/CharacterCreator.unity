@@ -7723,9 +7723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846e0af519a0c46ebb6f703dc0ded959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiUrl: https://kvdb.io
-  bucketId: XHswQYMv1ndXXgwvhzh1sG
-  secretKey: covenAnt
   onGetCharactersComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -7840,16 +7837,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3625668186238523531, guid: ee84699a734d945b6b88807682116354,
-        type: 3}
-      propertyPath: orthographic size
-      value: 7.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625668186238523531, guid: ee84699a734d945b6b88807682116354,
-        type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee84699a734d945b6b88807682116354, type: 3}
 --- !u!1001 &4743081185802995119
@@ -7938,6 +7925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808212484594749568, guid: 0e1a2a9e68aaa410691be8fb5b9cd730,
+        type: 3}
+      propertyPath: orthographic size
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4808212484594749571, guid: 0e1a2a9e68aaa410691be8fb5b9cd730,
         type: 3}
