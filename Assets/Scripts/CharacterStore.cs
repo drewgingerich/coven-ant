@@ -39,9 +39,10 @@ public class CharacterStore : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("key / value list: " + request.downloadHandler.text);
+			var characterData = UnityWebRequest.UnEscapeURL(request.downloadHandler.text);
+			Debug.Log("key / value list: " + characterData);
 
-			var jankyDictionary = JsonConvert.DeserializeObject<List<List<string>>>(request.downloadHandler.text);
+			var jankyDictionary = JsonConvert.DeserializeObject<List<List<string>>>(characterData);
 			var characters = new List<string>();
 
 			foreach (var keyPair in jankyDictionary)
