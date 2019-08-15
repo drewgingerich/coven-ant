@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 public class ImageUploader : MonoBehaviour
 {
 	public string clientId = "b448c8366a1c37a";
-	public string baseUploadUrl = "https://api.imgur.com/3/upload";
+	public string baseUploadUrl = "https://api.imgur.com/3/image";
 
 	[System.Serializable]
 	public class UploadCompleteEvent : UnityEvent<string> { }
@@ -28,6 +28,7 @@ public class ImageUploader : MonoBehaviour
 
 		WWWForm data = new WWWForm();
 		data.AddField("image", base64Image);
+		data.AddField("type", "base64");
 
 		UnityWebRequest uploadRequest = UnityWebRequest.Post(baseUploadUrl, data);
 		uploadRequest.SetRequestHeader("Authorization", "Client-ID " + clientId);
@@ -41,6 +42,7 @@ public class ImageUploader : MonoBehaviour
 		else
 		{
 			var jsonResponseString = uploadRequest.downloadHandler.text;
+			Debug.Log(jsonResponseString);
 			var json = TinyJson.JSONParser.FromJson<object>(jsonResponseString);
 			var uploadData = ((Dictionary<string, object>)json)["data"];
 			var link = ((Dictionary<string, object>)uploadData)["link"].ToString();
