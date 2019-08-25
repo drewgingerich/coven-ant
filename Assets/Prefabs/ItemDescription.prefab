@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -150,7 +150,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 5dc3a938fc1e546088a0f4f8737d6a5e, type: 3}
     m_FontSize: 67
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 6
     m_MaxSize: 85
     m_Alignment: 0
@@ -186,7 +186,7 @@ RectTransform:
   m_GameObject: {fileID: 3675624138673820355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5612415317149298280}
   - {fileID: 4807528464291063866}
