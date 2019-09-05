@@ -456,7 +456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121223275}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -976,17 +976,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297413382}
-  m_LocalRotation: {x: 0, y: 0, z: 0.057999633, w: 0.9983166}
+  m_LocalRotation: {x: -0, y: -0, z: 0.057999633, w: 0.9983166}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 562235768}
-  m_Father: {fileID: 706307428}
-  m_RootOrder: 6
+  m_Father: {fileID: 1811670881}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.65}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1078, y: -848}
+  m_AnchoredPosition: {x: 511, y: -378}
   m_SizeDelta: {x: 464.8, y: 236.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297413384
@@ -1931,8 +1931,7 @@ RectTransform:
   - {fileID: 980435455}
   - {fileID: 1327033438}
   - {fileID: 1671332730}
-  - {fileID: 1332513126}
-  - {fileID: 297413383}
+  - {fileID: 1811670881}
   m_Father: {fileID: 1335053487}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2331,7 +2330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.7}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 183, y: -1185}
+  m_AnchoredPosition: {x: 129, y: -819}
   m_SizeDelta: {x: 1818.5, y: 1263.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015938885
@@ -2738,7 +2737,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197134033}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -3019,17 +3018,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332513125}
-  m_LocalRotation: {x: 0, y: 0, z: -0.04318352, w: 0.9990672}
+  m_LocalRotation: {x: -0, y: -0, z: -0.04318352, w: 0.9990672}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1930670202}
-  m_Father: {fileID: 706307428}
-  m_RootOrder: 5
+  m_Father: {fileID: 1811670881}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.95}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -963, y: -838}
+  m_AnchoredPosition: {x: -505, y: -376}
   m_SizeDelta: {x: 464.8, y: 236.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332513127
@@ -3702,7 +3701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1671332730
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3969,6 +3968,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797786879}
   m_CullTransparentMesh: 0
+--- !u!1 &1811670880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1811670881}
+  m_Layer: 5
+  m_Name: NavButtons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1811670881
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811670880}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children:
+  - {fileID: 1332513126}
+  - {fileID: 297413383}
+  m_Father: {fileID: 706307428}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1898075796
 PrefabInstance:
   m_ObjectHideFlags: 0
