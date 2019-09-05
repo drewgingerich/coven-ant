@@ -917,7 +917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &243746461
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1004,7 +1004,7 @@ RectTransform:
   - {fileID: 358564095}
   - {fileID: 1114905425}
   - {fileID: 1367275009}
-  - {fileID: 751722863}
+  - {fileID: 510743800}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1719,6 +1719,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 124b99419fada40229790fd9db8a5651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &510743799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 510743800}
+  m_Layer: 5
+  m_Name: Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &510743800
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510743799}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children:
+  - {fileID: 751722863}
+  m_Father: {fileID: 243746465}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &556004365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,14 +2599,14 @@ RectTransform:
   m_GameObject: {fileID: 751722862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 243746465}
-  m_RootOrder: 3
+  m_Father: {fileID: 510743800}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 599}
+  m_AnchoredPosition: {x: 0, y: -198}
   m_SizeDelta: {x: 351.1, y: 181.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &751722864
@@ -7865,7 +7901,7 @@ PrefabInstance:
     - target: {fileID: 3625668186238523531, guid: ee84699a734d945b6b88807682116354,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.6248746
+      value: 0.5622807
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee84699a734d945b6b88807682116354, type: 3}
@@ -7959,7 +7995,7 @@ PrefabInstance:
     - target: {fileID: 4808212484594749568, guid: 0e1a2a9e68aaa410691be8fb5b9cd730,
         type: 3}
       propertyPath: orthographic size
-      value: 11.997593
+      value: 10.79579
       objectReference: {fileID: 0}
     - target: {fileID: 4808212484594749571, guid: 0e1a2a9e68aaa410691be8fb5b9cd730,
         type: 3}
