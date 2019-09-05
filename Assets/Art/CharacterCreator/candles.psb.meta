@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: f46c174594ac44982968968682a891ff
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: candles_GO/candles_GO
+    100002: candles_GO/candles_GO/flame-loop_0009_Layer-25 Copy
+    100004: candles_GO/candles_GO/light one candle Copy
+    100006: candles_GO/candles_GO/linework
+    100008: candles_GO/candles_GO/linework Copy
+    400000: candles_GO/candles_GO/Transform
+    400002: candles_GO/candles_GO/flame-loop_0009_Layer-25 Copy/Transform
+    400004: candles_GO/candles_GO/light one candle Copy/Transform
+    400006: candles_GO/candles_GO/linework/Transform
+    400008: candles_GO/candles_GO/linework Copy/Transform
+    2800000: candles
+    21200000: candles_GO/candles_GO/flame-loop_0009_Layer-25 Copy/SpriteRenderer
+    21200002: candles_GO/candles_GO/light one candle Copy/SpriteRenderer
+    21200004: candles_GO/candles_GO/linework/SpriteRenderer
+    21200006: candles_GO/candles_GO/linework Copy/SpriteRenderer
+    21300000: 4e0cdbc1676344e3296635f8b1a51218
+    21300002: 5d84af4bd4a1b406abd0534c02ea51a6
+    21300004: fa31878e3757145c1afc333cc3155fc2
+    21300006: 32c952a70cb074f33b53672058b5a6ef
+    100100000: candles_GO
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: flame-loop_0009_Layer-25 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1503
+      y: 1469
+      width: 74
+      height: 199
+    spriteID: 4e0cdbc1676344e3296635f8b1a51218
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 579, y: 775}
+  - name: light one candle Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1964
+      height: 1457
+    spriteID: 5d84af4bd4a1b406abd0534c02ea51a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -391, y: -39}
+  - name: linework Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2485
+      width: 1406
+      height: 963
+    spriteID: fa31878e3757145c1afc333cc3155fc2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -617, y: 2438}
+  - name: linework
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1469
+      width: 1491
+      height: 1008
+    spriteID: 32c952a70cb074f33b53672058b5a6ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -532, y: 1467}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 2800, y: 1500}
+  textureActualWidth: 2048
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: flame-loop_0009_Layer-25 Copy
+    spriteName: flame-loop_0009_Layer-25 Copy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4e0cdbc1676344e3296635f8b1a51218
+    layerID: -1513849585
+    mosaicPosition: {x: 1503, y: 1469}
+  - name: light one candle Copy
+    spriteName: light one candle Copy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5d84af4bd4a1b406abd0534c02ea51a6
+    layerID: -1693270140
+    mosaicPosition: {x: 4, y: 4}
+  - name: linework Copy
+    spriteName: linework Copy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fa31878e3757145c1afc333cc3155fc2
+    layerID: -1131414966
+    mosaicPosition: {x: 4, y: 2485}
+  - name: linework
+    spriteName: linework
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 32c952a70cb074f33b53672058b5a6ef
+    layerID: 0
+    mosaicPosition: {x: 4, y: 1469}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+  boneGOs: []
+  generateGOHierarchy: 0
+  textureAssetName: candles
+  prefabAssetName: candles_GO
