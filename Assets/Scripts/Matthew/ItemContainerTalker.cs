@@ -17,7 +17,7 @@ public class ItemContainerTalker : MonoBehaviour {
     public float chanceToPlayAntSound = 0.1f;
     public SpriteRenderer poof;
     public ItemDescriptionViewer descriptionViewer;
-    public float globalCooldownTime = 1f;
+    private float globalCooldownTime = 0.2f;
     public Timer globalCooldown;
     private CharacterCreatorItem item;
     private Selectable selectable;
