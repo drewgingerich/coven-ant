@@ -17,25 +17,18 @@ public class Gallery : MonoBehaviour
 
     int m_CurrentImageIndex = 0;
     List<RectTransform> m_ImageTransforms = new List<RectTransform>();
-    RectTransform firstImage;
-    RectTransform lastImage;
 
     float portraitWidth;
-    float m_LeftX;
-    float m_RightX;
-
-    float m_FarLeftX;
-    float m_FarRightX;
 
     bool m_IsScrolling = false;
 
     public void Initialize(List<string> characters)
     {
-        characters.Reverse();
+        // characters.Reverse();
+        portraitWidth = galleryImagePrefab.GetComponent<RectTransform>().rect.width;
         StartCoroutine(LoadGallery(characters));
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (m_ImageTransforms.Count > 1 && !m_IsScrolling)
@@ -51,8 +44,6 @@ public class Gallery : MonoBehaviour
                 ScrollLeft();
             }
         }
-        
-        // TODO: autoscroll if arrow key not pressed
     }
 
     public void ScrollLeft()
@@ -76,14 +67,7 @@ public class Gallery : MonoBehaviour
 
     public IEnumerator ScrollTo(int targetIndex)
     {
-        if (targetIndex < 1)
-        {
-            targetIndex = 1;
-        }
-        else if (targetIndex > m_ImageTransforms.Count - 2)
-        {
-            targetIndex = m_ImageTransforms.Count - 2;
-        }
+        targetIndex = ClampTargetIndex(targetIndex);
 
         if (targetIndex == m_CurrentImageIndex)
         {
@@ -104,19 +88,21 @@ public class Gallery : MonoBehaviour
         SfxManager.Instance.PlayArrowClick();
 
         yield return new WaitForSeconds(0.1f);
-
+ 
         leftArrow.gameObject.SetActive(false);
         rightArrow.gameObject.SetActive(false);
 
+        var offsets = GetOffsets(targetIndex);
+
         for (int i = 0; i < m_ImageTransforms.Count; i++)
         {
-            var indexDiff = targetIndex - i;
-            var transform = m_ImageTransforms[i];
-            var targetX = indexDiff * portraitWidth * -1;
-            transform.DOLocalMoveX(targetX, scrollSeconds);
+            m_ImageTransforms[i].DOLocalMoveX(offsets[i], scrollSeconds);
         }
 
         yield return new WaitForSeconds(scrollSeconds);
+
+        m_CurrentImageIndex = targetIndex;
+        m_IsScrolling = false;
 
         if (targetIndex == 1)
         {
@@ -133,21 +119,61 @@ public class Gallery : MonoBehaviour
             leftArrow.gameObject.SetActive(true);
             rightArrow.gameObject.SetActive(true);
         }
+    }
+
+    private int ClampTargetIndex(int targetIndex)
+    {
+        // One pad image on the left
+        var lowerBound = 1;
+        // Two pad images on the right
+        var upperBound = m_ImageTransforms.Count - 3;
+        return Mathf.Clamp(targetIndex, lowerBound, upperBound);
+    }
+
+    private void SnapTo(int targetIndex)
+    {
+        targetIndex = ClampTargetIndex(targetIndex);
+
+        if (targetIndex == m_CurrentImageIndex)
+        {
+            return;
+        }
+
+        var offsets = GetOffsets(targetIndex);
+
+        for (int i = 0; i < m_ImageTransforms.Count; i++)
+        {
+            m_ImageTransforms[i].localPosition = new Vector3(offsets[i], 0, 0);
+        }
 
         m_CurrentImageIndex = targetIndex;
-        m_IsScrolling = false;
+    }
+
+    private float[] GetOffsets(int targetIndex)
+    {
+        var offsets = new float[m_ImageTransforms.Count];
+        for (int i = 0; i < m_ImageTransforms.Count; i++)
+        {
+            var indexDiff = targetIndex - i;
+            var targetX = indexDiff * portraitWidth * -1;
+            offsets[i] = targetX;
+        }
+        return offsets;
+    }
+
+    private void CreatePadPortraits()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            var pad = Instantiate(galleryImagePrefab, transform).GetComponent<RectTransform>();
+            m_ImageTransforms.Add(pad);
+        }
+        SnapTo(1);
     }
 
     private IEnumerator LoadGallery(List<string> characters)
     {
-        portraitWidth = galleryImagePrefab.GetComponent<RectTransform>().rect.width;
-        m_RightX = galleryImagePrefab.GetComponent<RectTransform>().rect.width;
-        m_LeftX = m_RightX * -1;
-        m_FarRightX = m_RightX * 2;
-        m_FarLeftX = m_LeftX * 2;
-
-        firstImage = Instantiate(galleryImagePrefab, transform).GetComponent<RectTransform>();
-        m_ImageTransforms.Add(firstImage);
+        CreatePadPortraits();
 
         int filledPortraits = 0;
         for (int i = 0; filledPortraits < maxCharactersToLoad && i < characters.Count; i++)
@@ -168,31 +194,21 @@ public class Gallery : MonoBehaviour
 
             var child = Instantiate(galleryImagePrefab, transform);
             var childRectTransform = child.GetComponent<RectTransform>();
-            m_ImageTransforms.Add(childRectTransform);
+            m_ImageTransforms.Insert(1, childRectTransform);
 
-            var childText = child.GetComponentInChildren<Text>();
-            // NOTE: not enough room for date
-            //childText.text = $"{characterName} - {createdOn}";
-            childText.text = characterName;
+            child.GetComponentInChildren<Text>().text = characterName;
 
             var childImage = child.GetComponentsInChildren<Image>()[1];
 
             var myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-            //childImage.texture = myTexture;
-            //childImage.SizeToParent();
-
-            //childImage.GetComponent<RectTransform>().sizeDelta = new Vector2(100f, 100f);
-
-            //var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
             var sprite = Sprite.Create(myTexture, new Rect(0.0f, 0.0f, myTexture.width, myTexture.height), new Vector2(0.5f, 0.5f), 100f);
             childImage.sprite = sprite;
 
             filledPortraits++;
+
+            SnapTo(2);
+            // yield return null;
+            yield return StartCoroutine(ScrollTo(1));
         }
-
-        lastImage = Instantiate(galleryImagePrefab, transform).GetComponent<RectTransform>();
-        m_ImageTransforms.Add(lastImage);
-
-        StartCoroutine(ScrollTo(1));
     }
 }
