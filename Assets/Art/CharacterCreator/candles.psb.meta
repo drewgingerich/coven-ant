@@ -3,21 +3,17 @@ guid: f46c174594ac44982968968682a891ff
 ScriptedImporter:
   fileIDToRecycleName:
     100000: candles_GO/candles_GO
-    100002: candles_GO/candles_GO/flame-loop_0009_Layer-25 Copy
     100004: candles_GO/candles_GO/light one candle Copy
     100006: candles_GO/candles_GO/linework
     100008: candles_GO/candles_GO/linework Copy
     400000: candles_GO/candles_GO/Transform
-    400002: candles_GO/candles_GO/flame-loop_0009_Layer-25 Copy/Transform
     400004: candles_GO/candles_GO/light one candle Copy/Transform
     400006: candles_GO/candles_GO/linework/Transform
     400008: candles_GO/candles_GO/linework Copy/Transform
     2800000: candles
-    21200000: candles_GO/candles_GO/flame-loop_0009_Layer-25 Copy/SpriteRenderer
     21200002: candles_GO/candles_GO/light one candle Copy/SpriteRenderer
     21200004: candles_GO/candles_GO/linework/SpriteRenderer
     21200006: candles_GO/candles_GO/linework Copy/SpriteRenderer
-    21300000: 4e0cdbc1676344e3296635f8b1a51218
     21300002: 5d84af4bd4a1b406abd0534c02ea51a6
     21300004: fa31878e3757145c1afc333cc3155fc2
     21300006: 32c952a70cb074f33b53672058b5a6ef
@@ -104,27 +100,6 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: flame-loop_0009_Layer-25 Copy
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1503
-      y: 1469
-      width: 74
-      height: 199
-    spriteID: 4e0cdbc1676344e3296635f8b1a51218
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 579, y: 775}
   - name: light one candle Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -203,13 +178,6 @@ ScriptedImporter:
   characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: flame-loop_0009_Layer-25 Copy
-    spriteName: flame-loop_0009_Layer-25 Copy
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 4e0cdbc1676344e3296635f8b1a51218
-    layerID: -1513849585
-    mosaicPosition: {x: 1503, y: 1469}
   - name: light one candle Copy
     spriteName: light one candle Copy
     isGroup: 0
