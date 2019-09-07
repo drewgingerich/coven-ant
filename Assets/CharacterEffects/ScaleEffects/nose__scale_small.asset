@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: nose__scale_small
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: b63a348aabf1e402e88caf626b22298f, type: 2}
-  mode: 1
-  scale: {x: -0.1, y: -0.1}
+  mode: 2
+  scale: {x: 0.8, y: 0.8}

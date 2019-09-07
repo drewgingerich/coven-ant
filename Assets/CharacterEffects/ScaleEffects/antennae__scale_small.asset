@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: antennae__scale_small
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: c4960f9fa3d024dbebc22c357f8145e3, type: 2}
-  mode: 1
-  scale: {x: -0.1, y: -0.1}
+  mode: 2
+  scale: {x: 0.8, y: 0.8}
