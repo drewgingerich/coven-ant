@@ -12,8 +12,8 @@ public class GameEndHandler : MonoBehaviour
     public QrCodeRenderer qrCodeRenderer;
     public CharacterStore characterStore;
     public NameGenerator nameGenerator;
+    public SceneLoader sceneLoader;
 
-    public GameObject finalizePanel;
 
     public void OnGameEnd()
     {
@@ -21,6 +21,7 @@ public class GameEndHandler : MonoBehaviour
         Texture2D snapshot = snapshotCamera.TakeSnapshot();
 
         uploader.onUploadComplete.AddListener(HandleUpload);
+        uploader.onUploadFail.AddListener(HandleUploadFail);
 
         // Upload the finished character image to imgur
         uploader.UploadImage(snapshot);
@@ -28,15 +29,18 @@ public class GameEndHandler : MonoBehaviour
 
     private void HandleUpload(string imageUrl)
     {
+        qrCodeRenderer.gameObject.SetActive(true);
         qrCodeRenderer.onQrCodeDisplayed.AddListener(() =>
         {
-            finalizePanel.SetActive(true);
-
-            // Persist character data
+            CharacterStore.offline = false;
             characterStore.SetCharacter(imageUrl, nameGenerator.GenerateName());
         });
-
-        // Display a QR code for the imgur link
         qrCodeRenderer.DisplayQrCode(imageUrl);
+    }
+
+    private void HandleUploadFail()
+    {
+        CharacterStore.offline = true;
+        sceneLoader.FadeScene("HallOfFame");
     }
 }

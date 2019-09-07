@@ -9,6 +9,9 @@ using UnityEngine.Networking;
 
 public class CharacterStore : MonoBehaviour
 {
+
+	public static bool offline = false;
+
 	[System.Serializable]
 	public class GetCharactersCompleteEvent : UnityEvent<List<string>> { }
 
@@ -18,12 +21,20 @@ public class CharacterStore : MonoBehaviour
 
 	public GetCharactersCompleteEvent onGetCharactersComplete;
 	public UnityEvent onSetCharacterComplete;
+	public UnityEvent onGetCharactersLocal;
 
 	const string DATE_FORMAT = "yyyyMMddHHmmss";
 
 	public void GetCharacters()
 	{
-		StartCoroutine(GetCharactersRoutine());
+		if (offline)
+		{
+			onGetCharactersLocal.Invoke();
+		}
+		else
+		{
+			StartCoroutine(GetCharactersRoutine());
+		}
 	}
 
 	public IEnumerator GetCharactersRoutine()

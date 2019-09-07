@@ -15,6 +15,7 @@ public class ImageUploader : MonoBehaviour
 
 	// Consumed by GameEndHandler via script
 	public UploadCompleteEvent onUploadComplete;
+	public UnityEvent onUploadFail;
 
 	public void UploadImage(Texture2D texture)
 	{
@@ -32,11 +33,13 @@ public class ImageUploader : MonoBehaviour
 		UnityWebRequest uploadRequest = UnityWebRequest.Post(baseUploadUrl, data);
 		uploadRequest.SetRequestHeader("Authorization", "Client-ID " + clientId);
 
+		StartCoroutine(UploadTimeout());
 		yield return uploadRequest.SendWebRequest();
 
 		if (uploadRequest.isNetworkError)
 		{
 			Debug.Log("Error While Sending: " + uploadRequest.error);
+			onUploadFail.Invoke();
 		}
 		else
 		{
@@ -47,5 +50,12 @@ public class ImageUploader : MonoBehaviour
 			Debug.Log("Image accessible at: " + link);
 			onUploadComplete.Invoke(link);
 		}
+	}
+
+	private IEnumerator UploadTimeout()
+	{
+		yield return new WaitForSeconds(3f);
+		onUploadFail.Invoke();
+		StopAllCoroutines();
 	}
 }

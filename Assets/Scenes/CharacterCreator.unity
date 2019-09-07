@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 243746462}
   - component: {fileID: 243746461}
   - component: {fileID: 243746466}
+  - component: {fileID: 243746467}
   m_Layer: 5
   m_Name: QrParent
   m_TagString: Untagged
@@ -1032,6 +1033,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &243746467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243746460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a72c80e6db74564a766f2a18a6e4b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  qrImage: {fileID: 1114905426}
+  onQrCodeDisplayed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &278607186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1969,26 +1988,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243746460}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2114379237}
+        m_MethodName: OnGameEnd
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 1
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 751722865}
-        m_MethodName: Select
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Highlighted
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 586100797}
@@ -5076,7 +5084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginTimerOnStart: 1
-  timeRemaining: 50
+  timeRemaining: 5
   repeatTimer: 0
   OnTimerStart:
     m_PersistentCalls:
@@ -5113,9 +5121,9 @@ MonoBehaviour:
   OnTimerEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2114379237}
-        m_MethodName: OnGameEnd
-        m_Mode: 1
+      - m_Target: {fileID: 1823778770}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5145,6 +5153,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 278607187}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -7710,7 +7729,6 @@ GameObject:
   - component: {fileID: 2114379235}
   - component: {fileID: 2114379237}
   - component: {fileID: 2114379240}
-  - component: {fileID: 2114379239}
   - component: {fileID: 2114379238}
   m_Layer: 0
   m_Name: GameManager
@@ -7768,10 +7786,10 @@ MonoBehaviour:
   navigator: {fileID: 278607188}
   snapshotCamera: {fileID: 1749409046}
   uploader: {fileID: 2114379240}
-  qrCodeRenderer: {fileID: 2114379239}
+  qrCodeRenderer: {fileID: 243746467}
   characterStore: {fileID: 2114379238}
   nameGenerator: {fileID: 11400000, guid: aaa751752e6094d7a99a78a426db6b42, type: 2}
-  finalizePanel: {fileID: 1823778770}
+  sceneLoader: {fileID: 2114379235}
 --- !u!114 &2114379238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7794,20 +7812,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &2114379239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114379234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68a72c80e6db74564a766f2a18a6e4b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  qrImage: {fileID: 1114905426}
-  onQrCodeDisplayed:
+  onGetCharactersLocal:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -7830,6 +7835,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: ImageUploader+UploadCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onUploadFail:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1001 &3625668184497669523
 PrefabInstance:
@@ -7901,7 +7911,7 @@ PrefabInstance:
     - target: {fileID: 3625668186238523531, guid: ee84699a734d945b6b88807682116354,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5626204
+      value: 0.5625
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee84699a734d945b6b88807682116354, type: 3}
@@ -7995,7 +8005,7 @@ PrefabInstance:
     - target: {fileID: 4808212484594749568, guid: 0e1a2a9e68aaa410691be8fb5b9cd730,
         type: 3}
       propertyPath: orthographic size
-      value: 10.802313
+      value: 10.8
       objectReference: {fileID: 0}
     - target: {fileID: 4808212484594749571, guid: 0e1a2a9e68aaa410691be8fb5b9cd730,
         type: 3}
