@@ -57,6 +57,11 @@ public class Gallery : MonoBehaviour
 
     public void UserScroll (int value)
     {
+        if (m_IsScrolling)
+        {
+            return;
+        }
+        
         StartCoroutine(UserScrollTo(m_CurrentImageIndex + value));
     }
 
