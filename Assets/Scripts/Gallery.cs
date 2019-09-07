@@ -48,24 +48,25 @@ public class Gallery : MonoBehaviour
 
     public void ScrollLeft()
     {
-        Scroll(-1);
+        UserScroll(-1);
     }
 
     public void ScrollRight()
     {
-        Scroll(1);
+        UserScroll(1);
     }
 
-    public void Scroll (int value)
+    public void UserScroll (int value)
     {
+        StopAllCoroutines();
         if (value == 0)
         {
             return;
         }
-        StartCoroutine(ScrollTo(m_CurrentImageIndex + value));
+        StartCoroutine(UserScrollTo(m_CurrentImageIndex + value));
     }
 
-    public IEnumerator ScrollTo(int targetIndex)
+    public IEnumerator UserScrollTo(int targetIndex)
     {
         targetIndex = ClampTargetIndex(targetIndex);
 
@@ -73,8 +74,6 @@ public class Gallery : MonoBehaviour
         {
             yield break;
         }
-
-        m_IsScrolling = true;
 
         if (targetIndex < m_CurrentImageIndex)
         {
@@ -92,17 +91,7 @@ public class Gallery : MonoBehaviour
         leftArrow.gameObject.SetActive(false);
         rightArrow.gameObject.SetActive(false);
 
-        var offsets = GetOffsets(targetIndex);
-
-        for (int i = 0; i < m_ImageTransforms.Count; i++)
-        {
-            m_ImageTransforms[i].DOLocalMoveX(offsets[i], scrollSeconds);
-        }
-
-        yield return new WaitForSeconds(scrollSeconds);
-
-        m_CurrentImageIndex = targetIndex;
-        m_IsScrolling = false;
+        yield return StartCoroutine(ScrollTo(targetIndex, scrollSeconds));
 
         if (targetIndex == 1)
         {
@@ -119,6 +108,30 @@ public class Gallery : MonoBehaviour
             leftArrow.gameObject.SetActive(true);
             rightArrow.gameObject.SetActive(true);
         }
+    }
+
+    public IEnumerator ScrollTo(int targetIndex, float time)
+    {
+        targetIndex = ClampTargetIndex(targetIndex);
+
+        if (targetIndex == m_CurrentImageIndex)
+        {
+            yield break;
+        }
+
+        m_IsScrolling = true;
+
+        var offsets = GetOffsets(targetIndex);
+
+        for (int i = 0; i < m_ImageTransforms.Count; i++)
+        {
+            m_ImageTransforms[i].DOLocalMoveX(offsets[i], time);
+        }
+
+        yield return new WaitForSeconds(time);
+
+        m_CurrentImageIndex = targetIndex;
+        m_IsScrolling = false;
     }
 
     private int ClampTargetIndex(int targetIndex)
@@ -207,8 +220,7 @@ public class Gallery : MonoBehaviour
             filledPortraits++;
 
             SnapTo(2);
-            // yield return null;
-            yield return StartCoroutine(ScrollTo(1));
+            yield return StartCoroutine(ScrollTo(1, 0.2f));
         }
     }
 }
