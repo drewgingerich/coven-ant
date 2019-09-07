@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -58,17 +57,11 @@ public class Gallery : MonoBehaviour
 
     public void UserScroll (int value)
     {
-        StopAllCoroutines();
-        if (value == 0)
-        {
-            return;
-        }
         StartCoroutine(UserScrollTo(m_CurrentImageIndex + value));
     }
 
     public IEnumerator UserScrollTo(int targetIndex)
     {
-        m_IsScrolling = true;
 
         targetIndex = ClampTargetIndex(targetIndex);
 
@@ -76,6 +69,8 @@ public class Gallery : MonoBehaviour
         {
             yield break;
         }
+
+        m_IsScrolling = true;
 
         if (targetIndex < m_CurrentImageIndex)
         {
@@ -100,7 +95,7 @@ public class Gallery : MonoBehaviour
             leftArrow.gameObject.SetActive(false);
             rightArrow.gameObject.SetActive(true);
         }
-        else if (targetIndex == m_ImageTransforms.Count - 2)
+        else if (targetIndex == m_ImageTransforms.Count - 3)
         {
             leftArrow.gameObject.SetActive(true);
             rightArrow.gameObject.SetActive(false);
@@ -122,7 +117,6 @@ public class Gallery : MonoBehaviour
         {
             yield break;
         }
-
 
         var offsets = GetOffsets(targetIndex);
 
@@ -224,5 +218,6 @@ public class Gallery : MonoBehaviour
             SnapTo(2);
             yield return StartCoroutine(ScrollTo(1, 0.2f));
         }
+        leftArrow.gameObject.SetActive(false);
     }
 }
