@@ -5,7 +5,7 @@ public class KeyboardController : MonoBehaviour
     public SelectableNavigator navigator;
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             navigator.Use();
         }
