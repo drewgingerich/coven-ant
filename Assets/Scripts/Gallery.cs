@@ -68,6 +68,8 @@ public class Gallery : MonoBehaviour
 
     public IEnumerator UserScrollTo(int targetIndex)
     {
+        m_IsScrolling = true;
+
         targetIndex = ClampTargetIndex(targetIndex);
 
         if (targetIndex == m_CurrentImageIndex)
@@ -108,6 +110,8 @@ public class Gallery : MonoBehaviour
             leftArrow.gameObject.SetActive(true);
             rightArrow.gameObject.SetActive(true);
         }
+
+        m_IsScrolling = false;
     }
 
     public IEnumerator ScrollTo(int targetIndex, float time)
@@ -119,7 +123,6 @@ public class Gallery : MonoBehaviour
             yield break;
         }
 
-        m_IsScrolling = true;
 
         var offsets = GetOffsets(targetIndex);
 
@@ -131,7 +134,6 @@ public class Gallery : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         m_CurrentImageIndex = targetIndex;
-        m_IsScrolling = false;
     }
 
     private int ClampTargetIndex(int targetIndex)
