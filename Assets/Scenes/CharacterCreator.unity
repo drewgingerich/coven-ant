@@ -5084,7 +5084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beginTimerOnStart: 1
-  timeRemaining: 5
+  timeRemaining: 50
   repeatTimer: 0
   OnTimerStart:
     m_PersistentCalls:
