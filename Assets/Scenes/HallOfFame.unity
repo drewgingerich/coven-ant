@@ -1171,7 +1171,7 @@ MonoBehaviour:
   leftArrow: {fileID: 275299605}
   rightArrow: {fileID: 1477449515}
   scrollSeconds: 0.5
-  maxCharactersToLoad: 10
+  maxCharactersToLoad: 20
 --- !u!114 &1616217570
 MonoBehaviour:
   m_ObjectHideFlags: 0
