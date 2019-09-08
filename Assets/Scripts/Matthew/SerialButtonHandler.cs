@@ -10,8 +10,10 @@ public class SerialButtonHandler : ScriptableObject {
     
     public void OnButtonEvent(string message) {
         string[] tokenizedMsg = message.Split(' ');
-        if( buttonToEvent.ContainsKey(tokenizedMsg[1]) ) {
-            buttonToEvent[tokenizedMsg[1]].Invoke();
+        // Mac has an extra blank char that needs to die
+        string key = tokenizedMsg[1].Substring(0, 1);
+        if( buttonToEvent.ContainsKey(key) ) {
+            buttonToEvent[key].Invoke();
         } else {
             Debug.LogError("No event for message '" + message + "'");
         }
