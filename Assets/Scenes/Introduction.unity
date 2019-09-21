@@ -287,7 +287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.3}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143, y: 26.3}
+  m_AnchoredPosition: {x: 225.3, y: 26.3}
   m_SizeDelta: {x: 1818.5, y: 1263.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112998519
@@ -310,8 +310,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Cute maybe, but not very personal. Choose from a selection of <size=90><color=#00BCD4>magical
-    items</color></size> to alter its tiny head.
+  m_text: You will <size=110><color=#00BCD4>choose from a selection of magical items</color></size>
+    to alter its tiny head.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e0466f3bda84cc1af7e0b86822c531, type: 2}
   m_sharedMaterial: {fileID: 21957213020275430, guid: e3e0466f3bda84cc1af7e0b86822c531,
@@ -340,8 +340,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 76
-  m_fontSizeBase: 76
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -381,10 +381,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 112998519}
-    characterCount: 99
+    characterCount: 73
     spriteCount: 0
-    spaceCount: 17
-    wordCount: 18
+    spaceCount: 13
+    wordCount: 14
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121223275}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -511,17 +511,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138444504}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0008726948, w: 0.99999964}
+  m_LocalRotation: {x: 0, y: 0, z: -0.0034905854, w: 0.9999939}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1379182520}
   m_Father: {fileID: 980435455}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.4}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 199, y: -1021}
+  m_AnchoredPosition: {x: 239.2, y: -1024.3}
   m_SizeDelta: {x: 1818.5, y: 1263.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &138444506
@@ -544,9 +544,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Honestly, it's stuff we found in a storage closet, so the items are <size=90><color=#00BCD4>poorly
-    labeled</color></size>. But, that\u2019s why demonic rituals are so fun. Mystery,
-    baby!"
+  m_text: Honestly we found them all in the storage closet, so the items are <size=110><color=#00BCD4>poorly
+    labeled</color></size>.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e0466f3bda84cc1af7e0b86822c531, type: 2}
   m_sharedMaterial: {fileID: 21957213020275430, guid: e3e0466f3bda84cc1af7e0b86822c531,
@@ -575,8 +574,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 76
-  m_fontSizeBase: 76
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -616,14 +615,14 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 138444506}
-    characterCount: 142
+    characterCount: 82
     spriteCount: 0
-    spaceCount: 24
-    wordCount: 25
+    spaceCount: 14
+    wordCount: 15
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
-    materialCount: 2
+    materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -748,7 +747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.67}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -299}
+  m_AnchoredPosition: {x: 449.5, y: -246.4}
   m_SizeDelta: {x: 2048, y: 1816}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207787786
@@ -844,9 +843,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: We'll add your Coven-Ant to our <size=90><color=#00BCD4>Ghoulish Gallery</color></size>.
-    You may be delighted at your results, but don't faint when you <size=90><color=#00BCD4>see
-    everyone else's Coven-Ants</color></size>.
+  m_text: Lastly, stroll through our <size=110><color=#00BCD4>Ghoulish Gallery</color></size>
+    and <size=110><color=#00BCD4>see everyone's Coven-Ant</color></size>.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e0466f3bda84cc1af7e0b86822c531, type: 2}
   m_sharedMaterial: {fileID: 21957213020275430, guid: e3e0466f3bda84cc1af7e0b86822c531,
@@ -875,8 +873,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 76
-  m_fontSizeBase: 76
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -913,15 +911,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 107.89118, w: 0}
+  m_margin: {x: 0, y: 0, z: -91.78434, w: 0}
   m_textInfo:
     textComponent: {fileID: 263815794}
-    characterCount: 144
+    characterCount: 73
     spriteCount: 0
-    spaceCount: 23
-    wordCount: 24
+    spaceCount: 9
+    wordCount: 10
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2062,17 +2060,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879186257}
-  m_LocalRotation: {x: -0, y: -0, z: 0.011344416, w: 0.9999357}
+  m_LocalRotation: {x: 0, y: 0, z: 0.0052359584, w: 0.9999863}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 906071581}
   m_Father: {fileID: 1327033438}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.3}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143, y: 26.3}
+  m_AnchoredPosition: {x: 235.9, y: -72.5}
   m_SizeDelta: {x: 1818.5, y: 1263.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879186259
@@ -2095,10 +2093,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'But time is not unlimited: you must <size=90><color=#00BCD4>act quickly</color></size>.
-    As the ritual fades, the spirit candles will flicker out one by one. The ritual
-    <size=90><color=#00BCD4>ends when the last candle goes out</color></size>, and
-    your Coven-Ant''s form is sealed.'
+  m_text: But you must act quickly. The ritual <size=110><color=#00BCD4>ends when
+    the last candle goes out</color></size>.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e0466f3bda84cc1af7e0b86822c531, type: 2}
   m_sharedMaterial: {fileID: 21957213020275430, guid: e3e0466f3bda84cc1af7e0b86822c531,
@@ -2127,8 +2123,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 76
-  m_fontSizeBase: 76
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2168,12 +2164,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 879186259}
-    characterCount: 201
+    characterCount: 72
     spriteCount: 0
-    spaceCount: 36
-    wordCount: 37
+    spaceCount: 13
+    wordCount: 14
     linkCount: 0
-    lineCount: 4
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2243,7 +2239,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906071580}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -2350,17 +2346,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015938883}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0061085457, w: 0.99998134}
+  m_LocalRotation: {x: 0, y: 0, z: -0.009599217, w: 0.9999539}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1197134034}
   m_Father: {fileID: 1671332730}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.7}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.1}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129, y: -819}
+  m_AnchoredPosition: {x: 142.5, y: -820.5}
   m_SizeDelta: {x: 1818.5, y: 1263.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015938885
@@ -2412,8 +2408,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 76
-  m_fontSizeBase: 76
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2767,7 +2763,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197134033}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -2988,7 +2984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1327033438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3732,7 +3728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1671332730
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3967,7 +3963,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.3}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143, y: 26.3}
+  m_AnchoredPosition: {x: 230.5, y: 1.6}
   m_SizeDelta: {x: 1818.5, y: 1263.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797786881
@@ -3990,9 +3986,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Dear Minerva,\nIt's my pleasure to welcome you to our coven. A ritual from
-    ancient times, it\u2019s time to conjure your <size=90><color=#00BCD4>new familiar</color></size>.\nBehold:
-    a Coven-Ant</color></size>!"
+  m_text: "Dear Minerva,\nWelcome to our coven. It\u2019s time to conjure your new
+    familiar</color></size>. Behold, a <size=110><color=#00BCD4>Coven-Ant</color></size>!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e0466f3bda84cc1af7e0b86822c531, type: 2}
   m_sharedMaterial: {fileID: 21957213020275430, guid: e3e0466f3bda84cc1af7e0b86822c531,
@@ -4021,8 +4016,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 76
-  m_fontSizeBase: 76
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4062,12 +4057,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1797786881}
-    characterCount: 149
+    characterCount: 96
     spriteCount: 0
-    spaceCount: 25
-    wordCount: 26
+    spaceCount: 15
+    wordCount: 16
     linkCount: 0
-    lineCount: 4
+    lineCount: 3
     pageCount: 1
     materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
