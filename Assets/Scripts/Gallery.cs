@@ -23,7 +23,7 @@ public class Gallery : MonoBehaviour
 
     public void Initialize(List<string> characters)
     {
-        // characters.Reverse();
+        characters.Reverse();
         portraitWidth = galleryImagePrefab.GetComponent<RectTransform>().rect.width;
         StartCoroutine(LoadGallery(characters));
     }

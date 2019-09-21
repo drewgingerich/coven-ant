@@ -33,7 +33,7 @@ public class ImageUploader : MonoBehaviour
 		UnityWebRequest uploadRequest = UnityWebRequest.Post(baseUploadUrl, data);
 		uploadRequest.SetRequestHeader("Authorization", "Client-ID " + clientId);
 
-		StartCoroutine(UploadTimeout());
+		// StartCoroutine(UploadTimeout());
 		yield return uploadRequest.SendWebRequest();
 
 		if (uploadRequest.isNetworkError)

@@ -27,14 +27,7 @@ public class CharacterStore : MonoBehaviour
 
 	public void GetCharacters()
 	{
-		if (offline)
-		{
-			onGetCharactersLocal.Invoke();
-		}
-		else
-		{
-			StartCoroutine(GetCharactersRoutine());
-		}
+		StartCoroutine(GetCharactersRoutine());
 	}
 
 	public IEnumerator GetCharactersRoutine()
@@ -47,6 +40,7 @@ public class CharacterStore : MonoBehaviour
 		if (request.isNetworkError)
 		{
 			Debug.Log("Error uploading character: " + request.error);
+			onGetCharactersLocal.Invoke();
 		}
 		else
 		{
